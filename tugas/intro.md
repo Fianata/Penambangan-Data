@@ -1,11 +1,38 @@
-# Welcome to your Jupyter Book
-
-This is a small sample book to give you a feel for how book content is
-structured.
-It shows off a few of the major file types, as well as some sample content.
-It does not go in-depth into any particular topic - check out [the Jupyter Book documentation](https://jupyterbook.org) for more information.
-
-Check out the content pages bundled with this sample book to see more.
-
-```{tableofcontents}
-```
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "dznOOZ7g5iyf"
+      },
+      "source": [
+        "# Intro\n",
+        "\n",
+        "Halo selamat datang pada halaman saya.\n",
+        "\n",
+        "Halaman ini saya buat untuk mencatat materi ataupun tugas dari mata kuliah penambangan data untuk 1 semester kedepan\n",
+        "\n",
+        "Semoga materi pada mata kuliah ini bisa saya serap dengan baik dan jangan lupa stay ileng lan waspodo."
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": []
+    }
+  ],
+  "metadata": {
+    "colab": {
+      "provenance": []
+    },
+    "kernelspec": {
+      "display_name": "Python 3",
+      "name": "python3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 0
+}
