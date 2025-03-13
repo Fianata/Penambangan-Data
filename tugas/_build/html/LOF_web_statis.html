@@ -471,43 +471,43 @@ document.write(`
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>A</p></td>
+<tr class="row-even"><td><p>1</p></td>
 <td><p>2</p></td>
 <td><p>3</p></td>
 </tr>
-<tr class="row-odd"><td><p>B</p></td>
+<tr class="row-odd"><td><p>2</p></td>
 <td><p>3</p></td>
 <td><p>3</p></td>
 </tr>
-<tr class="row-even"><td><p>C</p></td>
+<tr class="row-even"><td><p>3</p></td>
 <td><p>5</p></td>
 <td><p>4</p></td>
 </tr>
-<tr class="row-odd"><td><p>D</p></td>
+<tr class="row-odd"><td><p>4</p></td>
 <td><p>6</p></td>
 <td><p>7</p></td>
 </tr>
-<tr class="row-even"><td><p>E</p></td>
+<tr class="row-even"><td><p>5</p></td>
 <td><p>8</p></td>
 <td><p>8</p></td>
 </tr>
-<tr class="row-odd"><td><p>F</p></td>
+<tr class="row-odd"><td><p>6</p></td>
 <td><p>7</p></td>
 <td><p>9</p></td>
 </tr>
-<tr class="row-even"><td><p>G</p></td>
+<tr class="row-even"><td><p>7</p></td>
 <td><p>9</p></td>
 <td><p>8</p></td>
 </tr>
-<tr class="row-odd"><td><p>H</p></td>
+<tr class="row-odd"><td><p>8</p></td>
 <td><p>2</p></td>
 <td><p>2</p></td>
 </tr>
-<tr class="row-even"><td><p>I</p></td>
+<tr class="row-even"><td><p>9</p></td>
 <td><p>3</p></td>
 <td><p>2</p></td>
 </tr>
-<tr class="row-odd"><td><p>J</p></td>
+<tr class="row-odd"><td><p>10</p></td>
 <td><p>4</p></td>
 <td><p>3</p></td>
 </tr>
@@ -620,73 +620,93 @@ document.write(`
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Note: you may need to restart the kernel to use updated packages.
 </pre></div>
 </div>
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">4</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">get_ipython</span><span class="p">()</span><span class="o">.</span><span class="n">run_line_magic</span><span class="p">(</span><span class="s1">&#39;pip&#39;</span><span class="p">,</span> <span class="s1">&#39;install pandas -qq&#39;</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="ne">----&gt; </span><span class="mi">4</span> <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;LOF_Data.csv&#39;</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">df</span>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
-<span class="nn">File ~/.local/lib/python3.12/site-packages/pandas/io/parsers/readers.py:1026,</span> in <span class="ni">read_csv</span><span class="nt">(filepath_or_buffer, sep, delimiter, header, names, index_col, usecols, dtype, engine, converters, true_values, false_values, skipinitialspace, skiprows, skipfooter, nrows, na_values, keep_default_na, na_filter, verbose, skip_blank_lines, parse_dates, infer_datetime_format, keep_date_col, date_parser, date_format, dayfirst, cache_dates, iterator, chunksize, compression, thousands, decimal, lineterminator, quotechar, quoting, doublequote, escapechar, comment, encoding, encoding_errors, dialect, on_bad_lines, delim_whitespace, low_memory, memory_map, float_precision, storage_options, dtype_backend)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1013</span> <span class="n">kwds_defaults</span> <span class="o">=</span> <span class="n">_refine_defaults_read</span><span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">1014</span>     <span class="n">dialect</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1015</span>     <span class="n">delimiter</span><span class="p">,</span>
-   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1022</span>     <span class="n">dtype_backend</span><span class="o">=</span><span class="n">dtype_backend</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1023</span> <span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1024</span> <span class="n">kwds</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">kwds_defaults</span><span class="p">)</span>
-<span class="ne">-&gt; </span><span class="mi">1026</span> <span class="k">return</span> <span class="n">_read</span><span class="p">(</span><span class="n">filepath_or_buffer</span><span class="p">,</span> <span class="n">kwds</span><span class="p">)</span>
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
 
-<span class="nn">File ~/.local/lib/python3.12/site-packages/pandas/io/parsers/readers.py:620,</span> in <span class="ni">_read</span><span class="nt">(filepath_or_buffer, kwds)</span>
-<span class="g g-Whitespace">    </span><span class="mi">617</span> <span class="n">_validate_names</span><span class="p">(</span><span class="n">kwds</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;names&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">))</span>
-<span class="g g-Whitespace">    </span><span class="mi">619</span> <span class="c1"># Create the parser.</span>
-<span class="ne">--&gt; </span><span class="mi">620</span> <span class="n">parser</span> <span class="o">=</span> <span class="n">TextFileReader</span><span class="p">(</span><span class="n">filepath_or_buffer</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">622</span> <span class="k">if</span> <span class="n">chunksize</span> <span class="ow">or</span> <span class="n">iterator</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">623</span>     <span class="k">return</span> <span class="n">parser</span>
-
-<span class="nn">File ~/.local/lib/python3.12/site-packages/pandas/io/parsers/readers.py:1620,</span> in <span class="ni">TextFileReader.__init__</span><span class="nt">(self, f, engine, **kwds)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1617</span>     <span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">[</span><span class="s2">&quot;has_index_names&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">kwds</span><span class="p">[</span><span class="s2">&quot;has_index_names&quot;</span><span class="p">]</span>
-<span class="g g-Whitespace">   </span><span class="mi">1619</span> <span class="bp">self</span><span class="o">.</span><span class="n">handles</span><span class="p">:</span> <span class="n">IOHandles</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span>
-<span class="ne">-&gt; </span><span class="mi">1620</span> <span class="bp">self</span><span class="o">.</span><span class="n">_engine</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_make_engine</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">engine</span><span class="p">)</span>
-
-<span class="nn">File ~/.local/lib/python3.12/site-packages/pandas/io/parsers/readers.py:1880,</span> in <span class="ni">TextFileReader._make_engine</span><span class="nt">(self, f, engine)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1878</span>     <span class="k">if</span> <span class="s2">&quot;b&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">mode</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1879</span>         <span class="n">mode</span> <span class="o">+=</span> <span class="s2">&quot;b&quot;</span>
-<span class="ne">-&gt; </span><span class="mi">1880</span> <span class="bp">self</span><span class="o">.</span><span class="n">handles</span> <span class="o">=</span> <span class="n">get_handle</span><span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">1881</span>     <span class="n">f</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1882</span>     <span class="n">mode</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1883</span>     <span class="n">encoding</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;encoding&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
-<span class="g g-Whitespace">   </span><span class="mi">1884</span>     <span class="n">compression</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;compression&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
-<span class="g g-Whitespace">   </span><span class="mi">1885</span>     <span class="n">memory_map</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;memory_map&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">),</span>
-<span class="g g-Whitespace">   </span><span class="mi">1886</span>     <span class="n">is_text</span><span class="o">=</span><span class="n">is_text</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1887</span>     <span class="n">errors</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;encoding_errors&quot;</span><span class="p">,</span> <span class="s2">&quot;strict&quot;</span><span class="p">),</span>
-<span class="g g-Whitespace">   </span><span class="mi">1888</span>     <span class="n">storage_options</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;storage_options&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
-<span class="g g-Whitespace">   </span><span class="mi">1889</span> <span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1890</span> <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">handles</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
-<span class="g g-Whitespace">   </span><span class="mi">1891</span> <span class="n">f</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">handles</span><span class="o">.</span><span class="n">handle</span>
-
-<span class="nn">File ~/.local/lib/python3.12/site-packages/pandas/io/common.py:873,</span> in <span class="ni">get_handle</span><span class="nt">(path_or_buf, mode, encoding, compression, memory_map, is_text, errors, storage_options)</span>
-<span class="g g-Whitespace">    </span><span class="mi">868</span> <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">handle</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">869</span>     <span class="c1"># Check whether the filename is to be opened in binary mode.</span>
-<span class="g g-Whitespace">    </span><span class="mi">870</span>     <span class="c1"># Binary mode does not support &#39;encoding&#39; and &#39;newline&#39;.</span>
-<span class="g g-Whitespace">    </span><span class="mi">871</span>     <span class="k">if</span> <span class="n">ioargs</span><span class="o">.</span><span class="n">encoding</span> <span class="ow">and</span> <span class="s2">&quot;b&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">ioargs</span><span class="o">.</span><span class="n">mode</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">872</span>         <span class="c1"># Encoding</span>
-<span class="ne">--&gt; </span><span class="mi">873</span>         <span class="n">handle</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">874</span>             <span class="n">handle</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">875</span>             <span class="n">ioargs</span><span class="o">.</span><span class="n">mode</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">876</span>             <span class="n">encoding</span><span class="o">=</span><span class="n">ioargs</span><span class="o">.</span><span class="n">encoding</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">877</span>             <span class="n">errors</span><span class="o">=</span><span class="n">errors</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">878</span>             <span class="n">newline</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">879</span>         <span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">880</span>     <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">881</span>         <span class="c1"># Binary mode</span>
-<span class="g g-Whitespace">    </span><span class="mi">882</span>         <span class="n">handle</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">handle</span><span class="p">,</span> <span class="n">ioargs</span><span class="o">.</span><span class="n">mode</span><span class="p">)</span>
-
-<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;LOF_Data.csv&#39;
-</pre></div>
-</div>
-</div>
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>ID</th>
+      <th>X</th>
+      <th>Y</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>25</td>
+      <td>30</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>30</td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>40</td>
+      <td>25</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>50</td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>25</td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>6</td>
+      <td>30</td>
+      <td>40</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>7</td>
+      <td>40</td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>8</td>
+      <td>20</td>
+      <td>45</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>9</td>
+      <td>35</td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>10</td>
+      <td>25</td>
+      <td>20</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="interpretasi-visualisasi">
@@ -785,11 +805,11 @@ document.write(`
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ambang Batas (Threshold) untuk Outlier: -1.7320816090863362
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ipython-input-18-2f1b2c55b3ef&gt;:52: UserWarning: You passed a edgecolor/edgecolors (&#39;k&#39;) for an unfilled marker (&#39;x&#39;).  Matplotlib is ignoring the edgecolor in favor of the facecolor.  This behavior may change in the future.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_7060/3763480899.py:52: UserWarning: You passed a edgecolor/edgecolors (&#39;k&#39;) for an unfilled marker (&#39;x&#39;).  Matplotlib is ignoring the edgecolor in favor of the facecolor.  This behavior may change in the future.
   plt.scatter(outliers[:, 0], outliers[:, 1], color=&quot;blue&quot;,
 </pre></div>
 </div>
-<img alt="_images/cca41d0d47b62298f0d1410aacc050aaf8a354749d47e9967e9db3a00fad2cfe.png" src="_images/cca41d0d47b62298f0d1410aacc050aaf8a354749d47e9967e9db3a00fad2cfe.png" />
+<img alt="_images/41abb01a1b32995b21bffbdc37d16f37d513d8699de89290093f60d1dc6c2fef.png" src="_images/41abb01a1b32995b21bffbdc37d16f37d513d8699de89290093f60d1dc6c2fef.png" />
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Skor Outlier (negative_outlier_factor_): [-1.17792058 -1.03402278 -1.04090309 -1.31442612 -0.93557974 -1.53755419
  -1.04090309 -1.75132058 -0.94015991 -0.93557974]
 Outlier yang Terdeteksi (ID, X, Y):
@@ -943,31 +963,31 @@ ID: 8, X: 20, Y: 45
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Manual LOF Scores: [1.1779205751866637, 1.0340227792379366, 1.0409030926227238, 1.3144261243071356, 0.9355797421532976, 1.5375541932958505, 1.0409030926227238, 1.7513205842828479, 0.9401599063724094, 0.9355797421532976]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Manual LOF Scores: [np.float64(1.2000757594961027), np.float64(1.0340227792379366), np.float64(1.025310285645616), np.float64(1.1993935533733657), np.float64(0.8851833760512339), np.float64(1.355381173529899), np.float64(1.075313648981821), np.float64(1.637103954266821), np.float64(0.8569215560820768), np.float64(0.8851833760512339)]
 Scikit-learn LOF Scores: [1.17792058 1.03402278 1.04090309 1.31442612 0.93557974 1.53755419
  1.04090309 1.75132058 0.94015991 0.93557974]
 
 Perbandingan Hasil Manual vs Scikit-learn:
    ID  Manual LOF  Scikit-learn LOF    Difference
-0   1    1.177921          1.177921  2.019718e-12
+0   1    1.200076          1.177921  2.215518e-02
 1   2    1.034023          1.034023  3.899103e-13
-2   3    1.040903          1.040903  4.634071e-13
-3   4    1.314426          1.314426  3.445688e-12
-4   5    0.935580          0.935580  6.359357e-13
-5   6    1.537554          1.537554  5.602407e-12
-6   7    1.040903          1.040903  4.634071e-13
-7   8    1.751321          1.751321  7.887468e-12
-8   9    0.940160          0.940160  6.404877e-13
-9  10    0.935580          0.935580  6.359357e-13
+2   3    1.025310          1.040903  1.559281e-02
+3   4    1.199394          1.314426  1.150326e-01
+4   5    0.885183          0.935580  5.039637e-02
+5   6    1.355381          1.537554  1.821730e-01
+6   7    1.075314          1.040903  3.441056e-02
+7   8    1.637104          1.751321  1.142166e-01
+8   9    0.856922          0.940160  8.323835e-02
+9  10    0.885183          0.935580  5.039637e-02
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ipython-input-19-ecb6bbd8b498&gt;:98: UserWarning: You passed a edgecolor/edgecolors (&#39;k&#39;) for an unfilled marker (&#39;x&#39;).  Matplotlib is ignoring the edgecolor in favor of the facecolor.  This behavior may change in the future.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_7060/3328461794.py:98: UserWarning: You passed a edgecolor/edgecolors (&#39;k&#39;) for an unfilled marker (&#39;x&#39;).  Matplotlib is ignoring the edgecolor in favor of the facecolor.  This behavior may change in the future.
   plt.scatter(np.array(x)[manual_outliers], np.array(y)[manual_outliers], color=&#39;red&#39;, label=&#39;Outlier (Manual)&#39;, s=100, edgecolors=&#39;k&#39;, marker=&#39;x&#39;)
-&lt;ipython-input-19-ecb6bbd8b498&gt;:108: UserWarning: You passed a edgecolor/edgecolors (&#39;k&#39;) for an unfilled marker (&#39;x&#39;).  Matplotlib is ignoring the edgecolor in favor of the facecolor.  This behavior may change in the future.
+/tmp/ipykernel_7060/3328461794.py:108: UserWarning: You passed a edgecolor/edgecolors (&#39;k&#39;) for an unfilled marker (&#39;x&#39;).  Matplotlib is ignoring the edgecolor in favor of the facecolor.  This behavior may change in the future.
   plt.scatter(np.array(x)[sklearn_outliers], np.array(y)[sklearn_outliers], color=&#39;green&#39;, label=&#39;Outlier (Scikit-learn)&#39;, s=100, edgecolors=&#39;k&#39;, marker=&#39;x&#39;)
 </pre></div>
 </div>
-<img alt="_images/b25eefa7226db7de4d1c253dab1dbe326e7e0acdd38e3b094eabd422d0e44bcd.png" src="_images/b25eefa7226db7de4d1c253dab1dbe326e7e0acdd38e3b094eabd422d0e44bcd.png" />
+<img alt="_images/ce1bf319033bbc4b84c72cd4abdf2f1d8e2929ec3607cab5d3f87d0ce1388ae5.png" src="_images/ce1bf319033bbc4b84c72cd4abdf2f1d8e2929ec3607cab5d3f87d0ce1388ae5.png" />
 </div>
 </div>
 </section>
