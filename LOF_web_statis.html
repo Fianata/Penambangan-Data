@@ -28,7 +28,7 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
@@ -60,7 +60,6 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'LOF_web_statis';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="Pengertian Data Understanding" href="Data_Understanding%20%282%29.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -123,6 +122,8 @@
       
       
       
+        
+      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -178,7 +179,7 @@
                 </a>
             </li>
         </ul>
-        <ul class="current nav bd-sidenav">
+        <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="About_Me.html">About Me</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Data_Understanding%20%282%29.html">Pengertian Data Understanding</a></li>
 
@@ -200,7 +201,22 @@
 
 
 
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Local Outlier Factor (LOF)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="LOF_web_statis%20%282%29.html">Local Outlier Factor (LOF)</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -573,8 +589,8 @@ document.write(`
 <section id="implementasi-dengan-scikit-learn">
 <h2>4. Implementasi dengan Scikit-Learn<a class="headerlink" href="#implementasi-dengan-scikit-learn" title="Link to this heading">#</a></h2>
 <p>Berikut adalah implementasi LOF menggunakan library <strong>scikit-learn</strong>:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.neighbors</span> <span class="kn">import</span> <span class="n">LocalOutlierFactor</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.neighbors</span><span class="w"> </span><span class="kn">import</span> <span class="n">LocalOutlierFactor</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 
 <span class="c1"># Data contoh</span>
 <span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">],</span> <span class="p">[</span><span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">],</span>
@@ -609,7 +625,7 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">pip</span> install pandas -qq
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
 
 <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;LOF_Data.csv&#39;</span><span class="p">)</span>
 <span class="n">df</span>
@@ -727,11 +743,11 @@ document.write(`
 <p>Ambang batas dapat disesuaikan berdasarkan persentil atau nilai tertentu.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">from</span> <span class="nn">sklearn.neighbors</span> <span class="kn">import</span> <span class="n">LocalOutlierFactor</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">from</span> <span class="nn">matplotlib.legend_handler</span> <span class="kn">import</span> <span class="n">HandlerPathCollection</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.neighbors</span><span class="w"> </span><span class="kn">import</span> <span class="n">LocalOutlierFactor</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">matplotlib.legend_handler</span><span class="w"> </span><span class="kn">import</span> <span class="n">HandlerPathCollection</span>
 
 <span class="c1"># Muat data dari CSV (pastikan file CSV ada di direktori yang benar)</span>
 <span class="c1"># Contoh: data = pd.read_csv(&#39;LOF_Data.csv&#39;)</span>
@@ -757,7 +773,7 @@ document.write(`
 <span class="n">manual_outliers</span> <span class="o">=</span> <span class="n">X_scores</span> <span class="o">&lt;</span> <span class="n">threshold</span>
 
 <span class="c1"># Fungsi untuk menyesuaikan ukuran marker pada legend</span>
-<span class="k">def</span> <span class="nf">update_legend_marker_size</span><span class="p">(</span><span class="n">handle</span><span class="p">,</span> <span class="n">orig</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">update_legend_marker_size</span><span class="p">(</span><span class="n">handle</span><span class="p">,</span> <span class="n">orig</span><span class="p">):</span>
     <span class="n">handle</span><span class="o">.</span><span class="n">update_from</span><span class="p">(</span><span class="n">orig</span><span class="p">)</span>
     <span class="n">handle</span><span class="o">.</span><span class="n">set_sizes</span><span class="p">([</span><span class="mi">20</span><span class="p">])</span>
 
@@ -805,11 +821,11 @@ document.write(`
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ambang Batas (Threshold) untuk Outlier: -1.7320816090863362
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_7060/3763480899.py:52: UserWarning: You passed a edgecolor/edgecolors (&#39;k&#39;) for an unfilled marker (&#39;x&#39;).  Matplotlib is ignoring the edgecolor in favor of the facecolor.  This behavior may change in the future.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_7848/3763480899.py:52: UserWarning: You passed a edgecolor/edgecolors (&#39;k&#39;) for an unfilled marker (&#39;x&#39;).  Matplotlib is ignoring the edgecolor in favor of the facecolor.  This behavior may change in the future.
   plt.scatter(outliers[:, 0], outliers[:, 1], color=&quot;blue&quot;,
 </pre></div>
 </div>
-<img alt="_images/41abb01a1b32995b21bffbdc37d16f37d513d8699de89290093f60d1dc6c2fef.png" src="_images/41abb01a1b32995b21bffbdc37d16f37d513d8699de89290093f60d1dc6c2fef.png" />
+<img alt="_images/b60d13b5204bdcb14651fe6c36be92739090f90ec9cce175dc692d74cac0bab4.png" src="_images/b60d13b5204bdcb14651fe6c36be92739090f90ec9cce175dc692d74cac0bab4.png" />
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Skor Outlier (negative_outlier_factor_): [-1.17792058 -1.03402278 -1.04090309 -1.31442612 -0.93557974 -1.53755419
  -1.04090309 -1.75132058 -0.94015991 -0.93557974]
 Outlier yang Terdeteksi (ID, X, Y):
@@ -840,11 +856,11 @@ ID: 8, X: 20, Y: 45
 <p>Memahami perbedaan implementasi dan akurasi antara kedua metode.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">from</span> <span class="nn">scipy.spatial.distance</span> <span class="kn">import</span> <span class="n">euclidean</span>
-<span class="kn">from</span> <span class="nn">sklearn.neighbors</span> <span class="kn">import</span> <span class="n">LocalOutlierFactor</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">scipy.spatial.distance</span><span class="w"> </span><span class="kn">import</span> <span class="n">euclidean</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.neighbors</span><span class="w"> </span><span class="kn">import</span> <span class="n">LocalOutlierFactor</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
 
 <span class="c1"># Data</span>
 <span class="n">data</span> <span class="o">=</span> <span class="p">[</span>
@@ -861,7 +877,7 @@ ID: 8, X: 20, Y: 45
 <span class="p">]</span>
 
 <span class="c1"># Fungsi untuk menghitung jarak Euclidean</span>
-<span class="k">def</span> <span class="nf">calculate_distances</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">calculate_distances</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
     <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
     <span class="n">distances</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">n</span><span class="p">,</span> <span class="n">n</span><span class="p">))</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
@@ -872,7 +888,7 @@ ID: 8, X: 20, Y: 45
     <span class="k">return</span> <span class="n">distances</span>
 
 <span class="c1"># Fungsi untuk menghitung LRD</span>
-<span class="k">def</span> <span class="nf">calculate_lrd</span><span class="p">(</span><span class="n">point_idx</span><span class="p">,</span> <span class="n">neighbors</span><span class="p">,</span> <span class="n">distances</span><span class="p">,</span> <span class="n">k</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">calculate_lrd</span><span class="p">(</span><span class="n">point_idx</span><span class="p">,</span> <span class="n">neighbors</span><span class="p">,</span> <span class="n">distances</span><span class="p">,</span> <span class="n">k</span><span class="p">):</span>
     <span class="n">sum_rd</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">for</span> <span class="n">neighbor</span> <span class="ow">in</span> <span class="n">neighbors</span><span class="p">:</span>
         <span class="n">rd</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">distances</span><span class="p">[</span><span class="n">point_idx</span><span class="p">][</span><span class="n">neighbor</span><span class="p">],</span> <span class="n">distances</span><span class="p">[</span><span class="n">neighbor</span><span class="p">][</span><span class="n">np</span><span class="o">.</span><span class="n">argsort</span><span class="p">(</span><span class="n">distances</span><span class="p">[</span><span class="n">neighbor</span><span class="p">])[</span><span class="n">k</span><span class="p">]])</span>
@@ -880,7 +896,7 @@ ID: 8, X: 20, Y: 45
     <span class="k">return</span> <span class="n">k</span> <span class="o">/</span> <span class="n">sum_rd</span> <span class="k">if</span> <span class="n">sum_rd</span> <span class="o">!=</span> <span class="mi">0</span> <span class="k">else</span> <span class="mi">0</span>
 
 <span class="c1"># Fungsi untuk menghitung LOF secara manual</span>
-<span class="k">def</span> <span class="nf">calculate_manual_lof</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">k</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">calculate_manual_lof</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">k</span><span class="p">):</span>
     <span class="n">distances</span> <span class="o">=</span> <span class="n">calculate_distances</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
     <span class="n">lof_scores</span> <span class="o">=</span> <span class="p">[]</span>
 
@@ -922,7 +938,7 @@ ID: 8, X: 20, Y: 45
 <span class="nb">print</span><span class="p">(</span><span class="n">comparison</span><span class="p">)</span>
 
 <span class="c1"># Visualisasi hasil</span>
-<span class="k">def</span> <span class="nf">visualize_lof</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">manual_scores</span><span class="p">,</span> <span class="n">sklearn_scores</span><span class="p">,</span> <span class="n">threshold</span><span class="o">=</span><span class="mf">1.2</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">visualize_lof</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">manual_scores</span><span class="p">,</span> <span class="n">sklearn_scores</span><span class="p">,</span> <span class="n">threshold</span><span class="o">=</span><span class="mf">1.2</span><span class="p">):</span>
     <span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="n">point</span><span class="p">[</span><span class="s1">&#39;x&#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">point</span> <span class="ow">in</span> <span class="n">data</span><span class="p">]</span>
     <span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="n">point</span><span class="p">[</span><span class="s1">&#39;y&#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">point</span> <span class="ow">in</span> <span class="n">data</span><span class="p">]</span>
 
@@ -981,13 +997,13 @@ Perbandingan Hasil Manual vs Scikit-learn:
 9  10    0.885183          0.935580  5.039637e-02
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_7060/3328461794.py:98: UserWarning: You passed a edgecolor/edgecolors (&#39;k&#39;) for an unfilled marker (&#39;x&#39;).  Matplotlib is ignoring the edgecolor in favor of the facecolor.  This behavior may change in the future.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_7848/3328461794.py:98: UserWarning: You passed a edgecolor/edgecolors (&#39;k&#39;) for an unfilled marker (&#39;x&#39;).  Matplotlib is ignoring the edgecolor in favor of the facecolor.  This behavior may change in the future.
   plt.scatter(np.array(x)[manual_outliers], np.array(y)[manual_outliers], color=&#39;red&#39;, label=&#39;Outlier (Manual)&#39;, s=100, edgecolors=&#39;k&#39;, marker=&#39;x&#39;)
-/tmp/ipykernel_7060/3328461794.py:108: UserWarning: You passed a edgecolor/edgecolors (&#39;k&#39;) for an unfilled marker (&#39;x&#39;).  Matplotlib is ignoring the edgecolor in favor of the facecolor.  This behavior may change in the future.
+/tmp/ipykernel_7848/3328461794.py:108: UserWarning: You passed a edgecolor/edgecolors (&#39;k&#39;) for an unfilled marker (&#39;x&#39;).  Matplotlib is ignoring the edgecolor in favor of the facecolor.  This behavior may change in the future.
   plt.scatter(np.array(x)[sklearn_outliers], np.array(y)[sklearn_outliers], color=&#39;green&#39;, label=&#39;Outlier (Scikit-learn)&#39;, s=100, edgecolors=&#39;k&#39;, marker=&#39;x&#39;)
 </pre></div>
 </div>
-<img alt="_images/ce1bf319033bbc4b84c72cd4abdf2f1d8e2929ec3607cab5d3f87d0ce1388ae5.png" src="_images/ce1bf319033bbc4b84c72cd4abdf2f1d8e2929ec3607cab5d3f87d0ce1388ae5.png" />
+<img alt="_images/da569bc5db4c315e006306b8e4291644b0fc9bfac78ea64a988faa1797ba4f96.png" src="_images/da569bc5db4c315e006306b8e4291644b0fc9bfac78ea64a988faa1797ba4f96.png" />
 </div>
 </div>
 </section>
@@ -1022,15 +1038,6 @@ Perbandingan Hasil Manual vs Scikit-learn:
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="Data_Understanding%20%282%29.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Pengertian Data Understanding</p>
-      </div>
-    </a>
 </div>
                 </footer>
               
