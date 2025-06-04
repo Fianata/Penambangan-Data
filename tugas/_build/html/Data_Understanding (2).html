@@ -1,0 +1,2145 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Pengertian Data Understanding &#8212; My sample book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Data_Understanding (2)';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Local Outlier Factor (LOF)" href="LOF_web_statis%20%282%29.html" />
+    <link rel="prev" title="About Me" href="About_Me.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/Data-mining.jpeg" class="logo__image only-light" alt="My sample book - Home"/>
+    <script>document.write(`<img src="_static/Data-mining.jpeg" class="logo__image only-dark" alt="My sample book - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Intro
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="About_Me.html">About Me</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Pengertian Data Understanding</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="LOF_web_statis%20%282%29.html">Local Outlier Factor (LOF)</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="Naive_Bayes.html">Naive Bayes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="UTS_Pendat.html"><strong>Proyek UTS Penambangan Data: Klasifikasi Pasien Sirosis Hati</strong></a></li>
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="K_means%20%282%29.html"><strong>K-means Clustering</strong></a></li>
+
+
+
+
+
+
+
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FData_Understanding (2).html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/Data_Understanding (2).ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Pengertian Data Understanding</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Pengertian Data Understanding</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#koneksi-dan-proses-pengambilan-data">Koneksi dan proses pengambilan data :</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#preview-data-dari-mysql">Preview data dari MySQL :</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#preview-data-dari-postgresql">Preview data dari PostgreSQL :</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#proses-penggabungan-data">Proses penggabungan data :</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#statistik-deskriptif">Statistik Deskriptif</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#visualiasai-distribusi-data-yang-digabungkan">Visualiasai distribusi data yang digabungkan :</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#identifikasi-masalah-data">Identifikasi Masalah Data</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#outliers">Outliers</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#penyebab-outlier">Penyebab Outlier</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#dampak-outlier">Dampak Outlier</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#pentingnya-deteksi-outlier">Pentingnya Deteksi Outlier</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#prinsip-kerja-knn">Prinsip Kerja KNN</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#deteksi-outlier">Deteksi Outlier:</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#keunggulan-knn">Keunggulan KNN</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#kekurangan-knn">Kekurangan KNN</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#knn-untuk-deteksi-outlier">KNN untuk Deteksi Outlier</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#persiapan-data">Persiapan Data</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#inisialisasi-model-knn">Inisialisasi Model KNN</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#visualisasi-outlier">Visualisasi Outlier</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="pengertian-data-understanding">
+<h1>Pengertian Data Understanding<a class="headerlink" href="#pengertian-data-understanding" title="Link to this heading">#</a></h1>
+<p>Dalam proses Data Understanding, kita berusaha untuk memahami karakteristik data yang kita miliki sebelum melakukan analisis lebih lanjut. Salah satu langkah utama dalam tahap ini adalah mengenali tipe data, karena hal ini berpengaruh pada cara data diproses, dianalisis, dan divisualisasikan.</p>
+<p>Secara umum, data dapat dikategorikan berdasarkan sifatnya, strukturnya, dan sumbernya. Berikut adalah penjelasan lebih rinci dari masing-masing kategori.</p>
+<p><em><strong>1. Tipe Data Berdasarkan Sifatnya</strong></em>
+Berdasarkan sifatnya, data terbagi menjadi dua kelompok utama: data kuantitatif (numerik) dan data kualitatif (kategorikal).</p>
+<p><em><strong>a. Data Kuantitatif (Numerik)</strong></em>
+Data kuantitatif adalah data yang berbentuk angka dan dapat diukur secara numerik. Data ini sering digunakan dalam statistik dan analisis berbasis angka.</p>
+<p><em><strong>1) Data Diskrit</strong></em>
+Data yang memiliki nilai tetap dan tidak dapat dibagi menjadi bagian yang lebih kecil secara bermakna.
+Biasanya berasal dari proses perhitungan atau pencacahan.
+Contoh:
+Jumlah mahasiswa dalam satu kelas (20, 30, 40).
+Jumlah kendaraan yang melewati jalan tertentu dalam satu jam.
+Jumlah anak dalam satu keluarga.</p>
+<p><em><strong>2) Data Kontinu</strong></em>
+Data yang dapat memiliki nilai dalam rentang tertentu dan bisa mencakup bilangan desimal.
+Biasanya berasal dari pengukuran.
+Contoh:
+Berat badan seseorang (55.5 kg, 60.2 kg).
+Suhu udara dalam satu hari (25.3°C, 30.7°C).
+Tinggi badan seseorang (170.5 cm, 165.2 cm).</p>
+<p><em><strong>b. Data Kualitatif (Kategorikal)</strong></em>
+Data kualitatif adalah data yang berbentuk kategori atau label dan tidak dapat diukur secara numerik. Data ini sering digunakan untuk klasifikasi atau identifikasi kelompok tertentu.</p>
+<p><em><strong>1) Data Nominal</strong></em>
+Data kategorikal tanpa urutan atau tingkatan tertentu.
+Tidak memiliki hubungan hierarkis antar kategori.
+Contoh:
+Jenis kelamin (Laki-laki, Perempuan).
+Warna favorit (Merah, Biru, Hijau).
+Nama kota asal (Jakarta, Surabaya, Bandung).</p>
+<p><em><strong>2) Data Ordinal</strong></em>
+Data kategorikal yang memiliki urutan atau tingkatan tertentu.
+Meskipun ada tingkatan, selisih antar tingkatan tidak dapat dihitung secara pasti.
+Contoh:
+Tingkat pendidikan (SD, SMP, SMA, Sarjana).
+Tingkat kepuasan pelanggan (Sangat Puas, Puas, Netral, Tidak Puas).
+Level keahlian dalam suatu keterampilan (Beginner, Intermediate, Advanced).</p>
+<p><em><strong>2. Tipe Data Berdasarkan Struktur dan Formatnya</strong></em>
+Selain berdasarkan sifatnya, data juga dapat dikategorikan berdasarkan bagaimana data tersebut tersimpan dan diorganisasikan.</p>
+<p><strong>a. Data Terstruktur</strong>
+Data yang memiliki format rapi dan tersimpan dalam bentuk tabel dengan baris dan kolom.
+Biasanya digunakan dalam database relasional (SQL).
+Mudah dianalisis menggunakan software seperti Excel, MySQL, dan PostgreSQL.
+Contoh:
+Data pelanggan toko online (ID, Nama, Alamat, Nomor HP).
+Data transaksi penjualan (Tanggal, Produk, Jumlah, Harga).</p>
+<p><strong>b. Data Semi-Terstruktur</strong>
+Data yang tidak sepenuhnya terstruktur seperti tabel, tetapi masih memiliki pola tertentu.
+Format data ini sering digunakan dalam komunikasi antar sistem komputer.
+Contoh format:
+JSON (JavaScript Object Notation)
+json
+Copy
+Edit
+{
+“nama”: “Budi”,
+“usia”: 25,
+“hobi”: [“Membaca”, “Olahraga”]
+}
+XML (Extensible Markup Language)
+xml
+Copy
+Edit
+<data>
+<nama>Budi</nama>
+<usia>25</usia>
+<hobi>Membaca</hobi>
+</data>
+CSV (Comma-Separated Values)
+Copy
+Edit
+Nama,Usia,Hobi
+Budi,25,Membaca</p>
+<p><em><strong>c. Data Tidak Terstruktur</strong></em>
+Data yang tidak memiliki format tetap dan sulit untuk diorganisir dalam bentuk tabel.
+Biasanya membutuhkan teknologi khusus untuk diproses, seperti Big Data dan AI.
+Contoh:
+File gambar (JPG, PNG).
+File video (MP4, AVI).
+Teks bebas (Artikel, Chat WhatsApp).
+Audio (Rekaman suara, podcast).</p>
+<p><em><strong>3. Tipe Data Berdasarkan Sumbernya</strong></em>
+Data juga bisa dikategorikan berdasarkan bagaimana data tersebut diperoleh.</p>
+<p><em><strong>a. Data Primer</strong></em>
+Data yang dikumpulkan langsung dari sumber pertama oleh peneliti atau pengguna.
+Contoh:
+Data hasil survei online yang dilakukan sendiri.
+Data dari wawancara langsung dengan narasumber.
+Data eksperimen laboratorium.
+<em><strong>b. Data Sekunder</strong></em>
+Data yang diperoleh dari sumber lain, bukan dikumpulkan sendiri.
+Biasanya digunakan untuk referensi atau penelitian lanjutan.
+Contoh:
+Data dari laporan pemerintah atau lembaga penelitian.
+Data statistik dari BPS (Badan Pusat Statistik).
+Data hasil penelitian yang diterbitkan dalam jurnal ilmiah.
+Kesimpulan
+Memahami tipe data sangat penting dalam dunia data science dan analisis data. Dengan mengetahui jenis data yang kita hadapi, kita bisa:
+✅ Menentukan teknik analisis yang tepat.
+✅ Memilih metode visualisasi data yang sesuai.
+✅ Mempersiapkan data dengan benar sebelum diproses lebih lanjut.</p>
+<p>Setelah memahami tipe-tipe data ini, langkah berikutnya adalah melakukan eksplorasi data, seperti pengecekan nilai yang hilang (missing values), distribusi data, dan outlier sebelum masuk ke tahap pemrosesan lebih lanjut.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="koneksi-dan-proses-pengambilan-data">
+<h1>Koneksi dan proses pengambilan data :<a class="headerlink" href="#koneksi-dan-proses-pengambilan-data" title="Link to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>pymysql<span class="w"> </span>psycopg2<span class="w"> </span>pandas<span class="w"> </span>sqlalchemy
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sqlalchemy</span><span class="w"> </span><span class="kn">import</span> <span class="n">create_engine</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting pymysql
+  Downloading PyMySQL-1.1.1-py3-none-any.whl.metadata (4.4 kB)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting psycopg2
+  Downloading psycopg2-2.9.10.tar.gz (385 kB)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Preparing metadata (setup.py) ... ?25l-
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> \
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> done
+?25hRequirement already satisfied: pandas in /home/codespace/.local/lib/python3.12/site-packages (2.2.3)
+Requirement already satisfied: sqlalchemy in /usr/local/python/3.12.1/lib/python3.12/site-packages (2.0.41)
+Requirement already satisfied: numpy&gt;=1.26.0 in /home/codespace/.local/lib/python3.12/site-packages (from pandas) (2.2.4)
+Requirement already satisfied: python-dateutil&gt;=2.8.2 in /home/codespace/.local/lib/python3.12/site-packages (from pandas) (2.9.0.post0)
+Requirement already satisfied: pytz&gt;=2020.1 in /home/codespace/.local/lib/python3.12/site-packages (from pandas) (2025.1)
+Requirement already satisfied: tzdata&gt;=2022.7 in /home/codespace/.local/lib/python3.12/site-packages (from pandas) (2025.1)
+Requirement already satisfied: greenlet&gt;=1 in /usr/local/python/3.12.1/lib/python3.12/site-packages (from sqlalchemy) (3.2.2)
+Requirement already satisfied: typing-extensions&gt;=4.6.0 in /home/codespace/.local/lib/python3.12/site-packages (from sqlalchemy) (4.12.2)
+Requirement already satisfied: six&gt;=1.5 in /home/codespace/.local/lib/python3.12/site-packages (from python-dateutil&gt;=2.8.2-&gt;pandas) (1.17.0)
+Downloading PyMySQL-1.1.1-py3-none-any.whl (44 kB)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Building wheels for collected packages: psycopg2
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Building wheel for psycopg2 (setup.py) ... ?25l-
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> \
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> |
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> /
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> -
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> \
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> |
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> /
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> -
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> \
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> |
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> /
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> -
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> \
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> |
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> /
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> -
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> \
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> |
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> /
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> -
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> \
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> |
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> /
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> -
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> \
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> |
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> /
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> -
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> \
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> |
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> /
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> -
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> \
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> |
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> /
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> -
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> done
+?25h  Created wheel for psycopg2: filename=psycopg2-2.9.10-cp312-cp312-linux_x86_64.whl size=635609 sha256=93f0f01ef88a4a55476a43693f82a2bf737b3aef0381519e0b5a270f9dc316c5
+  Stored in directory: /home/codespace/.cache/pip/wheels/ac/bb/ce/afa589c50b6004d3a06fc691e71bd09c9bd5f01e5921e5329b
+Successfully built psycopg2
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Installing collected packages: pymysql, psycopg2
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Successfully installed psycopg2-2.9.10 pymysql-1.1.1
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">[</span><span class=" -Color -Color-Blue">notice</span><span class=" -Color -Color-Bold">]</span> A new release of pip is available: <span class=" -Color -Color-Red">25.0.1</span> -&gt; <span class=" -Color -Color-Green">25.1.1</span>
+<span class=" -Color -Color-Bold">[</span><span class=" -Color -Color-Blue">notice</span><span class=" -Color -Color-Bold">]</span> To update, run: <span class=" -Color -Color-Green">python3 -m pip install --upgrade pip</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="preview-data-dari-mysql">
+<h1>Preview data dari MySQL :<a class="headerlink" href="#preview-data-dari-mysql" title="Link to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Koneksi ke Aiven MySQL</span>
+<span class="n">mysql_engine</span> <span class="o">=</span> <span class="n">create_engine</span><span class="p">(</span><span class="s2">&quot;mysql+pymysql://avnadmin:AVNS_avYU0WPbd4YEsvg2t9b@iris-mysql-iris-sql.l.aivencloud.com:19560/defaultdb&quot;</span><span class="p">)</span>
+<span class="c1"># Koneksi ke Aiven PostgreSQL</span>
+<span class="n">postgres_engine</span> <span class="o">=</span> <span class="n">create_engine</span><span class="p">(</span><span class="s2">&quot;postgresql+psycopg2://avnadmin:AVNS_qWgY6go04QEsv9VSVjz@pg-fc79532-iris-postgre.g.aivencloud.com:18594/defaultdb&quot;</span><span class="p">)</span>
+
+<span class="c1"># Mengambil data sari MySQL</span>
+<span class="n">df_mysql</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_sql</span><span class="p">(</span><span class="s2">&quot;SELECT * FROM iris_sql&quot;</span><span class="p">,</span><span class="n">mysql_engine</span><span class="p">)</span>
+<span class="n">df_mysql</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ProgrammingError</span><span class="g g-Whitespace">                          </span>Traceback (most recent call last)
+<span class="nn">File /usr/local/python/3.12.1/lib/python3.12/site-packages/sqlalchemy/engine/base.py:1963,</span> in <span class="ni">Connection._exec_single_context</span><span class="nt">(self, dialect, context, statement, parameters)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1962</span>     <span class="k">if</span> <span class="ow">not</span> <span class="n">evt_handled</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">1963</span>         <span class="bp">self</span><span class="o">.</span><span class="n">dialect</span><span class="o">.</span><span class="n">do_execute</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1964</span>             <span class="n">cursor</span><span class="p">,</span> <span class="n">str_statement</span><span class="p">,</span> <span class="n">effective_parameters</span><span class="p">,</span> <span class="n">context</span>
+<span class="g g-Whitespace">   </span><span class="mi">1965</span>         <span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1967</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_has_events</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">engine</span><span class="o">.</span><span class="n">_has_events</span><span class="p">:</span>
+
+<span class="nn">File /usr/local/python/3.12.1/lib/python3.12/site-packages/sqlalchemy/engine/default.py:943,</span> in <span class="ni">DefaultDialect.do_execute</span><span class="nt">(self, cursor, statement, parameters, context)</span>
+<span class="g g-Whitespace">    </span><span class="mi">942</span> <span class="k">def</span><span class="w"> </span><span class="nf">do_execute</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cursor</span><span class="p">,</span> <span class="n">statement</span><span class="p">,</span> <span class="n">parameters</span><span class="p">,</span> <span class="n">context</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="ne">--&gt; </span><span class="mi">943</span>     <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">statement</span><span class="p">,</span> <span class="n">parameters</span><span class="p">)</span>
+
+<span class="nn">File /usr/local/python/3.12.1/lib/python3.12/site-packages/pymysql/cursors.py:153,</span> in <span class="ni">Cursor.execute</span><span class="nt">(self, query, args)</span>
+<span class="g g-Whitespace">    </span><span class="mi">151</span> <span class="n">query</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">mogrify</span><span class="p">(</span><span class="n">query</span><span class="p">,</span> <span class="n">args</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">153</span> <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_query</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">154</span> <span class="bp">self</span><span class="o">.</span><span class="n">_executed</span> <span class="o">=</span> <span class="n">query</span>
+
+<span class="nn">File /usr/local/python/3.12.1/lib/python3.12/site-packages/pymysql/cursors.py:322,</span> in <span class="ni">Cursor._query</span><span class="nt">(self, q)</span>
+<span class="g g-Whitespace">    </span><span class="mi">321</span> <span class="bp">self</span><span class="o">.</span><span class="n">_clear_result</span><span class="p">()</span>
+<span class="ne">--&gt; </span><span class="mi">322</span> <span class="n">conn</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">q</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">323</span> <span class="bp">self</span><span class="o">.</span><span class="n">_do_get_result</span><span class="p">()</span>
+
+<span class="nn">File /usr/local/python/3.12.1/lib/python3.12/site-packages/pymysql/connections.py:563,</span> in <span class="ni">Connection.query</span><span class="nt">(self, sql, unbuffered)</span>
+<span class="g g-Whitespace">    </span><span class="mi">562</span> <span class="bp">self</span><span class="o">.</span><span class="n">_execute_command</span><span class="p">(</span><span class="n">COMMAND</span><span class="o">.</span><span class="n">COM_QUERY</span><span class="p">,</span> <span class="n">sql</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">563</span> <span class="bp">self</span><span class="o">.</span><span class="n">_affected_rows</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_read_query_result</span><span class="p">(</span><span class="n">unbuffered</span><span class="o">=</span><span class="n">unbuffered</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">564</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_affected_rows</span>
+
+<span class="nn">File /usr/local/python/3.12.1/lib/python3.12/site-packages/pymysql/connections.py:825,</span> in <span class="ni">Connection._read_query_result</span><span class="nt">(self, unbuffered)</span>
+<span class="g g-Whitespace">    </span><span class="mi">824</span>     <span class="n">result</span> <span class="o">=</span> <span class="n">MySQLResult</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">825</span>     <span class="n">result</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">826</span> <span class="bp">self</span><span class="o">.</span><span class="n">_result</span> <span class="o">=</span> <span class="n">result</span>
+
+<span class="nn">File /usr/local/python/3.12.1/lib/python3.12/site-packages/pymysql/connections.py:1199,</span> in <span class="ni">MySQLResult.read</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1198</span> <span class="k">try</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">1199</span>     <span class="n">first_packet</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">connection</span><span class="o">.</span><span class="n">_read_packet</span><span class="p">()</span>
+<span class="g g-Whitespace">   </span><span class="mi">1201</span>     <span class="k">if</span> <span class="n">first_packet</span><span class="o">.</span><span class="n">is_ok_packet</span><span class="p">():</span>
+
+<span class="nn">File /usr/local/python/3.12.1/lib/python3.12/site-packages/pymysql/connections.py:775,</span> in <span class="ni">Connection._read_packet</span><span class="nt">(self, packet_type)</span>
+<span class="g g-Whitespace">    </span><span class="mi">774</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_result</span><span class="o">.</span><span class="n">unbuffered_active</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="ne">--&gt; </span><span class="mi">775</span>     <span class="n">packet</span><span class="o">.</span><span class="n">raise_for_error</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">776</span> <span class="k">return</span> <span class="n">packet</span>
+
+<span class="nn">File /usr/local/python/3.12.1/lib/python3.12/site-packages/pymysql/protocol.py:219,</span> in <span class="ni">MysqlPacket.raise_for_error</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">218</span>     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;errno =&quot;</span><span class="p">,</span> <span class="n">errno</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">219</span> <span class="n">err</span><span class="o">.</span><span class="n">raise_mysql_exception</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_data</span><span class="p">)</span>
+
+<span class="nn">File /usr/local/python/3.12.1/lib/python3.12/site-packages/pymysql/err.py:150,</span> in <span class="ni">raise_mysql_exception</span><span class="nt">(data)</span>
+<span class="g g-Whitespace">    </span><span class="mi">149</span>     <span class="n">errorclass</span> <span class="o">=</span> <span class="n">InternalError</span> <span class="k">if</span> <span class="n">errno</span> <span class="o">&lt;</span> <span class="mi">1000</span> <span class="k">else</span> <span class="n">OperationalError</span>
+<span class="ne">--&gt; </span><span class="mi">150</span> <span class="k">raise</span> <span class="n">errorclass</span><span class="p">(</span><span class="n">errno</span><span class="p">,</span> <span class="n">errval</span><span class="p">)</span>
+
+<span class="ne">ProgrammingError</span>: (1146, &quot;Table &#39;defaultdb.iris_sql&#39; doesn&#39;t exist&quot;)
+
+<span class="n">The</span> <span class="n">above</span> <span class="n">exception</span> <span class="n">was</span> <span class="n">the</span> <span class="n">direct</span> <span class="n">cause</span> <span class="n">of</span> <span class="n">the</span> <span class="n">following</span> <span class="n">exception</span><span class="p">:</span>
+
+<span class="ne">ProgrammingError</span><span class="g g-Whitespace">                          </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">line</span> <span class="mi">7</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">postgres_engine</span> <span class="o">=</span> <span class="n">create_engine</span><span class="p">(</span><span class="s2">&quot;postgresql+psycopg2://avnadmin:AVNS_qWgY6go04QEsv9VSVjz@pg-fc79532-iris-postgre.g.aivencloud.com:18594/defaultdb&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="c1"># Mengambil data sari MySQL</span>
+<span class="ne">----&gt; </span><span class="mi">7</span> <span class="n">df_mysql</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_sql</span><span class="p">(</span><span class="s2">&quot;SELECT * FROM iris_sql&quot;</span><span class="p">,</span><span class="n">mysql_engine</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="n">df_mysql</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+
+<span class="nn">File ~/.local/lib/python3.12/site-packages/pandas/io/sql.py:734,</span> in <span class="ni">read_sql</span><span class="nt">(sql, con, index_col, coerce_float, params, parse_dates, columns, chunksize, dtype_backend, dtype)</span>
+<span class="g g-Whitespace">    </span><span class="mi">724</span>     <span class="k">return</span> <span class="n">pandas_sql</span><span class="o">.</span><span class="n">read_table</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">725</span>         <span class="n">sql</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">726</span>         <span class="n">index_col</span><span class="o">=</span><span class="n">index_col</span><span class="p">,</span>
+   <span class="p">(</span><span class="o">...</span><span class="p">)</span>    <span class="mi">731</span>         <span class="n">dtype_backend</span><span class="o">=</span><span class="n">dtype_backend</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">732</span>     <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">733</span> <span class="k">else</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">734</span>     <span class="k">return</span> <span class="n">pandas_sql</span><span class="o">.</span><span class="n">read_query</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">735</span>         <span class="n">sql</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">736</span>         <span class="n">index_col</span><span class="o">=</span><span class="n">index_col</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">737</span>         <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">738</span>         <span class="n">coerce_float</span><span class="o">=</span><span class="n">coerce_float</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">739</span>         <span class="n">parse_dates</span><span class="o">=</span><span class="n">parse_dates</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">740</span>         <span class="n">chunksize</span><span class="o">=</span><span class="n">chunksize</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">741</span>         <span class="n">dtype_backend</span><span class="o">=</span><span class="n">dtype_backend</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">742</span>         <span class="n">dtype</span><span class="o">=</span><span class="n">dtype</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">743</span>     <span class="p">)</span>
+
+<span class="nn">File ~/.local/lib/python3.12/site-packages/pandas/io/sql.py:1836,</span> in <span class="ni">SQLDatabase.read_query</span><span class="nt">(self, sql, index_col, coerce_float, parse_dates, params, chunksize, dtype, dtype_backend)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1779</span> <span class="k">def</span><span class="w"> </span><span class="nf">read_query</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1780</span>     <span class="bp">self</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1781</span>     <span class="n">sql</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+   <span class="p">(</span><span class="o">...</span><span class="p">)</span>   <span class="mi">1788</span>     <span class="n">dtype_backend</span><span class="p">:</span> <span class="n">DtypeBackend</span> <span class="o">|</span> <span class="n">Literal</span><span class="p">[</span><span class="s2">&quot;numpy&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;numpy&quot;</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1789</span> <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">DataFrame</span> <span class="o">|</span> <span class="n">Iterator</span><span class="p">[</span><span class="n">DataFrame</span><span class="p">]:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1790</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="g g-Whitespace">   </span><span class="mi">1791</span><span class="sd">     Read SQL query into a DataFrame.</span>
+<span class="g g-Whitespace">   </span><span class="mi">1792</span><span class="sd"> </span>
+<span class="sd">   (...)   1834 </span>
+<span class="g g-Whitespace">   </span><span class="mi">1835</span><span class="sd">     &quot;&quot;&quot;</span>
+<span class="ne">-&gt; </span><span class="mi">1836</span>     <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">sql</span><span class="p">,</span> <span class="n">params</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1837</span>     <span class="n">columns</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+<span class="g g-Whitespace">   </span><span class="mi">1839</span>     <span class="k">if</span> <span class="n">chunksize</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+
+<span class="nn">File ~/.local/lib/python3.12/site-packages/pandas/io/sql.py:1659,</span> in <span class="ni">SQLDatabase.execute</span><span class="nt">(self, sql, params)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1657</span> <span class="n">args</span> <span class="o">=</span> <span class="p">[]</span> <span class="k">if</span> <span class="n">params</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> <span class="p">[</span><span class="n">params</span><span class="p">]</span>
+<span class="g g-Whitespace">   </span><span class="mi">1658</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">sql</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+<span class="ne">-&gt; </span><span class="mi">1659</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">con</span><span class="o">.</span><span class="n">exec_driver_sql</span><span class="p">(</span><span class="n">sql</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1660</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">con</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">sql</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">)</span>
+
+<span class="nn">File /usr/local/python/3.12.1/lib/python3.12/site-packages/sqlalchemy/engine/base.py:1775,</span> in <span class="ni">Connection.exec_driver_sql</span><span class="nt">(self, statement, parameters, execution_options)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1770</span> <span class="n">execution_options</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_execution_options</span><span class="o">.</span><span class="n">merge_with</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1771</span>     <span class="n">execution_options</span>
+<span class="g g-Whitespace">   </span><span class="mi">1772</span> <span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1774</span> <span class="n">dialect</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dialect</span>
+<span class="ne">-&gt; </span><span class="mi">1775</span> <span class="n">ret</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_execute_context</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1776</span>     <span class="n">dialect</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1777</span>     <span class="n">dialect</span><span class="o">.</span><span class="n">execution_ctx_cls</span><span class="o">.</span><span class="n">_init_statement</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1778</span>     <span class="n">statement</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1779</span>     <span class="kc">None</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1780</span>     <span class="n">execution_options</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1781</span>     <span class="n">statement</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1782</span>     <span class="n">distilled_parameters</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1783</span> <span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1785</span> <span class="k">return</span> <span class="n">ret</span>
+
+<span class="nn">File /usr/local/python/3.12.1/lib/python3.12/site-packages/sqlalchemy/engine/base.py:1842,</span> in <span class="ni">Connection._execute_context</span><span class="nt">(self, dialect, constructor, statement, parameters, execution_options, *args, **kw)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1840</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_exec_insertmany_context</span><span class="p">(</span><span class="n">dialect</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1841</span> <span class="k">else</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">1842</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_exec_single_context</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1843</span>         <span class="n">dialect</span><span class="p">,</span> <span class="n">context</span><span class="p">,</span> <span class="n">statement</span><span class="p">,</span> <span class="n">parameters</span>
+<span class="g g-Whitespace">   </span><span class="mi">1844</span>     <span class="p">)</span>
+
+<span class="nn">File /usr/local/python/3.12.1/lib/python3.12/site-packages/sqlalchemy/engine/base.py:1982,</span> in <span class="ni">Connection._exec_single_context</span><span class="nt">(self, dialect, context, statement, parameters)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1979</span>     <span class="n">result</span> <span class="o">=</span> <span class="n">context</span><span class="o">.</span><span class="n">_setup_result_proxy</span><span class="p">()</span>
+<span class="g g-Whitespace">   </span><span class="mi">1981</span> <span class="k">except</span> <span class="ne">BaseException</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">1982</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_handle_dbapi_exception</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1983</span>         <span class="n">e</span><span class="p">,</span> <span class="n">str_statement</span><span class="p">,</span> <span class="n">effective_parameters</span><span class="p">,</span> <span class="n">cursor</span><span class="p">,</span> <span class="n">context</span>
+<span class="g g-Whitespace">   </span><span class="mi">1984</span>     <span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1986</span> <span class="k">return</span> <span class="n">result</span>
+
+<span class="nn">File /usr/local/python/3.12.1/lib/python3.12/site-packages/sqlalchemy/engine/base.py:2351,</span> in <span class="ni">Connection._handle_dbapi_exception</span><span class="nt">(self, e, statement, parameters, cursor, context, is_sub_exec)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2349</span> <span class="k">elif</span> <span class="n">should_wrap</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">2350</span>     <span class="k">assert</span> <span class="n">sqlalchemy_exception</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+<span class="ne">-&gt; </span><span class="mi">2351</span>     <span class="k">raise</span> <span class="n">sqlalchemy_exception</span><span class="o">.</span><span class="n">with_traceback</span><span class="p">(</span><span class="n">exc_info</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span> <span class="kn">from</span><span class="w"> </span><span class="nn">e</span>
+<span class="g g-Whitespace">   </span><span class="mi">2352</span> <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">2353</span>     <span class="k">assert</span> <span class="n">exc_info</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+
+<span class="nn">File /usr/local/python/3.12.1/lib/python3.12/site-packages/sqlalchemy/engine/base.py:1963,</span> in <span class="ni">Connection._exec_single_context</span><span class="nt">(self, dialect, context, statement, parameters)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1961</span>                 <span class="k">break</span>
+<span class="g g-Whitespace">   </span><span class="mi">1962</span>     <span class="k">if</span> <span class="ow">not</span> <span class="n">evt_handled</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">1963</span>         <span class="bp">self</span><span class="o">.</span><span class="n">dialect</span><span class="o">.</span><span class="n">do_execute</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1964</span>             <span class="n">cursor</span><span class="p">,</span> <span class="n">str_statement</span><span class="p">,</span> <span class="n">effective_parameters</span><span class="p">,</span> <span class="n">context</span>
+<span class="g g-Whitespace">   </span><span class="mi">1965</span>         <span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1967</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_has_events</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">engine</span><span class="o">.</span><span class="n">_has_events</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1968</span>     <span class="bp">self</span><span class="o">.</span><span class="n">dispatch</span><span class="o">.</span><span class="n">after_cursor_execute</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1969</span>         <span class="bp">self</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1970</span>         <span class="n">cursor</span><span class="p">,</span>
+   <span class="p">(</span><span class="o">...</span><span class="p">)</span>   <span class="mi">1974</span>         <span class="n">context</span><span class="o">.</span><span class="n">executemany</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1975</span>     <span class="p">)</span>
+
+<span class="nn">File /usr/local/python/3.12.1/lib/python3.12/site-packages/sqlalchemy/engine/default.py:943,</span> in <span class="ni">DefaultDialect.do_execute</span><span class="nt">(self, cursor, statement, parameters, context)</span>
+<span class="g g-Whitespace">    </span><span class="mi">942</span> <span class="k">def</span><span class="w"> </span><span class="nf">do_execute</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cursor</span><span class="p">,</span> <span class="n">statement</span><span class="p">,</span> <span class="n">parameters</span><span class="p">,</span> <span class="n">context</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="ne">--&gt; </span><span class="mi">943</span>     <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">statement</span><span class="p">,</span> <span class="n">parameters</span><span class="p">)</span>
+
+<span class="nn">File /usr/local/python/3.12.1/lib/python3.12/site-packages/pymysql/cursors.py:153,</span> in <span class="ni">Cursor.execute</span><span class="nt">(self, query, args)</span>
+<span class="g g-Whitespace">    </span><span class="mi">149</span>     <span class="k">pass</span>
+<span class="g g-Whitespace">    </span><span class="mi">151</span> <span class="n">query</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">mogrify</span><span class="p">(</span><span class="n">query</span><span class="p">,</span> <span class="n">args</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">153</span> <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_query</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">154</span> <span class="bp">self</span><span class="o">.</span><span class="n">_executed</span> <span class="o">=</span> <span class="n">query</span>
+<span class="g g-Whitespace">    </span><span class="mi">155</span> <span class="k">return</span> <span class="n">result</span>
+
+<span class="nn">File /usr/local/python/3.12.1/lib/python3.12/site-packages/pymysql/cursors.py:322,</span> in <span class="ni">Cursor._query</span><span class="nt">(self, q)</span>
+<span class="g g-Whitespace">    </span><span class="mi">320</span> <span class="n">conn</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_db</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">321</span> <span class="bp">self</span><span class="o">.</span><span class="n">_clear_result</span><span class="p">()</span>
+<span class="ne">--&gt; </span><span class="mi">322</span> <span class="n">conn</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">q</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">323</span> <span class="bp">self</span><span class="o">.</span><span class="n">_do_get_result</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">324</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">rowcount</span>
+
+<span class="nn">File /usr/local/python/3.12.1/lib/python3.12/site-packages/pymysql/connections.py:563,</span> in <span class="ni">Connection.query</span><span class="nt">(self, sql, unbuffered)</span>
+<span class="g g-Whitespace">    </span><span class="mi">561</span>     <span class="n">sql</span> <span class="o">=</span> <span class="n">sql</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">encoding</span><span class="p">,</span> <span class="s2">&quot;surrogateescape&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">562</span> <span class="bp">self</span><span class="o">.</span><span class="n">_execute_command</span><span class="p">(</span><span class="n">COMMAND</span><span class="o">.</span><span class="n">COM_QUERY</span><span class="p">,</span> <span class="n">sql</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">563</span> <span class="bp">self</span><span class="o">.</span><span class="n">_affected_rows</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_read_query_result</span><span class="p">(</span><span class="n">unbuffered</span><span class="o">=</span><span class="n">unbuffered</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">564</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_affected_rows</span>
+
+<span class="nn">File /usr/local/python/3.12.1/lib/python3.12/site-packages/pymysql/connections.py:825,</span> in <span class="ni">Connection._read_query_result</span><span class="nt">(self, unbuffered)</span>
+<span class="g g-Whitespace">    </span><span class="mi">823</span> <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">824</span>     <span class="n">result</span> <span class="o">=</span> <span class="n">MySQLResult</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">825</span>     <span class="n">result</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">826</span> <span class="bp">self</span><span class="o">.</span><span class="n">_result</span> <span class="o">=</span> <span class="n">result</span>
+<span class="g g-Whitespace">    </span><span class="mi">827</span> <span class="k">if</span> <span class="n">result</span><span class="o">.</span><span class="n">server_status</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+
+<span class="nn">File /usr/local/python/3.12.1/lib/python3.12/site-packages/pymysql/connections.py:1199,</span> in <span class="ni">MySQLResult.read</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1197</span> <span class="k">def</span><span class="w"> </span><span class="nf">read</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="g g-Whitespace">   </span><span class="mi">1198</span>     <span class="k">try</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">1199</span>         <span class="n">first_packet</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">connection</span><span class="o">.</span><span class="n">_read_packet</span><span class="p">()</span>
+<span class="g g-Whitespace">   </span><span class="mi">1201</span>         <span class="k">if</span> <span class="n">first_packet</span><span class="o">.</span><span class="n">is_ok_packet</span><span class="p">():</span>
+<span class="g g-Whitespace">   </span><span class="mi">1202</span>             <span class="bp">self</span><span class="o">.</span><span class="n">_read_ok_packet</span><span class="p">(</span><span class="n">first_packet</span><span class="p">)</span>
+
+<span class="nn">File /usr/local/python/3.12.1/lib/python3.12/site-packages/pymysql/connections.py:775,</span> in <span class="ni">Connection._read_packet</span><span class="nt">(self, packet_type)</span>
+<span class="g g-Whitespace">    </span><span class="mi">773</span>     <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_result</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">_result</span><span class="o">.</span><span class="n">unbuffered_active</span> <span class="ow">is</span> <span class="kc">True</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">774</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_result</span><span class="o">.</span><span class="n">unbuffered_active</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="ne">--&gt; </span><span class="mi">775</span>     <span class="n">packet</span><span class="o">.</span><span class="n">raise_for_error</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">776</span> <span class="k">return</span> <span class="n">packet</span>
+
+<span class="nn">File /usr/local/python/3.12.1/lib/python3.12/site-packages/pymysql/protocol.py:219,</span> in <span class="ni">MysqlPacket.raise_for_error</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">217</span> <span class="k">if</span> <span class="n">DEBUG</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">218</span>     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;errno =&quot;</span><span class="p">,</span> <span class="n">errno</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">219</span> <span class="n">err</span><span class="o">.</span><span class="n">raise_mysql_exception</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_data</span><span class="p">)</span>
+
+<span class="nn">File /usr/local/python/3.12.1/lib/python3.12/site-packages/pymysql/err.py:150,</span> in <span class="ni">raise_mysql_exception</span><span class="nt">(data)</span>
+<span class="g g-Whitespace">    </span><span class="mi">148</span> <span class="k">if</span> <span class="n">errorclass</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">149</span>     <span class="n">errorclass</span> <span class="o">=</span> <span class="n">InternalError</span> <span class="k">if</span> <span class="n">errno</span> <span class="o">&lt;</span> <span class="mi">1000</span> <span class="k">else</span> <span class="n">OperationalError</span>
+<span class="ne">--&gt; </span><span class="mi">150</span> <span class="k">raise</span> <span class="n">errorclass</span><span class="p">(</span><span class="n">errno</span><span class="p">,</span> <span class="n">errval</span><span class="p">)</span>
+
+<span class="ne">ProgrammingError</span>: (pymysql.err.ProgrammingError) (1146, &quot;Table &#39;defaultdb.iris_sql&#39; doesn&#39;t exist&quot;)
+<span class="p">[</span><span class="n">SQL</span><span class="p">:</span> <span class="n">SELECT</span> <span class="o">*</span> <span class="n">FROM</span> <span class="n">iris_sql</span><span class="p">]</span>
+<span class="p">(</span><span class="n">Background</span> <span class="n">on</span> <span class="n">this</span> <span class="n">error</span> <span class="n">at</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">sqlalche</span><span class="o">.</span><span class="n">me</span><span class="o">/</span><span class="n">e</span><span class="o">/</span><span class="mi">20</span><span class="o">/</span><span class="n">f405</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="preview-data-dari-postgresql">
+<h1>Preview data dari PostgreSQL :<a class="headerlink" href="#preview-data-dari-postgresql" title="Link to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Mengambil data dari PostgreSQ</span>
+<span class="n">df_postgres</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_sql</span><span class="p">(</span><span class="s2">&quot;SELECT * FROM iris_postgres ip&quot;</span><span class="p">,</span><span class="n">postgres_engine</span><span class="p">)</span>
+
+<span class="n">df_postgres</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-6a3089eb-bb03-4b51-be6f-272f6dda124e" class="colab-df-container">
+    <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>id</th>
+      <th>Class</th>
+      <th>sepal length</th>
+      <th>sepal width</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>Iris-setosa</td>
+      <td>20.1</td>
+      <td>30.5</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>Iris-setosa</td>
+      <td>4.9</td>
+      <td>3.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>Iris-setosa</td>
+      <td>4.7</td>
+      <td>3.2</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>Iris-setosa</td>
+      <td>4.6</td>
+      <td>3.1</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>Iris-setosa</td>
+      <td>5.0</td>
+      <td>3.6</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+    <div class="colab-df-buttons">
+
+  <div class="colab-df-container">
+    <button class="colab-df-convert" onclick="convertToInteractive('df-6a3089eb-bb03-4b51-be6f-272f6dda124e')"
+            title="Convert this dataframe to an interactive table."
+            style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960">
+    <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"/>
+  </svg>
+    </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    .colab-df-buttons div {
+      margin-bottom: 4px;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+    <script>
+      const buttonEl =
+        document.querySelector('#df-6a3089eb-bb03-4b51-be6f-272f6dda124e button.colab-df-convert');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      async function convertToInteractive(key) {
+        const element = document.querySelector('#df-6a3089eb-bb03-4b51-be6f-272f6dda124e');
+        const dataTable =
+          await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                    [key], {});
+        if (!dataTable) return;
+
+        const docLinkHtml = 'Like what you see? Visit the ' +
+          '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+          + ' to learn more about interactive tables.';
+        element.innerHTML = '';
+        dataTable['output_type'] = 'display_data';
+        await google.colab.output.renderOutput(dataTable, element);
+        const docLink = document.createElement('div');
+        docLink.innerHTML = docLinkHtml;
+        element.appendChild(docLink);
+      }
+    </script>
+  </div>
+
+
+<div id="df-10c0713e-5f9b-4312-8333-e496be4fcb4c">
+  <button class="colab-df-quickchart" onclick="quickchart('df-10c0713e-5f9b-4312-8333-e496be4fcb4c')"
+            title="Suggest charts"
+            style="display:none;">
+
+<svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+     width="24px">
+    <g>
+        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
+    </g>
+</svg>
+  </button>
+
+<style>
+  .colab-df-quickchart {
+      --bg-color: #E8F0FE;
+      --fill-color: #1967D2;
+      --hover-bg-color: #E2EBFA;
+      --hover-fill-color: #174EA6;
+      --disabled-fill-color: #AAA;
+      --disabled-bg-color: #DDD;
+  }
+
+  [theme=dark] .colab-df-quickchart {
+      --bg-color: #3B4455;
+      --fill-color: #D2E3FC;
+      --hover-bg-color: #434B5C;
+      --hover-fill-color: #FFFFFF;
+      --disabled-bg-color: #3B4455;
+      --disabled-fill-color: #666;
+  }
+
+  .colab-df-quickchart {
+    background-color: var(--bg-color);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    fill: var(--fill-color);
+    height: 32px;
+    padding: 0;
+    width: 32px;
+  }
+
+  .colab-df-quickchart:hover {
+    background-color: var(--hover-bg-color);
+    box-shadow: 0 1px 2px rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+    fill: var(--button-hover-fill-color);
+  }
+
+  .colab-df-quickchart-complete:disabled,
+  .colab-df-quickchart-complete:disabled:hover {
+    background-color: var(--disabled-bg-color);
+    fill: var(--disabled-fill-color);
+    box-shadow: none;
+  }
+
+  .colab-df-spinner {
+    border: 2px solid var(--fill-color);
+    border-color: transparent;
+    border-bottom-color: var(--fill-color);
+    animation:
+      spin 1s steps(1) infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+      border-left-color: var(--fill-color);
+    }
+    20% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    30% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+      border-right-color: var(--fill-color);
+    }
+    40% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    60% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+    }
+    80% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-bottom-color: var(--fill-color);
+    }
+    90% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+    }
+  }
+</style>
+
+  <script>
+    async function quickchart(key) {
+      const quickchartButtonEl =
+        document.querySelector('#' + key + ' button');
+      quickchartButtonEl.disabled = true;  // To prevent multiple clicks.
+      quickchartButtonEl.classList.add('colab-df-spinner');
+      try {
+        const charts = await google.colab.kernel.invokeFunction(
+            'suggestCharts', [key], {});
+      } catch (error) {
+        console.error('Error during call to suggestCharts:', error);
+      }
+      quickchartButtonEl.classList.remove('colab-df-spinner');
+      quickchartButtonEl.classList.add('colab-df-quickchart-complete');
+    }
+    (() => {
+      let quickchartButtonEl =
+        document.querySelector('#df-10c0713e-5f9b-4312-8333-e496be4fcb4c button');
+      quickchartButtonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+    })();
+  </script>
+</div>
+
+    </div>
+  </div>
+</div></div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="proses-penggabungan-data">
+<h1>Proses penggabungan data :<a class="headerlink" href="#proses-penggabungan-data" title="Link to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Proses Menggabungkan data dari dua database</span>
+<span class="n">df_postgres</span> <span class="o">=</span> <span class="n">df_postgres</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;class&quot;</span><span class="p">],</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span> <span class="c1">#menghilangkan kolom &quot;class&quot; pada dataframe postgreSQL agar tidak terjadi duplikasi kolom</span>
+<span class="n">df_iris</span> <span class="o">=</span> <span class="n">df_mysql</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">df_postgres</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s2">&quot;id&quot;</span><span class="p">)</span>
+<span class="n">df_iris</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;iris_combined.csv&quot;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span> <span class="c1"># menyimpan hasil penggabungan ke file csv</span>
+<span class="n">df_iris</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-5564980f-bf9c-4227-b6d5-8367b524e4bd" class="colab-df-container">
+    <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>id</th>
+      <th>class</th>
+      <th>petal length</th>
+      <th>petal width</th>
+      <th>Class</th>
+      <th>sepal length</th>
+      <th>sepal width</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>Iris-setosa</td>
+      <td>86.4</td>
+      <td>70.0</td>
+      <td>Iris-setosa</td>
+      <td>20.1</td>
+      <td>30.5</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>Iris-setosa</td>
+      <td>1.4</td>
+      <td>0.2</td>
+      <td>Iris-setosa</td>
+      <td>4.9</td>
+      <td>3.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>Iris-setosa</td>
+      <td>1.3</td>
+      <td>0.2</td>
+      <td>Iris-setosa</td>
+      <td>4.7</td>
+      <td>3.2</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>Iris-setosa</td>
+      <td>1.5</td>
+      <td>0.2</td>
+      <td>Iris-setosa</td>
+      <td>4.6</td>
+      <td>3.1</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>Iris-setosa</td>
+      <td>1.4</td>
+      <td>0.2</td>
+      <td>Iris-setosa</td>
+      <td>5.0</td>
+      <td>3.6</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>145</th>
+      <td>146</td>
+      <td>Iris-virginica</td>
+      <td>5.2</td>
+      <td>2.3</td>
+      <td>Iris-virginica</td>
+      <td>6.7</td>
+      <td>3.0</td>
+    </tr>
+    <tr>
+      <th>146</th>
+      <td>147</td>
+      <td>Iris-virginica</td>
+      <td>5.0</td>
+      <td>1.9</td>
+      <td>Iris-virginica</td>
+      <td>6.3</td>
+      <td>2.5</td>
+    </tr>
+    <tr>
+      <th>147</th>
+      <td>148</td>
+      <td>Iris-virginica</td>
+      <td>5.2</td>
+      <td>2.0</td>
+      <td>Iris-virginica</td>
+      <td>6.5</td>
+      <td>3.0</td>
+    </tr>
+    <tr>
+      <th>148</th>
+      <td>149</td>
+      <td>Iris-virginica</td>
+      <td>5.4</td>
+      <td>2.3</td>
+      <td>Iris-virginica</td>
+      <td>6.2</td>
+      <td>3.4</td>
+    </tr>
+    <tr>
+      <th>149</th>
+      <td>150</td>
+      <td>Iris-virginica</td>
+      <td>5.1</td>
+      <td>1.8</td>
+      <td>Iris-virginica</td>
+      <td>5.9</td>
+      <td>3.0</td>
+    </tr>
+  </tbody>
+</table>
+<p>150 rows × 7 columns</p>
+</div>
+    <div class="colab-df-buttons">
+
+  <div class="colab-df-container">
+    <button class="colab-df-convert" onclick="convertToInteractive('df-5564980f-bf9c-4227-b6d5-8367b524e4bd')"
+            title="Convert this dataframe to an interactive table."
+            style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960">
+    <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"/>
+  </svg>
+    </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    .colab-df-buttons div {
+      margin-bottom: 4px;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+    <script>
+      const buttonEl =
+        document.querySelector('#df-5564980f-bf9c-4227-b6d5-8367b524e4bd button.colab-df-convert');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      async function convertToInteractive(key) {
+        const element = document.querySelector('#df-5564980f-bf9c-4227-b6d5-8367b524e4bd');
+        const dataTable =
+          await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                    [key], {});
+        if (!dataTable) return;
+
+        const docLinkHtml = 'Like what you see? Visit the ' +
+          '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+          + ' to learn more about interactive tables.';
+        element.innerHTML = '';
+        dataTable['output_type'] = 'display_data';
+        await google.colab.output.renderOutput(dataTable, element);
+        const docLink = document.createElement('div');
+        docLink.innerHTML = docLinkHtml;
+        element.appendChild(docLink);
+      }
+    </script>
+  </div>
+
+
+<div id="df-12ebc7b4-0752-4692-afc2-549e75d487f2">
+  <button class="colab-df-quickchart" onclick="quickchart('df-12ebc7b4-0752-4692-afc2-549e75d487f2')"
+            title="Suggest charts"
+            style="display:none;">
+
+<svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+     width="24px">
+    <g>
+        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
+    </g>
+</svg>
+  </button>
+
+<style>
+  .colab-df-quickchart {
+      --bg-color: #E8F0FE;
+      --fill-color: #1967D2;
+      --hover-bg-color: #E2EBFA;
+      --hover-fill-color: #174EA6;
+      --disabled-fill-color: #AAA;
+      --disabled-bg-color: #DDD;
+  }
+
+  [theme=dark] .colab-df-quickchart {
+      --bg-color: #3B4455;
+      --fill-color: #D2E3FC;
+      --hover-bg-color: #434B5C;
+      --hover-fill-color: #FFFFFF;
+      --disabled-bg-color: #3B4455;
+      --disabled-fill-color: #666;
+  }
+
+  .colab-df-quickchart {
+    background-color: var(--bg-color);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    fill: var(--fill-color);
+    height: 32px;
+    padding: 0;
+    width: 32px;
+  }
+
+  .colab-df-quickchart:hover {
+    background-color: var(--hover-bg-color);
+    box-shadow: 0 1px 2px rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+    fill: var(--button-hover-fill-color);
+  }
+
+  .colab-df-quickchart-complete:disabled,
+  .colab-df-quickchart-complete:disabled:hover {
+    background-color: var(--disabled-bg-color);
+    fill: var(--disabled-fill-color);
+    box-shadow: none;
+  }
+
+  .colab-df-spinner {
+    border: 2px solid var(--fill-color);
+    border-color: transparent;
+    border-bottom-color: var(--fill-color);
+    animation:
+      spin 1s steps(1) infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+      border-left-color: var(--fill-color);
+    }
+    20% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    30% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+      border-right-color: var(--fill-color);
+    }
+    40% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    60% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+    }
+    80% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-bottom-color: var(--fill-color);
+    }
+    90% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+    }
+  }
+</style>
+
+  <script>
+    async function quickchart(key) {
+      const quickchartButtonEl =
+        document.querySelector('#' + key + ' button');
+      quickchartButtonEl.disabled = true;  // To prevent multiple clicks.
+      quickchartButtonEl.classList.add('colab-df-spinner');
+      try {
+        const charts = await google.colab.kernel.invokeFunction(
+            'suggestCharts', [key], {});
+      } catch (error) {
+        console.error('Error during call to suggestCharts:', error);
+      }
+      quickchartButtonEl.classList.remove('colab-df-spinner');
+      quickchartButtonEl.classList.add('colab-df-quickchart-complete');
+    }
+    (() => {
+      let quickchartButtonEl =
+        document.querySelector('#df-12ebc7b4-0752-4692-afc2-549e75d487f2 button');
+      quickchartButtonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+    })();
+  </script>
+</div>
+
+  <div id="id_d1c21d9c-4ca2-442a-ada8-cb17478969ed">
+    <style>
+      .colab-df-generate {
+        background-color: #E8F0FE;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        display: none;
+        fill: #1967D2;
+        height: 32px;
+        padding: 0 0 0 0;
+        width: 32px;
+      }
+
+      .colab-df-generate:hover {
+        background-color: #E2EBFA;
+        box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+        fill: #174EA6;
+      }
+
+      [theme=dark] .colab-df-generate {
+        background-color: #3B4455;
+        fill: #D2E3FC;
+      }
+
+      [theme=dark] .colab-df-generate:hover {
+        background-color: #434B5C;
+        box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+        filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+        fill: #FFFFFF;
+      }
+    </style>
+    <button class="colab-df-generate" onclick="generateWithVariable('df_iris')"
+            title="Generate code using this dataframe."
+            style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M7,19H8.4L18.45,9,17,7.55,7,17.6ZM5,21V16.75L18.45,3.32a2,2,0,0,1,2.83,0l1.4,1.43a1.91,1.91,0,0,1,.58,1.4,1.91,1.91,0,0,1-.58,1.4L9.25,21ZM18.45,9,17,7.55Zm-12,3A5.31,5.31,0,0,0,4.9,8.1,5.31,5.31,0,0,0,1,6.5,5.31,5.31,0,0,0,4.9,4.9,5.31,5.31,0,0,0,6.5,1,5.31,5.31,0,0,0,8.1,4.9,5.31,5.31,0,0,0,12,6.5,5.46,5.46,0,0,0,6.5,12Z"/>
+  </svg>
+    </button>
+    <script>
+      (() => {
+      const buttonEl =
+        document.querySelector('#id_d1c21d9c-4ca2-442a-ada8-cb17478969ed button.colab-df-generate');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      buttonEl.onclick = () => {
+        google.colab.notebook.generateWithVariable('df_iris');
+      }
+      })();
+    </script>
+  </div>
+
+    </div>
+  </div>
+</div></div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="statistik-deskriptif">
+<h1>Statistik Deskriptif<a class="headerlink" href="#statistik-deskriptif" title="Link to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Hitung statistik deskriptif</span>
+<span class="n">fitur</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;sepal length&quot;</span><span class="p">,</span> <span class="s2">&quot;sepal width&quot;</span><span class="p">,</span> <span class="s2">&quot;petal length&quot;</span><span class="p">,</span> <span class="s2">&quot;petal width&quot;</span><span class="p">]</span>
+<span class="n">stats</span> <span class="o">=</span> <span class="n">df_iris</span><span class="p">[</span><span class="n">fitur</span><span class="p">]</span><span class="o">.</span><span class="n">agg</span><span class="p">([</span><span class="s1">&#39;mean&#39;</span><span class="p">,</span> <span class="s1">&#39;median&#39;</span><span class="p">,</span> <span class="s1">&#39;min&#39;</span><span class="p">,</span> <span class="s1">&#39;max&#39;</span><span class="p">])</span>
+
+<span class="c1"># Hitung modus secara terpisah karena bisa ada lebih dari satu nilai yang dominan</span>
+<span class="n">mode_values</span> <span class="o">=</span> <span class="n">df_iris</span><span class="p">[</span><span class="n">fitur</span><span class="p">]</span><span class="o">.</span><span class="n">mode</span><span class="p">()</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="c1"># Gabungkan hasilnya</span>
+<span class="n">stats</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;mode&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">mode_values</span>
+
+<span class="c1"># Cetak hasil</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">stats</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>        sepal length  sepal width  petal length  petal width
+mean        5.943333        3.234      4.325333        1.664
+median      5.800000        3.000      4.400000        1.300
+min         4.300000        2.000      1.000000        0.100
+max        20.100000       30.500     86.400000       70.000
+mode        5.000000        3.000      1.500000        0.200
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="visualiasai-distribusi-data-yang-digabungkan">
+<h1>Visualiasai distribusi data yang digabungkan :<a class="headerlink" href="#visualiasai-distribusi-data-yang-digabungkan" title="Link to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+
+<span class="c1"># Buat histogram untuk setiap fitur</span>
+<span class="n">fitur</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;sepal length&quot;</span><span class="p">,</span> <span class="s2">&quot;sepal width&quot;</span><span class="p">,</span> <span class="s2">&quot;petal length&quot;</span><span class="p">,</span> <span class="s2">&quot;petal width&quot;</span><span class="p">]</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>  <span class="c1"># 2x2 layout</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="s2">&quot;Distribusi Data Iris&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>  <span class="c1"># Judul utama</span>
+
+<span class="c1"># Loop untuk membuat histogram pada setiap subplot</span>
+<span class="k">for</span> <span class="n">ax</span><span class="p">,</span> <span class="n">col</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">axes</span><span class="o">.</span><span class="n">flat</span><span class="p">,</span> <span class="n">fitur</span><span class="p">):</span>
+    <span class="n">df_iris</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">bins</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;skyblue&#39;</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Distribusi </span><span class="si">{</span><span class="n">col</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>  <span class="c1"># Judul tiap subplot</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="n">col</span><span class="p">)</span>  <span class="c1"># Label X sesuai fitur</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Frekuensi&quot;</span><span class="p">)</span>  <span class="c1"># Label Y</span>
+
+<span class="c1"># Tampilkan plot</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">(</span><span class="n">rect</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">0.96</span><span class="p">])</span>  <span class="c1"># Atur layout agar tidak bertumpuk dengan judul</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/78e5ef2701fb4cf7ec9d8c7c03528b4d5ec13eb728081edab21e46f985b3d03b.png" src="_images/78e5ef2701fb4cf7ec9d8c7c03528b4d5ec13eb728081edab21e46f985b3d03b.png" />
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="identifikasi-masalah-data">
+<h1>Identifikasi Masalah Data<a class="headerlink" href="#identifikasi-masalah-data" title="Link to this heading">#</a></h1>
+<p>Missing Values: Menemukan data yang hilang atau tidak lengkap.</p>
+<p>Outliers: Mendeteksi nilai-nilai ekstrem yang mungkin merupakan kesalahan atau anomali.</p>
+<p>Duplikasi Data: Mengidentifikasi baris atau entri yang duplikat.</p>
+<p>Inkonsistensi: Memeriksa apakah ada ketidaksesuaian dalam format atau nilai data.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="outliers">
+<h1>Outliers<a class="headerlink" href="#outliers" title="Link to this heading">#</a></h1>
+<p>Outlier adalah titik data yang secara signifikan berbeda dari sebagian besar data dalam suatu dataset. Outlier dapat terjadi karena beberapa alasan:</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="penyebab-outlier">
+<h1>Penyebab Outlier<a class="headerlink" href="#penyebab-outlier" title="Link to this heading">#</a></h1>
+<p>Kesalahan Pengukuran: Kesalahan saat mengumpulkan data, misalnya, kesalahan sensor atau human error.</p>
+<p>Variasi Alami: Kejadian langka atau anomali yang memang terjadi dalam data.</p>
+<p>Kesalahan Input Data: Kesalahan saat memasukkan data, seperti typo atau kesalahan entri.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="dampak-outlier">
+<h1>Dampak Outlier<a class="headerlink" href="#dampak-outlier" title="Link to this heading">#</a></h1>
+<p>Mengubah Nilai Statistik: Mean dan standar deviasi dapat terpengaruh oleh outlier.</p>
+<p>Mengurangi Akurasi Model: Outlier dapat menyebabkan model machine learning menjadi kurang akurat.</p>
+<p>Mengaburkan Pola Data: Outlier dapat menyembunyikan pola atau tren yang sebenarnya dalam data.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="pentingnya-deteksi-outlier">
+<h1>Pentingnya Deteksi Outlier<a class="headerlink" href="#pentingnya-deteksi-outlier" title="Link to this heading">#</a></h1>
+<p>Deteksi outlier penting untuk:</p>
+<p>Membersihkan Data: Menghapus atau memperbaiki data yang tidak valid.</p>
+<p>Mengidentifikasi Anomali: Mendeteksi kejadian langka atau mencurigakan, seperti fraud detection.</p>
+<p>Memahami Variasi Data: Mempelajari variasi atau penyimpangan dalam data.</p>
+<p>#K-Nearest Neighbors (KNN)
+KNN adalah algoritma machine learning yang digunakan untuk klasifikasi dan regresi. Berikut adalah penjelasan rinci tentang KNN:</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="prinsip-kerja-knn">
+<h1>Prinsip Kerja KNN<a class="headerlink" href="#prinsip-kerja-knn" title="Link to this heading">#</a></h1>
+<p>Menghitung Jarak: Untuk setiap titik data, KNN menghitung jarak ke ( k ) tetangga terdekatnya. Jarak yang umum digunakan adalah Euclidean Distance.</p>
+<p>Klasifikasi: Untuk klasifikasi, KNN memilih kelas yang paling dominan di antara ( k ) tetangga terdekat.</p>
+<p>Regresi: Untuk regresi, KNN mengambil rata-rata atau median dari nilai ( k ) tetangga terdekat.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="deteksi-outlier">
+<h1>Deteksi Outlier:<a class="headerlink" href="#deteksi-outlier" title="Link to this heading">#</a></h1>
+<p>KNN dapat digunakan untuk mendeteksi outlier dengan mengukur jarak suatu titik data terhadap tetangga terdekatnya. Jika jaraknya terlalu jauh, titik data tersebut dianggap sebagai outlier.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="keunggulan-knn">
+<h1>Keunggulan KNN<a class="headerlink" href="#keunggulan-knn" title="Link to this heading">#</a></h1>
+<p>Mudah Dipahami: Algoritma KNN sederhana dan intuitif.</p>
+<p>Tidak Memerlukan Pelatihan: KNN termasuk dalam kategori lazy learning, sehingga tidak memerlukan proses pelatihan model.</p>
+<p>Fleksibel: Dapat digunakan untuk klasifikasi, regresi, dan deteksi outlier.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="kekurangan-knn">
+<h1>Kekurangan KNN<a class="headerlink" href="#kekurangan-knn" title="Link to this heading">#</a></h1>
+<p>Komputasi Mahal: Menghitung jarak untuk dataset besar membutuhkan waktu dan sumber daya yang besar.</p>
+<p>Sensitif terhadap Skala Data: KNN sangat dipengaruhi oleh skala data, sehingga data perlu dinormalisasi atau distandarisasi.</p>
+<p>Pemilihan ( k ): Pemilihan nilai ( k ) yang tepat sangat penting untuk kinerja model.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="knn-untuk-deteksi-outlier">
+<h1>KNN untuk Deteksi Outlier<a class="headerlink" href="#knn-untuk-deteksi-outlier" title="Link to this heading">#</a></h1>
+<p>Dalam konteks deteksi outlier, KNN bekerja dengan:</p>
+<p>Menghitung jarak Euclidean antara setiap titik data dan ( k ) tetangga terdekatnya.</p>
+<p>Menghitung rata-rata jarak ke ( k ) tetangga terdekat.</p>
+<p>Menentukan threshold untuk mengidentifikasi outlier (misalnya, menggunakan persentil ke-99).</p>
+<p>Proses Deteksi Outlier menggunakan KNN
+Pada contoh ini, kita akan menggunakan KNN untuk mendeteksi outlier pada dataset iris yang sudah digabung. Berikut adalah langkah-langkahnya:</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="persiapan-data">
+<h1>Persiapan Data<a class="headerlink" href="#persiapan-data" title="Link to this heading">#</a></h1>
+<p>Dataset dibaca dari hasil penggabungan yang disimpan pada df_iris.</p>
+<p>Fitur yang digunakan adalah sepal length, sepal width, petal length, dan petal width.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="inisialisasi-model-knn">
+<h1>Inisialisasi Model KNN<a class="headerlink" href="#inisialisasi-model-knn" title="Link to this heading">#</a></h1>
+<p>Model KNN diinisialisasi dengan ( k = 5 ) dan metrik jarak Euclidean.</p>
+<p>Menghitung Jarak
+Jarak ke ( k ) tetangga terdekat dihitung untuk setiap titik data.</p>
+<p>Rata-rata jarak ke ( k ) tetangga terdekat dihitung.</p>
+<p>M#enentukan Outlier
+Outlier ditentukan berdasarkan threshold (persentil ke-99 dari rata-rata jarak).</p>
+<p>Titik data dengan rata-rata jarak lebih besar dari threshold dianggap sebagai outlier.</p>
+<p>#Implementasi KNN untuk deteksi Outlier</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.neighbors</span><span class="w"> </span><span class="kn">import</span> <span class="n">NearestNeighbors</span>
+
+<span class="c1"># Load dataset iris yang sudah diubah</span>
+<span class="n">df_iris</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;iris_combined.csv&quot;</span><span class="p">)</span>
+
+<span class="c1"># Menampilkan 5 baris pertama</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df_iris</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   id        class  petal length  petal width        Class  sepal length  \
+0   1  Iris-setosa          86.4         70.0  Iris-setosa          20.1   
+1   2  Iris-setosa           1.4          0.2  Iris-setosa           4.9   
+2   3  Iris-setosa           1.3          0.2  Iris-setosa           4.7   
+3   4  Iris-setosa           1.5          0.2  Iris-setosa           4.6   
+4   5  Iris-setosa           1.4          0.2  Iris-setosa           5.0   
+
+   sepal width  
+0         30.5  
+1          3.0  
+2          3.2  
+3          3.1  
+4          3.6  
+</pre></div>
+</div>
+</div>
+</div>
+<p>#Deteksi Outlier</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Pilih fitur numerik yang akan digunakan untuk deteksi outlier</span>
+<span class="n">features</span> <span class="o">=</span> <span class="n">df_iris</span><span class="o">.</span><span class="n">select_dtypes</span><span class="p">(</span><span class="n">include</span><span class="o">=</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">number</span><span class="p">])</span>  <span class="c1"># Hanya ambil kolom numerik</span>
+
+<span class="c1"># Gunakan KNN untuk mencari k tetangga terdekat</span>
+<span class="n">k</span> <span class="o">=</span> <span class="mi">5</span>  <span class="c1"># Jumlah tetangga terdekat</span>
+<span class="n">nbrs</span> <span class="o">=</span> <span class="n">NearestNeighbors</span><span class="p">(</span><span class="n">n_neighbors</span><span class="o">=</span><span class="n">k</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">features</span><span class="p">)</span>
+<span class="n">distances</span><span class="p">,</span> <span class="n">indices</span> <span class="o">=</span> <span class="n">nbrs</span><span class="o">.</span><span class="n">kneighbors</span><span class="p">(</span><span class="n">features</span><span class="p">)</span>
+
+<span class="c1"># Hitung rata-rata jarak ke k tetangga terdekat</span>
+<span class="n">avg_distances</span> <span class="o">=</span> <span class="n">distances</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># Tentukan threshold outlier berdasarkan persentil</span>
+<span class="n">threshold</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">avg_distances</span><span class="p">,</span> <span class="mi">95</span><span class="p">)</span>  <span class="c1"># Ambil 5% data dengan jarak tertinggi</span>
+
+<span class="c1"># Tandai outlier (True jika outlier, False jika bukan)</span>
+<span class="n">df_iris</span><span class="p">[</span><span class="s2">&quot;outlier&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">avg_distances</span> <span class="o">&gt;</span> <span class="n">threshold</span>
+
+<span class="c1"># Menampilkan hasil</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df_iris</span><span class="p">[[</span><span class="s2">&quot;id&quot;</span><span class="p">,</span> <span class="s2">&quot;outlier&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   id  outlier
+0   1     True
+1   2     True
+2   3    False
+3   4    False
+4   5    False
+5   6    False
+6   7    False
+7   8    False
+8   9    False
+9  10    False
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="visualisasi-outlier">
+<h1>Visualisasi Outlier<a class="headerlink" href="#visualisasi-outlier" title="Link to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.neighbors</span><span class="w"> </span><span class="kn">import</span> <span class="n">NearestNeighbors</span>
+
+<span class="c1"># Pilih fitur yang akan digunakan untuk deteksi outlier</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">df_iris</span><span class="p">[</span><span class="n">fitur</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+
+<span class="c1"># Inisialisasi model KNN</span>
+<span class="n">k</span> <span class="o">=</span> <span class="mi">5</span>  <span class="c1"># Jumlah tetangga terdekat</span>
+<span class="n">knn</span> <span class="o">=</span> <span class="n">NearestNeighbors</span><span class="p">(</span><span class="n">n_neighbors</span><span class="o">=</span><span class="n">k</span><span class="p">,</span> <span class="n">metric</span><span class="o">=</span><span class="s1">&#39;euclidean&#39;</span><span class="p">)</span>
+<span class="n">knn</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+
+<span class="c1"># Hitung jarak ke k tetangga terdekat</span>
+<span class="n">distances</span><span class="p">,</span> <span class="n">indices</span> <span class="o">=</span> <span class="n">knn</span><span class="o">.</span><span class="n">kneighbors</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+
+<span class="c1"># Hitung rata-rata jarak ke k tetangga terdekat</span>
+<span class="n">mean_distances</span> <span class="o">=</span> <span class="n">distances</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># Tentukan threshold untuk outlier</span>
+<span class="n">threshold</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">mean_distances</span><span class="p">,</span> <span class="mi">99</span><span class="p">)</span><span class="c1"># Ambil 1% data dengan jarak terbesar sebagai outlier</span>
+
+<span class="c1"># Tandai outlier</span>
+<span class="n">df_iris</span><span class="p">[</span><span class="s1">&#39;outlier&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">mean_distances</span> <span class="o">&gt;</span> <span class="n">threshold</span>
+
+<span class="c1"># Menampilkan data yang dianggap outlier</span>
+<span class="n">outliers_data</span> <span class="o">=</span> <span class="n">df_iris</span><span class="p">[</span><span class="n">df_iris</span><span class="p">[</span><span class="s1">&#39;outlier&#39;</span><span class="p">]]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Outliers detected:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">outliers_data</span><span class="p">)</span>
+
+<span class="c1"># Visualisasi untuk pasangan kolom petal length vs petal width</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+
+<span class="c1"># Diagram 1: Petal Length vs Petal Width</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>  <span class="c1"># 1 baris, 2 kolom, diagram pertama</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">df_iris</span><span class="p">[</span><span class="s1">&#39;petal length&#39;</span><span class="p">],</span> <span class="n">df_iris</span><span class="p">[</span><span class="s1">&#39;petal width&#39;</span><span class="p">],</span><span class="n">c</span><span class="o">=</span><span class="n">df_iris</span><span class="p">[</span><span class="s1">&#39;outlier&#39;</span><span class="p">],</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;viridis&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Data&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">outliers_data</span><span class="p">[</span><span class="s1">&#39;petal length&#39;</span><span class="p">],</span><span class="n">outliers_data</span><span class="p">[</span><span class="s1">&#39;petal width&#39;</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Outliers&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Petal Length&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Petal Width&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Petal Length vs Petal Width&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+
+<span class="c1"># Diagram 2: Sepal Length vs Sepal Width</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>  <span class="c1"># 1 baris, 2 kolom, diagram kedua</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">df_iris</span><span class="p">[</span><span class="s1">&#39;sepal length&#39;</span><span class="p">],</span> <span class="n">df_iris</span><span class="p">[</span><span class="s1">&#39;sepal width&#39;</span><span class="p">],</span><span class="n">c</span><span class="o">=</span><span class="n">df_iris</span><span class="p">[</span><span class="s1">&#39;outlier&#39;</span><span class="p">],</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;viridis&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Data&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">outliers_data</span><span class="p">[</span><span class="s1">&#39;sepal length&#39;</span><span class="p">],</span><span class="n">outliers_data</span><span class="p">[</span><span class="s1">&#39;sepal width&#39;</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Outliers&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Sepal Length&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Sepal Width&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Sepal Length vs Sepal Width&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>  <span class="c1"># Agar layout tidak tumpang tindih</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Outliers detected:
+      id           class  petal length  petal width           Class  \
+0      1     Iris-setosa          86.4         70.0     Iris-setosa   
+106  107  Iris-virginica           4.5          1.7  Iris-virginica   
+
+     sepal length  sepal width  outlier  
+0            20.1         30.5     True  
+106           4.9          2.5     True  
+</pre></div>
+</div>
+<img alt="_images/5f8fa026ca7169e111140ac8a5bbe77dec22844b9d8af24cf0e1718bbbd37faf.png" src="_images/5f8fa026ca7169e111140ac8a5bbe77dec22844b9d8af24cf0e1718bbbd37faf.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+
+<span class="c1"># Buat dataset dummy dengan 100 sampel dan 2 fitur</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.neighbors</span><span class="w"> </span><span class="kn">import</span> <span class="n">LocalOutlierFactor</span>
+
+<span class="n">clf</span> <span class="o">=</span> <span class="n">LocalOutlierFactor</span><span class="p">(</span><span class="n">n_neighbors</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">contamination</span><span class="o">=</span><span class="mf">0.1</span><span class="p">)</span>
+<span class="n">y_pred</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">fit_predict</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+<span class="n">X_scores</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">negative_outlier_factor_</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Prediksi LOF:&quot;</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Prediksi LOF: [ 1  1  1  1 -1  1  1  1  1  1  1  1  1 -1  1  1  1  1  1  1  1  1  1  1
+  1  1  1  1  1  1  1  1 -1  1 -1  1  1  1  1  1  1  1  1  1  1  1  1  1
+  1  1  1  1  1  1 -1 -1  1  1  1  1 -1  1  1  1  1 -1  1  1  1  1  1  1
+  1  1 -1  1  1  1  1  1  1  1  1  1  1  1  1  1 -1  1  1  1  1  1  1  1
+  1  1  1  1]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="About_Me.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">About Me</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="LOF_web_statis%20%282%29.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Local Outlier Factor (LOF)</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Pengertian Data Understanding</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#koneksi-dan-proses-pengambilan-data">Koneksi dan proses pengambilan data :</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#preview-data-dari-mysql">Preview data dari MySQL :</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#preview-data-dari-postgresql">Preview data dari PostgreSQL :</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#proses-penggabungan-data">Proses penggabungan data :</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#statistik-deskriptif">Statistik Deskriptif</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#visualiasai-distribusi-data-yang-digabungkan">Visualiasai distribusi data yang digabungkan :</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#identifikasi-masalah-data">Identifikasi Masalah Data</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#outliers">Outliers</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#penyebab-outlier">Penyebab Outlier</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#dampak-outlier">Dampak Outlier</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#pentingnya-deteksi-outlier">Pentingnya Deteksi Outlier</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#prinsip-kerja-knn">Prinsip Kerja KNN</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#deteksi-outlier">Deteksi Outlier:</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#keunggulan-knn">Keunggulan KNN</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#kekurangan-knn">Kekurangan KNN</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#knn-untuk-deteksi-outlier">KNN untuk Deteksi Outlier</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#persiapan-data">Persiapan Data</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#inisialisasi-model-knn">Inisialisasi Model KNN</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#visualisasi-outlier">Visualisasi Outlier</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
