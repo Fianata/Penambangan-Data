@@ -1,0 +1,1433 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Pendahuluan &#8212; My sample book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Tugas_Pra_Uas';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/Data-mining.jpeg" class="logo__image only-light" alt="My sample book - Home"/>
+    <script>document.write(`<img src="_static/Data-mining.jpeg" class="logo__image only-dark" alt="My sample book - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Intro
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="About_Me.html">About Me</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Data_Understanding%20%282%29.html">Pengertian Data Understanding</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="LOF_web_statis%20%282%29.html">Local Outlier Factor (LOF)</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="Naive_Bayes.html">Naive Bayes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="UTS_Pendat.html"><strong>Proyek UTS Penambangan Data: Klasifikasi Pasien Sirosis Hati</strong></a></li>
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="K_means%20%282%29.html"><strong>K-means Clustering</strong></a></li>
+
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="Decision_Tree.html"><strong>Decision Tree</strong></a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="Diskrisasi_K_Means.html"><strong>Dikritisasi Data</strong></a></li>
+
+
+
+
+
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FTugas_Pra_Uas.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/Tugas_Pra_Uas.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Pendahuluan</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><strong>Pendahuluan</strong></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sumber-data"><strong>Sumber Data</strong></a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#data-understanding"><strong>Data Understanding</strong></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penjelasan-setiap-fitur-variabel-dataset"><strong>Penjelasan Setiap Fitur (Variabel) Dataset</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#integrasi-data"><strong>Integrasi Data</strong></a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#eksplorasi-data"><strong>Eksplorasi Data</strong></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-1-import-library-dan-memuat-data"><strong>Langkah 1: Import Library dan Memuat Data</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-3-pengecekan-missing-values"><strong>Langkah 3: Pengecekan Missing Values</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-4-analisis-distribusi-nilai-value-counts"><strong>Langkah 4: Analisis Distribusi Nilai (Value Counts)</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-5-visualisasi-distribusi-fitur"><strong>Langkah 5: Visualisasi Distribusi Fitur</strong></a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#visualisasi-data"><strong>Visualisasi Data</strong></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penjelasan"><strong>Penjelasan</strong></a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#preprocessing-encoding"><strong>Preprocessing (Encoding)</strong></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#implementasi"><strong>Implementasi</strong></a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#klasifikasi"><strong>Klasifikasi</strong></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hasil-kinerja-model"><strong>Hasil Kinerja Model</strong></a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#evaluasi-model"><strong>Evaluasi model</strong></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kelebihan-utama"><strong>Kelebihan Utama:</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kelemahan-utama"><strong>Kelemahan Utama:</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rekomendasi-penggunaan"><strong>Rekomendasi Penggunaan</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kesimpulan-akhir"><strong>Kesimpulan Akhir:</strong></a></li>
+</ul>
+</li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="pendahuluan">
+<h1><strong>Pendahuluan</strong><a class="headerlink" href="#pendahuluan" title="Link to this heading">#</a></h1>
+<p>Dataset yang digunakan dalam analisis ini adalah “Car Evaluation” yang bersumber dari UCI Machine Learning Repository. Dataset ini berasal dari model evaluasi mobil sederhana yang kemudian diubah menjadi dataset untuk keperluan klasifikasi. Dataset ini sangat populer untuk tujuan edukasi dan pembandingan performa model karena strukturnya yang jelas dan datanya yang bersih.</p>
+<p>Dataset ini memiliki 1728 data (instance) dan 7 atribut yang semuanya bersifat kategorikal, di mana 6 atribut berfungsi sebagai fitur dan 1 atribut sebagai kelas target.</p>
+<section id="sumber-data">
+<h2><strong>Sumber Data</strong><a class="headerlink" href="#sumber-data" title="Link to this heading">#</a></h2>
+<p>Data saya ambil dari
+<a class="reference external" href="https://archive.ics.uci.edu/dataset/19/car+evaluation">https://archive.ics.uci.edu/dataset/19/car+evaluation</a></p>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="data-understanding">
+<h1><strong>Data Understanding</strong><a class="headerlink" href="#data-understanding" title="Link to this heading">#</a></h1>
+<p>##<strong>Tujuan</strong>
+Tujuan utamanya adalah untuk memprediksi tingkat kelayakan sebuah mobil berdasarkan atribut-atributnya.</p>
+<section id="penjelasan-setiap-fitur-variabel-dataset">
+<h2><strong>Penjelasan Setiap Fitur (Variabel) Dataset</strong><a class="headerlink" href="#penjelasan-setiap-fitur-variabel-dataset" title="Link to this heading">#</a></h2>
+<p>Berikut adalah penjelasan detail untuk setiap kolom dalam dataset <strong>Car Evaluation</strong> yang sudah kita proses:</p>
+<ul class="simple">
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">buying</span></code> (Harga Beli)</strong>: Atribut kategorikal yang menunjukkan harga pembelian mobil.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">vhigh</span></code> (very high / sangat tinggi)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">high</span></code> (tinggi)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">med</span></code> (medium / sedang)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">low</span></code> (rendah)</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">maint</span></code> (Biaya Perawatan)</strong>: Atribut kategorikal untuk biaya pemeliharaan mobil.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">vhigh</span></code> (very high / sangat tinggi)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">high</span></code> (tinggi)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">med</span></code> (medium / sedang)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">low</span></code> (rendah)</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">doors</span></code> (Jumlah Pintu)</strong>: Atribut kategorikal untuk jumlah pintu pada mobil.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">2</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">3</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">4</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">5more</span></code> (5 atau lebih)</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">persons</span></code> (Kapasitas Penumpang)</strong>: Atribut kategorikal untuk kapasitas penumpang mobil.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">2</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">4</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">more</span></code> (lebih dari 4)</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">lug_boot</span></code> (Ukuran Bagasi)</strong>: Atribut kategorikal untuk ukuran bagasi mobil.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">small</span></code> (kecil)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">med</span></code> (sedang)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">big</span></code> (besar)</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">safety</span></code> (Tingkat Keamanan)</strong>: Atribut kategorikal untuk estimasi tingkat keamanan mobil.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">low</span></code> (rendah)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">med</span></code> (sedang)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">high</span></code> (tinggi)</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">class</span></code> (Kelas Evaluasi)</strong>: Ini adalah <strong>variabel target</strong> atau label yang ingin diprediksi. Kolom ini berisi hasil evaluasi mobil berdasarkan keenam atribut lainnya.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">unacc</span></code> (unacceptable / tidak dapat diterima)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">acc</span></code> (acceptable / dapat diterima)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">good</span></code> (baik)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">vgood</span></code> (very good / sangat baik)</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="integrasi-data">
+<h2><strong>Integrasi Data</strong><a class="headerlink" href="#integrasi-data" title="Link to this heading">#</a></h2>
+<p>Untuk mengambil data agar dapat diolah, perlu untuk menginstall package yang telah disediakan oleh UCI Dataset. Instalasi dilakukan berguna untuk menarik data yang berasal dari UCI dataset agar dapat diolah. peritah untuk mengambil data dari UCI dataset dapat di lihat ketika menekan tombol import in python pada datase yang diinginkan dan ikuti perintah tersebut agar data dapat diambil dari UCI dataset. Contoh pengambilan data dari UCI dataset dapat dilihat pada gambar dan perintah berikut:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">ucimlrepo</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting ucimlrepo
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Downloading ucimlrepo-0.0.7-py3-none-any.whl.metadata (5.5 kB)
+Requirement already satisfied: pandas&gt;=1.0.0 in /home/codespace/.local/lib/python3.12/site-packages (from ucimlrepo) (2.2.3)
+Requirement already satisfied: certifi&gt;=2020.12.5 in /home/codespace/.local/lib/python3.12/site-packages (from ucimlrepo) (2025.4.26)
+Requirement already satisfied: numpy&gt;=1.26.0 in /home/codespace/.local/lib/python3.12/site-packages (from pandas&gt;=1.0.0-&gt;ucimlrepo) (2.2.6)
+Requirement already satisfied: python-dateutil&gt;=2.8.2 in /home/codespace/.local/lib/python3.12/site-packages (from pandas&gt;=1.0.0-&gt;ucimlrepo) (2.9.0.post0)
+Requirement already satisfied: pytz&gt;=2020.1 in /home/codespace/.local/lib/python3.12/site-packages (from pandas&gt;=1.0.0-&gt;ucimlrepo) (2025.2)
+Requirement already satisfied: tzdata&gt;=2022.7 in /home/codespace/.local/lib/python3.12/site-packages (from pandas&gt;=1.0.0-&gt;ucimlrepo) (2025.2)
+Requirement already satisfied: six&gt;=1.5 in /home/codespace/.local/lib/python3.12/site-packages (from python-dateutil&gt;=2.8.2-&gt;pandas&gt;=1.0.0-&gt;ucimlrepo) (1.17.0)
+Downloading ucimlrepo-0.0.7-py3-none-any.whl (8.0 kB)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Installing collected packages: ucimlrepo
+Successfully installed ucimlrepo-0.0.7
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Note: you may need to restart the kernel to use updated packages.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">ucimlrepo</span><span class="w"> </span><span class="kn">import</span> <span class="n">fetch_ucirepo</span>
+
+<span class="c1"># fetch dataset</span>
+<span class="n">car_evaluation</span> <span class="o">=</span> <span class="n">fetch_ucirepo</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="mi">19</span><span class="p">)</span>
+
+<span class="c1"># data (as pandas dataframes)</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">car_evaluation</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">features</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">car_evaluation</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">targets</span>
+
+<span class="c1"># metadata</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">car_evaluation</span><span class="o">.</span><span class="n">metadata</span><span class="p">)</span>
+
+<span class="c1"># variable information</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">car_evaluation</span><span class="o">.</span><span class="n">variables</span><span class="p">)</span>
+
+<span class="c1"># simpan dalam csv</span>
+<span class="n">df_lengkap</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;car_evaluation_lengkap.csv&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Data berhasil disimpan ke file &#39;car_evaluation_lengkap.csv&#39;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;uci_id&#39;: 19, &#39;name&#39;: &#39;Car Evaluation&#39;, &#39;repository_url&#39;: &#39;https://archive.ics.uci.edu/dataset/19/car+evaluation&#39;, &#39;data_url&#39;: &#39;https://archive.ics.uci.edu/static/public/19/data.csv&#39;, &#39;abstract&#39;: &#39;Derived from simple hierarchical decision model, this database may be useful for testing constructive induction and structure discovery methods.&#39;, &#39;area&#39;: &#39;Other&#39;, &#39;tasks&#39;: [&#39;Classification&#39;], &#39;characteristics&#39;: [&#39;Multivariate&#39;], &#39;num_instances&#39;: 1728, &#39;num_features&#39;: 6, &#39;feature_types&#39;: [&#39;Categorical&#39;], &#39;demographics&#39;: [], &#39;target_col&#39;: [&#39;class&#39;], &#39;index_col&#39;: None, &#39;has_missing_values&#39;: &#39;no&#39;, &#39;missing_values_symbol&#39;: None, &#39;year_of_dataset_creation&#39;: 1988, &#39;last_updated&#39;: &#39;Thu Aug 10 2023&#39;, &#39;dataset_doi&#39;: &#39;10.24432/C5JP48&#39;, &#39;creators&#39;: [&#39;Marko Bohanec&#39;], &#39;intro_paper&#39;: {&#39;ID&#39;: 249, &#39;type&#39;: &#39;NATIVE&#39;, &#39;title&#39;: &#39;Knowledge acquisition and explanation for multi-attribute decision making&#39;, &#39;authors&#39;: &#39;M. Bohanec, V. Rajkovič&#39;, &#39;venue&#39;: &#39;8th Intl Workshop on Expert Systems and their Applications, Avignon, France&#39;, &#39;year&#39;: 1988, &#39;journal&#39;: None, &#39;DOI&#39;: None, &#39;URL&#39;: &#39;https://www.semanticscholar.org/paper/KNOWLEDGE-ACQUISITION-AND-EXPLANATION-FOR-DECISION-Bohanec-Rajkovi%C4%8D/8bab443ae322ff47c3e609272bd93fd4650555bc&#39;, &#39;sha&#39;: None, &#39;corpus&#39;: None, &#39;arxiv&#39;: None, &#39;mag&#39;: None, &#39;acl&#39;: None, &#39;pmid&#39;: None, &#39;pmcid&#39;: None}, &#39;additional_info&#39;: {&#39;summary&#39;: &#39;Car Evaluation Database was derived from a simple hierarchical decision model originally developed for the demonstration of DEX, M. Bohanec, V. Rajkovic: Expert system for decision making. Sistemica 1(1), pp. 145-157, 1990.). The model evaluates cars according to the following concept structure:\r\n\r\nCAR                      car acceptability\r\n. PRICE                  overall price\r\n. . buying               buying price\r\n. . maint                price of the maintenance\r\n. TECH                   technical characteristics\r\n. . COMFORT              comfort\r\n. . . doors              number of doors\r\n. . . persons            capacity in terms of persons to carry\r\n. . . lug_boot           the size of luggage boot\r\n. . safety               estimated safety of the car\r\n\r\nInput attributes are printed in lowercase. Besides the target concept (CAR), the model includes three intermediate concepts: PRICE, TECH, COMFORT. Every concept is in the original model related to its lower level descendants by a set of examples (for these examples sets see http://www-ai.ijs.si/BlazZupan/car.html).\r\n\r\nThe Car Evaluation Database contains examples with the structural information removed, i.e., directly relates CAR to the six input attributes: buying, maint, doors, persons, lug_boot, safety.\r\n\r\nBecause of known underlying concept structure, this database may be particularly useful for testing constructive induction and structure discovery methods.\r\n&#39;, &#39;purpose&#39;: None, &#39;funded_by&#39;: None, &#39;instances_represent&#39;: None, &#39;recommended_data_splits&#39;: None, &#39;sensitive_data&#39;: None, &#39;preprocessing_description&#39;: None, &#39;variable_info&#39;: &#39;buying:   vhigh, high, med, low.\nmaint:    vhigh, high, med, low.\ndoors:    2, 3, 4, 5more.\npersons:  2, 4, more.\nlug_boot: small, med, big.\nsafety:   low, med, high.&#39;, &#39;citation&#39;: None}}
+       name     role         type demographic  \
+0    buying  Feature  Categorical        None   
+1     maint  Feature  Categorical        None   
+2     doors  Feature  Categorical        None   
+3   persons  Feature  Categorical        None   
+4  lug_boot  Feature  Categorical        None   
+5    safety  Feature  Categorical        None   
+6     class   Target  Categorical        None   
+
+                                         description units missing_values  
+0                                       buying price  None             no  
+1                           price of the maintenance  None             no  
+2                                    number of doors  None             no  
+3              capacity in terms of persons to carry  None             no  
+4                           the size of luggage boot  None             no  
+5                        estimated safety of the car  None             no  
+6  evaulation level (unacceptable, acceptable, go...  None             no  
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">line</span> <span class="mi">17</span>
+<span class="g g-Whitespace">     </span><span class="mi">14</span> <span class="nb">print</span><span class="p">(</span><span class="n">car_evaluation</span><span class="o">.</span><span class="n">variables</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">16</span> <span class="c1"># simpan dalam csv</span>
+<span class="ne">---&gt; </span><span class="mi">17</span> <span class="n">df_lengkap</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;car_evaluation_lengkap.csv&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">19</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Data berhasil disimpan ke file &#39;car_evaluation_lengkap.csv&#39;&quot;</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;df_lengkap&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="eksplorasi-data">
+<h1><strong>Eksplorasi Data</strong><a class="headerlink" href="#eksplorasi-data" title="Link to this heading">#</a></h1>
+<section id="langkah-1-import-library-dan-memuat-data">
+<h2><strong>Langkah 1: Import Library dan Memuat Data</strong><a class="headerlink" href="#langkah-1-import-library-dan-memuat-data" title="Link to this heading">#</a></h2>
+<p>Pertama, kita siapkan semua “alat” (library) yang kita butuhkan dan memuat dataset dari file /<code class="docutils literal notranslate"><span class="pre">car_evaluation_lengkap.csv</span></code>ke dalam DataFrame pandas.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">seaborn</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sns</span>
+
+<span class="c1"># Tentukan nama kolom yang benar sesuai deskripsi dataset</span>
+<span class="n">column_names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;buying&#39;</span><span class="p">,</span> <span class="s1">&#39;maint&#39;</span><span class="p">,</span> <span class="s1">&#39;doors&#39;</span><span class="p">,</span> <span class="s1">&#39;persons&#39;</span><span class="p">,</span> <span class="s1">&#39;lug_boot&#39;</span><span class="p">,</span> <span class="s1">&#39;safety&#39;</span><span class="p">,</span> <span class="s1">&#39;class&#39;</span><span class="p">]</span>
+
+<span class="c1"># Muat data dari file CSV.</span>
+<span class="c1"># header=None memberitahu pandas bahwa file kita tidak punya baris judul.</span>
+<span class="c1"># names=column_names akan menetapkan nama kolom yang sudah kita siapkan.</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;car_evaluation_lengkap.csv&#39;</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">names</span><span class="o">=</span><span class="n">column_names</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Data berhasil dimuat. Berikut 5 baris pertama:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Data berhasil dimuat. Berikut 5 baris pertama:
+   buying  maint  doors  persons  lug_boot  safety  class
+0  buying  maint  doors  persons  lug_boot  safety  class
+1   vhigh  vhigh      2        2     small     low  unacc
+2   vhigh  vhigh      2        2     small     med  unacc
+3   vhigh  vhigh      2        2     small    high  unacc
+4   vhigh  vhigh      2        2       med     low  unacc
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Penjelasan</strong>: Kode di atas hanya fokus pada persiapan awal: mengimpor library dan memastikan data kita dimuat dengan nama kolom yang benar.</p>
+<p>###<strong>Langkah 2: Membersihkan Anomali Data</strong></p>
+<p>Dari analisis sebelumnya, kita tahu bahwa nama-nama kolom (buying, maint, dll.) ikut terbaca sebagai data. Langkah ini fokus untuk membersihkan baris anomali tersebut.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">--- Langkah 2: Membersihkan Anomali Data ---&quot;</span><span class="p">)</span>
+<span class="n">initial_rows</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+
+<span class="c1"># Kita akan menghapus baris di mana nilai pada kolom &#39;buying&#39; adalah string &#39;buying&#39;.</span>
+<span class="c1"># Ini adalah cara efektif untuk membuang baris header yang salah tempat.</span>
+<span class="n">df_cleaned</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;buying&#39;</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">&#39;buying&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">final_rows</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">df_cleaned</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Jumlah baris sebelum dibersihkan: </span><span class="si">{</span><span class="n">initial_rows</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Jumlah baris setelah dibersihkan: </span><span class="si">{</span><span class="n">final_rows</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Jumlah baris anomali yang dihapus: </span><span class="si">{</span><span class="n">initial_rows</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">final_rows</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--- Langkah 2: Membersihkan Anomali Data ---
+Jumlah baris sebelum dibersihkan: 1729
+Jumlah baris setelah dibersihkan: 1728
+Jumlah baris anomali yang dihapus: 1
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Penjelasan:</strong> Blok ini secara spesifik menangani masalah kualitas data yang ditemukan sebelumnya. Kita sekarang memiliki DataFrame baru bernama df_cleaned yang lebih bersih.</p>
+</section>
+<section id="langkah-3-pengecekan-missing-values">
+<h2><strong>Langkah 3: Pengecekan Missing Values</strong><a class="headerlink" href="#langkah-3-pengecekan-missing-values" title="Link to this heading">#</a></h2>
+<p>Sekarang, pada data yang sudah bersih, kita periksa apakah ada sel yang kosong atau tidak.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">--- Langkah 3: Pengecekan Missing Values ---&quot;</span><span class="p">)</span>
+
+<span class="c1"># Menghitung jumlah nilai null (kosong) di setiap kolom pada data yang sudah bersih</span>
+<span class="n">missing_values</span> <span class="o">=</span> <span class="n">df_cleaned</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+
+<span class="k">if</span> <span class="n">missing_values</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hasil: Tidak ada missing value di dalam dataset yang sudah dibersihkan.&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Ditemukan missing value pada kolom berikut:&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">missing_values</span><span class="p">[</span><span class="n">missing_values</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--- Langkah 3: Pengecekan Missing Values ---
+Hasil: Tidak ada missing value di dalam dataset yang sudah dibersihkan.
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Penjelasan:</strong> Kode ini menjalankan satu tugas spesifik: verifikasi missing values. Dengan memisahkannya, kita bisa langsung melihat hasil dari pengecekan ini.</p>
+</section>
+<section id="langkah-4-analisis-distribusi-nilai-value-counts">
+<h2><strong>Langkah 4: Analisis Distribusi Nilai (Value Counts)</strong><a class="headerlink" href="#langkah-4-analisis-distribusi-nilai-value-counts" title="Link to this heading">#</a></h2>
+<p>Blok ini bertujuan untuk memahami isi dari setiap kolom: ada kategori apa saja dan berapa jumlahnya.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">--- Langkah 4: Analisis Distribusi Nilai per Kolom ---&quot;</span><span class="p">)</span>
+
+<span class="c1"># Melakukan iterasi untuk setiap kolom di DataFrame yang sudah bersih</span>
+<span class="k">for</span> <span class="n">column</span> <span class="ow">in</span> <span class="n">df_cleaned</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Distribusi untuk kolom &#39;</span><span class="si">{</span><span class="n">column</span><span class="si">}</span><span class="s2">&#39;:&quot;</span><span class="p">)</span>
+    <span class="c1"># .value_counts() menghitung frekuensi setiap nilai unik</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">df_cleaned</span><span class="p">[</span><span class="n">column</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--- Langkah 4: Analisis Distribusi Nilai per Kolom ---
+
+Distribusi untuk kolom &#39;buying&#39;:
+buying
+vhigh    432
+high     432
+med      432
+low      432
+Name: count, dtype: int64
+
+Distribusi untuk kolom &#39;maint&#39;:
+maint
+vhigh    432
+high     432
+med      432
+low      432
+Name: count, dtype: int64
+
+Distribusi untuk kolom &#39;doors&#39;:
+doors
+2        432
+3        432
+4        432
+5more    432
+Name: count, dtype: int64
+
+Distribusi untuk kolom &#39;persons&#39;:
+persons
+2       576
+4       576
+more    576
+Name: count, dtype: int64
+
+Distribusi untuk kolom &#39;lug_boot&#39;:
+lug_boot
+small    576
+med      576
+big      576
+Name: count, dtype: int64
+
+Distribusi untuk kolom &#39;safety&#39;:
+safety
+low     576
+med     576
+high    576
+Name: count, dtype: int64
+
+Distribusi untuk kolom &#39;class&#39;:
+class
+unacc    1210
+acc       384
+good       69
+vgood      65
+Name: count, dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Penjelasan:</strong> Bagian ini membantu kita memahami komposisi data dan memastikan tidak ada lagi nilai-nilai aneh setelah pembersihan.</p>
+</section>
+<section id="langkah-5-visualisasi-distribusi-fitur">
+<h2><strong>Langkah 5: Visualisasi Distribusi Fitur</strong><a class="headerlink" href="#langkah-5-visualisasi-distribusi-fitur" title="Link to this heading">#</a></h2>
+<p>Terakhir, kita buat visualisasi untuk semua kolom agar lebih mudah melihat pola dan distribusinya secara sekilas.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">--- Langkah 5: Membuat Visualisasi Distribusi ---&quot;</span><span class="p">)</span>
+
+<span class="c1"># Menentukan tata letak grid untuk plot (3 kolom per baris)</span>
+<span class="n">num_cols</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">num_rows</span> <span class="o">=</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">df_cleaned</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span> <span class="o">+</span> <span class="n">num_cols</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">//</span> <span class="n">num_cols</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">num_rows</span><span class="p">,</span> <span class="n">num_cols</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="n">num_rows</span> <span class="o">*</span> <span class="mi">4</span><span class="p">))</span>
+<span class="n">axes</span> <span class="o">=</span> <span class="n">axes</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span> <span class="c1"># Meratakan array axes agar mudah di-loop</span>
+
+<span class="c1"># Membuat plot untuk setiap kolom</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">col</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">df_cleaned</span><span class="o">.</span><span class="n">columns</span><span class="p">):</span>
+    <span class="n">sns</span><span class="o">.</span><span class="n">countplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">df_cleaned</span><span class="p">[</span><span class="n">col</span><span class="p">],</span> <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">palette</span><span class="o">=</span><span class="s1">&#39;viridis&#39;</span><span class="p">,</span> <span class="n">order</span><span class="o">=</span><span class="n">df_cleaned</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+    <span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Distribusi Fitur: </span><span class="si">{</span><span class="n">col</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="c1"># Hapus label x agar tidak berantakan</span>
+    <span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Jumlah&#39;</span><span class="p">)</span>
+
+<span class="c1"># Menyembunyikan subplot yang tidak terpakai</span>
+<span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">axes</span><span class="p">)):</span>
+    <span class="n">axes</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;off&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span> <span class="c1"># Merapikan tata letak</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span> <span class="c1"># Menampilkan plot ke layar</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Visualisasi selesai ditampilkan.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--- Langkah 5: Membuat Visualisasi Distribusi ---
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipython-input-18-1998771751.py:12: FutureWarning: 
+
+Passing `palette` without assigning `hue` is deprecated and will be removed in v0.14.0. Assign the `x` variable to `hue` and set `legend=False` for the same effect.
+
+  sns.countplot(x=df_cleaned[col], ax=axes[i], palette=&#39;viridis&#39;, order=df_cleaned[col].value_counts().index)
+/tmp/ipython-input-18-1998771751.py:12: FutureWarning: 
+
+Passing `palette` without assigning `hue` is deprecated and will be removed in v0.14.0. Assign the `x` variable to `hue` and set `legend=False` for the same effect.
+
+  sns.countplot(x=df_cleaned[col], ax=axes[i], palette=&#39;viridis&#39;, order=df_cleaned[col].value_counts().index)
+/tmp/ipython-input-18-1998771751.py:12: FutureWarning: 
+
+Passing `palette` without assigning `hue` is deprecated and will be removed in v0.14.0. Assign the `x` variable to `hue` and set `legend=False` for the same effect.
+
+  sns.countplot(x=df_cleaned[col], ax=axes[i], palette=&#39;viridis&#39;, order=df_cleaned[col].value_counts().index)
+/tmp/ipython-input-18-1998771751.py:12: FutureWarning: 
+
+Passing `palette` without assigning `hue` is deprecated and will be removed in v0.14.0. Assign the `x` variable to `hue` and set `legend=False` for the same effect.
+
+  sns.countplot(x=df_cleaned[col], ax=axes[i], palette=&#39;viridis&#39;, order=df_cleaned[col].value_counts().index)
+/tmp/ipython-input-18-1998771751.py:12: FutureWarning: 
+
+Passing `palette` without assigning `hue` is deprecated and will be removed in v0.14.0. Assign the `x` variable to `hue` and set `legend=False` for the same effect.
+
+  sns.countplot(x=df_cleaned[col], ax=axes[i], palette=&#39;viridis&#39;, order=df_cleaned[col].value_counts().index)
+/tmp/ipython-input-18-1998771751.py:12: FutureWarning: 
+
+Passing `palette` without assigning `hue` is deprecated and will be removed in v0.14.0. Assign the `x` variable to `hue` and set `legend=False` for the same effect.
+
+  sns.countplot(x=df_cleaned[col], ax=axes[i], palette=&#39;viridis&#39;, order=df_cleaned[col].value_counts().index)
+/tmp/ipython-input-18-1998771751.py:12: FutureWarning: 
+
+Passing `palette` without assigning `hue` is deprecated and will be removed in v0.14.0. Assign the `x` variable to `hue` and set `legend=False` for the same effect.
+
+  sns.countplot(x=df_cleaned[col], ax=axes[i], palette=&#39;viridis&#39;, order=df_cleaned[col].value_counts().index)
+</pre></div>
+</div>
+<img alt="_images/daaf2df28f2f1bbdbaf2c1f125e82b1bb86242bf444328c87454e67b17912def.png" src="_images/daaf2df28f2f1bbdbaf2c1f125e82b1bb86242bf444328c87454e67b17912def.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Visualisasi selesai ditampilkan.
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Penjelasan:</strong> Kode ini didedikasikan sepenuhnya untuk visualisasi. Memisahkannya seperti ini sangat membantu, terutama jika kita ingin mengubah atau menyesuaikan tampilan plot di kemudian hari.</p>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="visualisasi-data">
+<h1><strong>Visualisasi Data</strong><a class="headerlink" href="#visualisasi-data" title="Link to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">seaborn</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sns</span>
+
+<span class="c1"># Langsung saja, mari kita buat beberapa visualisasi yang lebih mendalam</span>
+<span class="c1"># untuk memahami hubungan antar variabel.</span>
+
+<span class="c1"># --- Persiapan Data (Sama seperti sebelumnya) ---</span>
+<span class="c1"># Langkah ini memastikan kita bekerja dengan data yang bersih.</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Mempersiapkan data...&quot;</span><span class="p">)</span>
+<span class="n">column_names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;buying&#39;</span><span class="p">,</span> <span class="s1">&#39;maint&#39;</span><span class="p">,</span> <span class="s1">&#39;doors&#39;</span><span class="p">,</span> <span class="s1">&#39;persons&#39;</span><span class="p">,</span> <span class="s1">&#39;lug_boot&#39;</span><span class="p">,</span> <span class="s1">&#39;safety&#39;</span><span class="p">,</span> <span class="s1">&#39;class&#39;</span><span class="p">]</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;car_evaluation_lengkap.csv&#39;</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">names</span><span class="o">=</span><span class="n">column_names</span><span class="p">)</span>
+<span class="c1"># Membersihkan anomali data (baris header yang terbaca sebagai data)</span>
+<span class="n">df_cleaned</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;buying&#39;</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">&#39;buying&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Data bersih siap digunakan.&quot;</span><span class="p">)</span>
+
+<span class="c1"># --- Visualisasi 1: Hubungan antara Tingkat Keamanan (Safety) dan Kelas Evaluasi ---</span>
+<span class="c1"># Visualisasi ini sangat penting untuk melihat apakah keamanan menjadi faktor penentu.</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Membuat Visualisasi 1: Safety vs. Class...&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">countplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;safety&#39;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s1">&#39;class&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">df_cleaned</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="s1">&#39;viridis&#39;</span><span class="p">,</span>
+              <span class="n">order</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;low&#39;</span><span class="p">,</span> <span class="s1">&#39;med&#39;</span><span class="p">,</span> <span class="s1">&#39;high&#39;</span><span class="p">],</span>  <span class="c1"># Urutkan sumbu x agar lebih logis</span>
+              <span class="n">hue_order</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;unacc&#39;</span><span class="p">,</span> <span class="s1">&#39;acc&#39;</span><span class="p">,</span> <span class="s1">&#39;good&#39;</span><span class="p">,</span> <span class="s1">&#39;vgood&#39;</span><span class="p">])</span> <span class="c1"># Urutkan legenda</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Hubungan antara Tingkat Keamanan dan Evaluasi Mobil&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Tingkat Keamanan (Safety)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Jumlah Mobil&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Kelas Evaluasi&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;visualisasi_safety_vs_class.png&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Visualisasi 1 berhasil disimpan sebagai &#39;visualisasi_safety_vs_class.png&#39;&quot;</span><span class="p">)</span>
+
+
+<span class="c1"># --- Visualisasi 2: Hubungan antara Harga Beli (Buying) dan Kelas Evaluasi ---</span>
+<span class="c1"># Visualisasi ini membantu kita memahami pengaruh harga terhadap penerimaan mobil.</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Membuat Visualisasi 2: Buying Price vs. Class...&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">countplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;buying&#39;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s1">&#39;class&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">df_cleaned</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="s1">&#39;magma&#39;</span><span class="p">,</span>
+              <span class="n">order</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;low&#39;</span><span class="p">,</span> <span class="s1">&#39;med&#39;</span><span class="p">,</span> <span class="s1">&#39;high&#39;</span><span class="p">,</span> <span class="s1">&#39;vhigh&#39;</span><span class="p">],</span> <span class="c1"># Urutkan sumbu x agar lebih logis</span>
+              <span class="n">hue_order</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;unacc&#39;</span><span class="p">,</span> <span class="s1">&#39;acc&#39;</span><span class="p">,</span> <span class="s1">&#39;good&#39;</span><span class="p">,</span> <span class="s1">&#39;vgood&#39;</span><span class="p">])</span> <span class="c1"># Urutkan legenda</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Hubungan antara Harga Beli dan Evaluasi Mobil&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Harga Beli (Buying Price)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Jumlah Mobil&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Kelas Evaluasi&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;visualisasi_buying_vs_class.png&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Visualisasi 2 berhasil disimpan sebagai &#39;visualisasi_buying_vs_class.png&#39;&quot;</span><span class="p">)</span>
+
+<span class="c1"># --- Visualisasi 3: Pengaruh Kapasitas Penumpang (Persons) ---</span>
+<span class="c1"># Apakah mobil dengan kapasitas 2 orang bisa diterima? Mari kita lihat.</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Membuat Visualisasi 3: Persons vs. Class...&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">countplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;persons&#39;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s1">&#39;class&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">df_cleaned</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="s1">&#39;plasma&#39;</span><span class="p">,</span>
+              <span class="n">order</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;2&#39;</span><span class="p">,</span> <span class="s1">&#39;4&#39;</span><span class="p">,</span> <span class="s1">&#39;more&#39;</span><span class="p">],</span> <span class="c1"># Urutkan sumbu x agar lebih logis</span>
+              <span class="n">hue_order</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;unacc&#39;</span><span class="p">,</span> <span class="s1">&#39;acc&#39;</span><span class="p">,</span> <span class="s1">&#39;good&#39;</span><span class="p">,</span> <span class="s1">&#39;vgood&#39;</span><span class="p">])</span> <span class="c1"># Urutkan legenda</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Hubungan antara Kapasitas Penumpang dan Evaluasi Mobil&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Kapasitas Penumpang (Persons)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Jumlah Mobil&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Kelas Evaluasi&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;visualisasi_persons_vs_class.png&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Visualisasi 3 berhasil disimpan sebagai &#39;visualisasi_persons_vs_class.png&#39;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Mempersiapkan data...
+Data bersih siap digunakan.
+
+Membuat Visualisasi 1: Safety vs. Class...
+Visualisasi 1 berhasil disimpan sebagai &#39;visualisasi_safety_vs_class.png&#39;
+
+Membuat Visualisasi 2: Buying Price vs. Class...
+Visualisasi 2 berhasil disimpan sebagai &#39;visualisasi_buying_vs_class.png&#39;
+
+Membuat Visualisasi 3: Persons vs. Class...
+Visualisasi 3 berhasil disimpan sebagai &#39;visualisasi_persons_vs_class.png&#39;
+</pre></div>
+</div>
+<img alt="_images/39db219447ee569c4ea193744d5e1ffa7fea4b5b9d9ff7673dc9c19ac2a03643.png" src="_images/39db219447ee569c4ea193744d5e1ffa7fea4b5b9d9ff7673dc9c19ac2a03643.png" />
+<img alt="_images/95dc14c7196ee59af032d965a65df560f517911939ae0653fa0bdec4a3e10b7d.png" src="_images/95dc14c7196ee59af032d965a65df560f517911939ae0653fa0bdec4a3e10b7d.png" />
+<img alt="_images/59eca9235269c86d3640e1cf8a29ef58e7141b797252ffed4631ce1ec7952f01.png" src="_images/59eca9235269c86d3640e1cf8a29ef58e7141b797252ffed4631ce1ec7952f01.png" />
+</div>
+</div>
+<section id="penjelasan">
+<h2><strong>Penjelasan</strong><a class="headerlink" href="#penjelasan" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Hubungan antara Tingkat Keamanan (Safety) dan Evaluasi Mobil
+Visualisasi ini menunjukkan betapa krusialnya faktor keamanan dalam penentuan kelayakan sebuah mobil.</p></li>
+<li><p>Hubungan antara Harga Beli (Buying) dan Evaluasi Mobil
+Grafik ini memperlihatkan bagaimana harga menjadi salah satu pertimbangan utama dalam evaluasi.</p></li>
+<li><p>Hubungan antara Kapasitas Penumpang (Persons) dan Evaluasi Mobil
+Kapasitas angkut penumpang juga ternyata menjadi syarat mutlak dalam model evaluasi ini.</p></li>
+</ol>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="preprocessing-encoding">
+<h1><strong>Preprocessing (Encoding)</strong><a class="headerlink" href="#preprocessing-encoding" title="Link to this heading">#</a></h1>
+<p><strong>Langkah preprocessing yang paling penting adalah Encoding</strong> untuk mengubah teks menjadi angka.</p>
+<p>Setelah melalui proses di atas, dataset df_processed kini sepenuhnya dalam format numerik dan siap untuk digunakan dalam melatih model machine learning seperti Decision Tree, Random Forest, dan lainnya</p>
+<section id="implementasi">
+<h2><strong>Implementasi</strong><a class="headerlink" href="#implementasi" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.preprocessing</span><span class="w"> </span><span class="kn">import</span> <span class="n">LabelEncoder</span>
+
+<span class="c1"># --- 1. Pemuatan dan Pembersihan Data (Sama seperti sebelumnya) ---</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;--- Memuat dan Membersihkan Data ---&quot;</span><span class="p">)</span>
+<span class="n">column_names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;buying&#39;</span><span class="p">,</span> <span class="s1">&#39;maint&#39;</span><span class="p">,</span> <span class="s1">&#39;doors&#39;</span><span class="p">,</span> <span class="s1">&#39;persons&#39;</span><span class="p">,</span> <span class="s1">&#39;lug_boot&#39;</span><span class="p">,</span> <span class="s1">&#39;safety&#39;</span><span class="p">,</span> <span class="s1">&#39;class&#39;</span><span class="p">]</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;car_evaluation_lengkap.csv&#39;</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">names</span><span class="o">=</span><span class="n">column_names</span><span class="p">)</span>
+<span class="n">df_cleaned</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;buying&#39;</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">&#39;buying&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Data Awal (Sebelum Preprocessing):&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df_cleaned</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+
+
+<span class="c1"># --- 2. Preprocessing: Label Encoding ---</span>
+<span class="c1"># Ini adalah langkah preprocessing yang paling penting untuk dataset ini.</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">--- Melakukan Label Encoding ---&quot;</span><span class="p">)</span>
+
+<span class="c1"># Buat salinan DataFrame agar data asli tetap utuh</span>
+<span class="n">df_processed</span> <span class="o">=</span> <span class="n">df_cleaned</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+<span class="c1"># Inisialisasi LabelEncoder</span>
+<span class="n">le</span> <span class="o">=</span> <span class="n">LabelEncoder</span><span class="p">()</span>
+
+<span class="c1"># Lakukan loop untuk setiap kolom dan ubah nilainya menjadi numerik</span>
+<span class="k">for</span> <span class="n">column</span> <span class="ow">in</span> <span class="n">df_processed</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+    <span class="n">df_processed</span><span class="p">[</span><span class="n">column</span><span class="p">]</span> <span class="o">=</span> <span class="n">le</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">df_processed</span><span class="p">[</span><span class="n">column</span><span class="p">])</span>
+    <span class="c1"># Menampilkan mapping untuk beberapa kolom sebagai contoh</span>
+    <span class="k">if</span> <span class="n">column</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;buying&#39;</span><span class="p">,</span> <span class="s1">&#39;class&#39;</span><span class="p">]:</span>
+        <span class="c1"># Untuk melihat mapping-nya (opsional)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Mapping untuk kolom &#39;</span><span class="si">{</span><span class="n">column</span><span class="si">}</span><span class="s2">&#39;:&quot;</span><span class="p">)</span>
+        <span class="c1"># Mencetak kelas dan hasil transformasinya</span>
+        <span class="n">mapping</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">le</span><span class="o">.</span><span class="n">classes_</span><span class="p">,</span> <span class="n">le</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">le</span><span class="o">.</span><span class="n">classes_</span><span class="p">)))</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">mapping</span><span class="p">)</span>
+
+
+<span class="c1"># --- 3. Hasil Akhir ---</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Data Akhir (Setelah Preprocessing dengan Label Encoding):&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df_processed</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n\n</span><span class="s2">Proses preprocessing selesai. Data sekarang sepenuhnya numerik dan siap untuk pemodelan.&quot;</span><span class="p">)</span>
+
+<span class="c1"># Anda bisa menyimpan data yang sudah diproses ini jika perlu</span>
+
+<span class="c1"># df_processed.to_csv(&#39;car_evaluation_processed.csv&#39;, index=False)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--- Memuat dan Membersihkan Data ---
+Data Awal (Sebelum Preprocessing):
+  buying  maint doors persons lug_boot safety  class
+0  vhigh  vhigh     2       2    small    low  unacc
+1  vhigh  vhigh     2       2    small    med  unacc
+2  vhigh  vhigh     2       2    small   high  unacc
+3  vhigh  vhigh     2       2      med    low  unacc
+4  vhigh  vhigh     2       2      med    med  unacc
+
+--- Melakukan Label Encoding ---
+Mapping untuk kolom &#39;buying&#39;:
+{&#39;high&#39;: np.int64(0), &#39;low&#39;: np.int64(1), &#39;med&#39;: np.int64(2), &#39;vhigh&#39;: np.int64(3)}
+Mapping untuk kolom &#39;class&#39;:
+{&#39;acc&#39;: np.int64(0), &#39;good&#39;: np.int64(1), &#39;unacc&#39;: np.int64(2), &#39;vgood&#39;: np.int64(3)}
+
+Data Akhir (Setelah Preprocessing dengan Label Encoding):
+   buying  maint  doors  persons  lug_boot  safety  class
+0       3      3      0        0         2       1      2
+1       3      3      0        0         2       2      2
+2       3      3      0        0         2       0      2
+3       3      3      0        0         1       1      2
+4       3      3      0        0         1       2      2
+
+
+Proses preprocessing selesai. Data sekarang sepenuhnya numerik dan siap untuk pemodelan.
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="klasifikasi">
+<h1><strong>Klasifikasi</strong><a class="headerlink" href="#klasifikasi" title="Link to this heading">#</a></h1>
+<p>Berdasarkan konteks data yang memiliki kolom target (class), maka metode yang paling sesuai adalah Klasifikasi. Tujuannya adalah untuk melatih sebuah model yang bisa memprediksi kategori evaluasi mobil berdasarkan fitur-fiturnya.</p>
+<p><strong>Model klasifikasi menggunakan algoritma Decision Tree.</strong> Berikut adalah hasil dan penjelasannya.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">seaborn</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sns</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.model_selection</span><span class="w"> </span><span class="kn">import</span> <span class="n">train_test_split</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.preprocessing</span><span class="w"> </span><span class="kn">import</span> <span class="n">LabelEncoder</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.tree</span><span class="w"> </span><span class="kn">import</span> <span class="n">DecisionTreeClassifier</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.metrics</span><span class="w"> </span><span class="kn">import</span> <span class="n">accuracy_score</span><span class="p">,</span> <span class="n">classification_report</span><span class="p">,</span> <span class="n">confusion_matrix</span>
+
+<span class="c1"># --- 1. Pemuatan dan Persiapan Data ---</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;--- 1. Memuat, Membersihkan, dan Melakukan Encoding Data ---&quot;</span><span class="p">)</span>
+<span class="c1"># Menyiapkan nama kolom</span>
+<span class="n">column_names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;buying&#39;</span><span class="p">,</span> <span class="s1">&#39;maint&#39;</span><span class="p">,</span> <span class="s1">&#39;doors&#39;</span><span class="p">,</span> <span class="s1">&#39;persons&#39;</span><span class="p">,</span> <span class="s1">&#39;lug_boot&#39;</span><span class="p">,</span> <span class="s1">&#39;safety&#39;</span><span class="p">,</span> <span class="s1">&#39;class&#39;</span><span class="p">]</span>
+<span class="c1"># Memuat data dari file</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;car_evaluation_lengkap.csv&#39;</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">names</span><span class="o">=</span><span class="n">column_names</span><span class="p">)</span>
+
+<span class="c1"># Membersihkan anomali data (baris header yang terbaca sebagai data)</span>
+<span class="n">df_cleaned</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;buying&#39;</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">&#39;buying&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># Melakukan Encoding (mengubah teks menjadi angka)</span>
+<span class="n">df_processed</span> <span class="o">=</span> <span class="n">df_cleaned</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">le_dict</span> <span class="o">=</span> <span class="p">{}</span> <span class="c1"># Dictionary untuk menyimpan encoder setiap kolom</span>
+<span class="k">for</span> <span class="n">column</span> <span class="ow">in</span> <span class="n">df_processed</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+    <span class="n">le</span> <span class="o">=</span> <span class="n">LabelEncoder</span><span class="p">()</span>
+    <span class="n">df_processed</span><span class="p">[</span><span class="n">column</span><span class="p">]</span> <span class="o">=</span> <span class="n">le</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">df_processed</span><span class="p">[</span><span class="n">column</span><span class="p">])</span>
+    <span class="n">le_dict</span><span class="p">[</span><span class="n">column</span><span class="p">]</span> <span class="o">=</span> <span class="n">le</span> <span class="c1"># Simpan encoder untuk referensi nanti</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Data berhasil disiapkan dan diubah menjadi format numerik.&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Contoh data setelah diproses:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df_processed</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+
+
+<span class="c1"># --- 2. Mendefinisikan Fitur (X) dan Target (y) ---</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">--- 2. Memisahkan Fitur (X) dan Target (y) ---&quot;</span><span class="p">)</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">df_processed</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;class&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">df_processed</span><span class="p">[</span><span class="s1">&#39;class&#39;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Fitur (X) dan Target (y) berhasil didefinisikan.&quot;</span><span class="p">)</span>
+
+
+<span class="c1"># --- 3. Membagi Data menjadi Training dan Testing ---</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">--- 3. Membagi Data Training dan Testing ---&quot;</span><span class="p">)</span>
+<span class="c1"># Membagi data: 80% untuk training, 20% untuk testing</span>
+<span class="c1"># `stratify=y` sangat penting untuk memastikan proporsi kelas target sama di data train dan test,</span>
+<span class="c1"># karena data kita tidak seimbang (imbalanced).</span>
+<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">,</span> <span class="n">stratify</span><span class="o">=</span><span class="n">y</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Ukuran data training: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">X_train</span><span class="p">)</span><span class="si">}</span><span class="s2"> baris&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Ukuran data testing: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span><span class="si">}</span><span class="s2"> baris&quot;</span><span class="p">)</span>
+
+
+<span class="c1"># --- 4. Melatih Model Klasifikasi (Decision Tree) ---</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">--- 4. Melatih Model Decision Tree ---&quot;</span><span class="p">)</span>
+<span class="c1"># Membuat model Decision Tree</span>
+<span class="c1"># `criterion=&#39;entropy&#39;` sering digunakan untuk information gain</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">DecisionTreeClassifier</span><span class="p">(</span><span class="n">criterion</span><span class="o">=</span><span class="s1">&#39;entropy&#39;</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+
+<span class="c1"># Melatih model menggunakan data training</span>
+<span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Model Decision Tree berhasil dilatih.&quot;</span><span class="p">)</span>
+
+
+<span class="c1"># --- 5. Mengevaluasi Performa Model ---</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">--- 5. Mengevaluasi Performa Model ---&quot;</span><span class="p">)</span>
+<span class="c1"># Membuat prediksi pada data testing</span>
+<span class="n">y_pred</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+
+<span class="c1"># Menghitung akurasi</span>
+<span class="n">accuracy</span> <span class="o">=</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Akurasi Model: </span><span class="si">{</span><span class="n">accuracy</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">100</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">%&quot;</span><span class="p">)</span>
+
+<span class="c1"># Menampilkan Laporan Klasifikasi</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Laporan Klasifikasi:&quot;</span><span class="p">)</span>
+<span class="c1"># Menggunakan nama kelas asli dari LabelEncoder untuk laporan yang lebih mudah dibaca</span>
+<span class="n">class_names</span> <span class="o">=</span> <span class="n">le_dict</span><span class="p">[</span><span class="s1">&#39;class&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">classes_</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">classification_report</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">,</span> <span class="n">target_names</span><span class="o">=</span><span class="n">class_names</span><span class="p">))</span>
+
+
+<span class="c1"># --- 6. Membuat Visualisasi Confusion Matrix ---</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">--- 6. Membuat Visualisasi Confusion Matrix ---&quot;</span><span class="p">)</span>
+<span class="n">cm</span> <span class="o">=</span> <span class="n">confusion_matrix</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">7</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">cm</span><span class="p">,</span> <span class="n">annot</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">fmt</span><span class="o">=</span><span class="s1">&#39;d&#39;</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;Blues&#39;</span><span class="p">,</span>
+            <span class="n">xticklabels</span><span class="o">=</span><span class="n">class_names</span><span class="p">,</span> <span class="n">yticklabels</span><span class="o">=</span><span class="n">class_names</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Confusion Matrix&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Predicted Label&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;True Label&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;confusion_matrix.png&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Visualisasi Confusion Matrix berhasil disimpan sebagai &#39;confusion_matrix.png&#39;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--- 1. Memuat, Membersihkan, dan Melakukan Encoding Data ---
+Data berhasil disiapkan dan diubah menjadi format numerik.
+Contoh data setelah diproses:
+   buying  maint  doors  persons  lug_boot  safety  class
+0       3      3      0        0         2       1      2
+1       3      3      0        0         2       2      2
+2       3      3      0        0         2       0      2
+3       3      3      0        0         1       1      2
+4       3      3      0        0         1       2      2
+
+--- 2. Memisahkan Fitur (X) dan Target (y) ---
+Fitur (X) dan Target (y) berhasil didefinisikan.
+
+--- 3. Membagi Data Training dan Testing ---
+Ukuran data training: 1382 baris
+Ukuran data testing: 346 baris
+
+--- 4. Melatih Model Decision Tree ---
+Model Decision Tree berhasil dilatih.
+
+--- 5. Mengevaluasi Performa Model ---
+Akurasi Model: 97.98%
+              precision    recall  f1-score   support
+
+         acc       0.96      0.96      0.96        77
+        good       0.82      1.00      0.90        14
+       unacc       1.00      1.00      1.00       242
+       vgood       1.00      0.77      0.87        13
+
+    accuracy                           0.98       346
+   macro avg       0.95      0.93      0.93       346
+weighted avg       0.98      0.98      0.98       346
+
+
+--- 6. Membuat Visualisasi Confusion Matrix ---
+Visualisasi Confusion Matrix berhasil disimpan sebagai &#39;confusion_matrix.png&#39;
+</pre></div>
+</div>
+<img alt="_images/91d7ca46d1d71477fbf1bce8af8d1a414db743022c6818a590b927e90877acd9.png" src="_images/91d7ca46d1d71477fbf1bce8af8d1a414db743022c6818a590b927e90877acd9.png" />
+</div>
+</div>
+<section id="hasil-kinerja-model">
+<h2><strong>Hasil Kinerja Model</strong><a class="headerlink" href="#hasil-kinerja-model" title="Link to this heading">#</a></h2>
+<p>Model yang kita latih menunjukkan performa yang sangat baik.</p>
+<p>Akurasi Keseluruhan: 97.98% Artinya, model berhasil menebak evaluasi mobil dengan benar pada sekitar 98 dari 100 mobil dalam data pengujian yang belum pernah dilihat sebelumnya.</p>
+<p><strong>Penjelasan Laporan:</strong></p>
+<ul class="simple">
+<li><p><strong>Kelas unacc</strong> (tidak diterima): Model ini sempurna dalam mengidentifikasi mobil yang tidak dapat diterima (precision dan recall = 1.00). Ini adalah kelas mayoritas, dan aturannya mungkin sangat jelas (misal: safety rendah = unacc).</p></li>
+<li><p><strong>Kelas acc</strong> (diterima): Performa juga sangat kuat untuk kelas ini (precision dan recall = 0.96).</p></li>
+<li><p><strong>Kelas good</strong> (baik): Model berhasil menemukan semua mobil yang ‘good’ (recall = 1.00). Namun, terkadang ia salah mengira mobil lain sebagai ‘good’ (precision = 0.82).</p></li>
+<li><p><strong>Kelas vgood</strong>(sangat baik): Ketika model menebak sebuah mobil adalah ‘vgood’, tebakannya selalu benar
+(precision = 1.00). Namun, ia sedikit kesulitan menemukan semua mobil ‘vgood’ yang ada, dan melewatkan sekitar 23% di antaranya (recall = 0.77).</p></li>
+</ul>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="evaluasi-model">
+<h1><strong>Evaluasi model</strong><a class="headerlink" href="#evaluasi-model" title="Link to this heading">#</a></h1>
+<p>Secara singkat, model Decision Tree ini sangat baik dan efektif, namun memiliki beberapa karakteristik penting yang perlu diperhatikan:</p>
+<p>Akurasi Tinggi namun Bervariasi: Model ini mencapai akurasi sangat tinggi (~97%) pada pengujian tunggal, namun pengujian yang lebih stabil (Cross-Validation) menunjukkan performa rata-rata yang lebih realistis yaitu ~88%. Ini berarti model ini kuat, tetapi kinerjanya bisa bervariasi.</p>
+<p>###Kemampuan Mengenali Setiap Kelas</p>
+<ul class="simple">
+<li><p><strong>Kelas</strong> unacc <strong>(Tidak Diterima): A+ (Sempurna)</strong></p>
+<ul>
+<li><p>Model ini mampu mengidentifikasi semua mobil yang tidak layak tanpa kesalahan. Sangat ideal untuk penyaringan awal.</p></li>
+</ul>
+</li>
+<li><p><strong>Kelas</strong> acc <strong>(Diterima): A (Sangat Baik)</strong></p>
+<ul>
+<li><p>Model juga menunjukkan performa yang sangat kuat dan andal dalam mengenali mobil yang secara umum dapat diterima.</p></li>
+</ul>
+</li>
+<li><p><strong>Kelas</strong> good &amp; vgood <strong>(Baik &amp; Sangat Baik): B (Baik dengan Catatan)</strong></p>
+<ul>
+<li><p><strong>Presisi Tinggi:</strong> Ketika model ini mengatakan sebuah mobil ‘baik’ atau ‘sangat baik’, prediksinya cenderung benar.</p></li>
+<li><p><strong>Recall Lebih Rendah:</strong> Kelemahannya adalah ia terkadang melewatkan beberapa mobil yang seharusnya masuk dalam kategori ini. Model ini lebih “berhati-hati” daripada “menyeluruh” dalam menemukan mobil terbaik.</p></li>
+</ul>
+</li>
+</ul>
+<section id="kelebihan-utama">
+<h2><strong>Kelebihan Utama:</strong><a class="headerlink" href="#kelebihan-utama" title="Link to this heading">#</a></h2>
+<p>Model sempurna dalam mendeteksi mobil yang tidak layak (unacc) dan memiliki presisi (ketepatan) yang tinggi saat memprediksi mobil kategori good atau vgood. Jika ia menebak suatu mobil ‘baik’ atau ‘sangat baik’, tebakannya cenderung benar.</p>
+</section>
+<section id="kelemahan-utama">
+<h2><strong>Kelemahan Utama:</strong><a class="headerlink" href="#kelemahan-utama" title="Link to this heading">#</a></h2>
+<p>Kelemahannya adalah terkadang melewatkan beberapa mobil yang sebenarnya masuk kategori good dan vgood (recall lebih rendah), serta performanya yang agak sensitif terhadap bagaimana data dibagi.</p>
+</section>
+<section id="rekomendasi-penggunaan">
+<h2><strong>Rekomendasi Penggunaan</strong><a class="headerlink" href="#rekomendasi-penggunaan" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Sangat Direkomendasikan Untuk:</strong> Digunakan sebagai sistem <strong>penyaringan tahap pertama</strong> untuk secara cepat dan akurat mengeliminasi mobil-mobil yang pasti tidak memenuhi syarat.</p></li>
+<li><p><strong>Perlu Verifikasi Untuk:</strong> Menemukan mobil-mobil kategori terbaik (good dan vgood). Hasil dari model sebaiknya dianggap sebagai <strong>kandidat kuat</strong> yang mungkin masih memerlukan validasi lebih lanjut, karena ada kemungkinan beberapa kasus terlewat.</p></li>
+</ul>
+</section>
+<section id="kesimpulan-akhir">
+<h2><strong>Kesimpulan Akhir:</strong><a class="headerlink" href="#kesimpulan-akhir" title="Link to this heading">#</a></h2>
+<p>Model Decision Tree ini tetap merupakan model yang baik dan kuat (dengan akurasi rata-rata ~88%). Namun, evaluasi lanjutan dengan cross-validation memberikan kita wawasan krusial bahwa performanya tidak sekonsisten yang terlihat di awal. Model ini bisa bekerja dengan sangat baik pada beberapa set data, namun kinerjanya bisa menurun pada set data lainnya.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><strong>Pendahuluan</strong></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sumber-data"><strong>Sumber Data</strong></a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#data-understanding"><strong>Data Understanding</strong></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penjelasan-setiap-fitur-variabel-dataset"><strong>Penjelasan Setiap Fitur (Variabel) Dataset</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#integrasi-data"><strong>Integrasi Data</strong></a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#eksplorasi-data"><strong>Eksplorasi Data</strong></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-1-import-library-dan-memuat-data"><strong>Langkah 1: Import Library dan Memuat Data</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-3-pengecekan-missing-values"><strong>Langkah 3: Pengecekan Missing Values</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-4-analisis-distribusi-nilai-value-counts"><strong>Langkah 4: Analisis Distribusi Nilai (Value Counts)</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-5-visualisasi-distribusi-fitur"><strong>Langkah 5: Visualisasi Distribusi Fitur</strong></a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#visualisasi-data"><strong>Visualisasi Data</strong></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penjelasan"><strong>Penjelasan</strong></a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#preprocessing-encoding"><strong>Preprocessing (Encoding)</strong></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#implementasi"><strong>Implementasi</strong></a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#klasifikasi"><strong>Klasifikasi</strong></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hasil-kinerja-model"><strong>Hasil Kinerja Model</strong></a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#evaluasi-model"><strong>Evaluasi model</strong></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kelebihan-utama"><strong>Kelebihan Utama:</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kelemahan-utama"><strong>Kelemahan Utama:</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rekomendasi-penggunaan"><strong>Rekomendasi Penggunaan</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kesimpulan-akhir"><strong>Kesimpulan Akhir:</strong></a></li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,80 @@
+Traceback (most recent call last):
+  File "/home/codespace/.local/lib/python3.12/site-packages/jupyter_core/utils/__init__.py", line 154, in wrapped
+    asyncio.get_running_loop()
+RuntimeError: no running event loop
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
+    executenb(
+  File "/home/codespace/.local/lib/python3.12/site-packages/nbclient/client.py", line 1319, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/codespace/.local/lib/python3.12/site-packages/jupyter_core/utils/__init__.py", line 158, in wrapped
+    return loop.run_until_complete(inner)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python/3.12.1/lib/python3.12/asyncio/base_events.py", line 684, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/home/codespace/.local/lib/python3.12/site-packages/nbclient/client.py", line 709, in async_execute
+    await self.async_execute_cell(
+  File "/home/codespace/.local/lib/python3.12/site-packages/nbclient/client.py", line 1062, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/home/codespace/.local/lib/python3.12/site-packages/nbclient/client.py", line 918, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+from ucimlrepo import fetch_ucirepo
+
+# fetch dataset
+car_evaluation = fetch_ucirepo(id=19)
+
+# data (as pandas dataframes)
+X = car_evaluation.data.features
+y = car_evaluation.data.targets
+
+# metadata
+print(car_evaluation.metadata)
+
+# variable information
+print(car_evaluation.variables)
+
+# simpan dalam csv
+df_lengkap.to_csv('car_evaluation_lengkap.csv', index=False)
+
+print("Data berhasil disimpan ke file 'car_evaluation_lengkap.csv'")
+
+------------------
+
+----- stdout -----
+{'uci_id': 19, 'name': 'Car Evaluation', 'repository_url': 'https://archive.ics.uci.edu/dataset/19/car+evaluation', 'data_url': 'https://archive.ics.uci.edu/static/public/19/data.csv', 'abstract': 'Derived from simple hierarchical decision model, this database may be useful for testing constructive induction and structure discovery methods.', 'area': 'Other', 'tasks': ['Classification'], 'characteristics': ['Multivariate'], 'num_instances': 1728, 'num_features': 6, 'feature_types': ['Categorical'], 'demographics': [], 'target_col': ['class'], 'index_col': None, 'has_missing_values': 'no', 'missing_values_symbol': None, 'year_of_dataset_creation': 1988, 'last_updated': 'Thu Aug 10 2023', 'dataset_doi': '10.24432/C5JP48', 'creators': ['Marko Bohanec'], 'intro_paper': {'ID': 249, 'type': 'NATIVE', 'title': 'Knowledge acquisition and explanation for multi-attribute decision making', 'authors': 'M. Bohanec, V. Rajkovič', 'venue': '8th Intl Workshop on Expert Systems and their Applications, Avignon, France', 'year': 1988, 'journal': None, 'DOI': None, 'URL': 'https://www.semanticscholar.org/paper/KNOWLEDGE-ACQUISITION-AND-EXPLANATION-FOR-DECISION-Bohanec-Rajkovi%C4%8D/8bab443ae322ff47c3e609272bd93fd4650555bc', 'sha': None, 'corpus': None, 'arxiv': None, 'mag': None, 'acl': None, 'pmid': None, 'pmcid': None}, 'additional_info': {'summary': 'Car Evaluation Database was derived from a simple hierarchical decision model originally developed for the demonstration of DEX, M. Bohanec, V. Rajkovic: Expert system for decision making. Sistemica 1(1), pp. 145-157, 1990.). The model evaluates cars according to the following concept structure:\r\n\r\nCAR                      car acceptability\r\n. PRICE                  overall price\r\n. . buying               buying price\r\n. . maint                price of the maintenance\r\n. TECH                   technical characteristics\r\n. . COMFORT              comfort\r\n. . . doors              number of doors\r\n. . . persons            capacity in terms of persons to carry\r\n. . . lug_boot           the size of luggage boot\r\n. . safety               estimated safety of the car\r\n\r\nInput attributes are printed in lowercase. Besides the target concept (CAR), the model includes three intermediate concepts: PRICE, TECH, COMFORT. Every concept is in the original model related to its lower level descendants by a set of examples (for these examples sets see http://www-ai.ijs.si/BlazZupan/car.html).\r\n\r\nThe Car Evaluation Database contains examples with the structural information removed, i.e., directly relates CAR to the six input attributes: buying, maint, doors, persons, lug_boot, safety.\r\n\r\nBecause of known underlying concept structure, this database may be particularly useful for testing constructive induction and structure discovery methods.\r\n', 'purpose': None, 'funded_by': None, 'instances_represent': None, 'recommended_data_splits': None, 'sensitive_data': None, 'preprocessing_description': None, 'variable_info': 'buying:   vhigh, high, med, low.\nmaint:    vhigh, high, med, low.\ndoors:    2, 3, 4, 5more.\npersons:  2, 4, more.\nlug_boot: small, med, big.\nsafety:   low, med, high.', 'citation': None}}
+       name     role         type demographic  \
+0    buying  Feature  Categorical        None   
+1     maint  Feature  Categorical        None   
+2     doors  Feature  Categorical        None   
+3   persons  Feature  Categorical        None   
+4  lug_boot  Feature  Categorical        None   
+5    safety  Feature  Categorical        None   
+6     class   Target  Categorical        None   
+
+                                         description units missing_values  
+0                                       buying price  None             no  
+1                           price of the maintenance  None             no  
+2                                    number of doors  None             no  
+3              capacity in terms of persons to carry  None             no  
+4                           the size of luggage boot  None             no  
+5                        estimated safety of the car  None             no  
+6  evaulation level (unacceptable, acceptable, go...  None             no
+------------------
+
+[31m---------------------------------------------------------------------------[39m
+[31mNameError[39m                                 Traceback (most recent call last)
+[36mCell[39m[36m [39m[32mIn[2][39m[32m, line 17[39m
+[32m     14[39m [38;5;28mprint[39m(car_evaluation.variables)
+[32m     16[39m [38;5;66;03m# simpan dalam csv[39;00m
+[32m---> [39m[32m17[39m [43mdf_lengkap[49m.to_csv([33m'[39m[33mcar_evaluation_lengkap.csv[39m[33m'[39m, index=[38;5;28;01mFalse[39;00m)
+[32m     19[39m [38;5;28mprint[39m([33m"[39m[33mData berhasil disimpan ke file [39m[33m'[39m[33mcar_evaluation_lengkap.csv[39m[33m'[39m[33m"[39m)
+
+[31mNameError[39m: name 'df_lengkap' is not defined
+
