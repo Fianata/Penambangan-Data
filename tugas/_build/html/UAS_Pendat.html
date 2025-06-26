@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>UAS &#8212; My sample book</title>
+    <title>UAS PENAMBANGAN DATA &#8212; My sample book</title>
   
   
   
@@ -57,9 +57,10 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'UAS';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'UAS_Pendat';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Tugas Pra UAS" href="Tugas_Pra_Uas.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -122,8 +123,6 @@
       
       
       
-        
-      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -179,7 +178,7 @@
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="About_Me.html">About Me</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Data_Understanding%20%282%29.html">Pengertian Data Understanding</a></li>
 
@@ -260,7 +259,7 @@
 
 
 
-<li class="toctree-l1"><a class="reference internal" href="UAS_Pendat.html">UAS PENAMBANGAN DATA</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">UAS PENAMBANGAN DATA</a></li>
 
 
 
@@ -340,7 +339,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FUAS.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FUAS_Pendat.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -370,7 +369,7 @@
       
       
       
-      <li><a href="_sources/UAS.ipynb" target="_blank"
+      <li><a href="_sources/UAS_Pendat.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -454,7 +453,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>UAS</h1>
+    <h1>UAS PENAMBANGAN DATA</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -464,7 +463,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><strong>UAS</strong></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">UAS PENAMBANGAN DATA</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#pendahuluan"><strong>Pendahuluan</strong></a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sumber-data"><strong>Sumber Data</strong></a></li>
 </ul>
@@ -488,7 +487,7 @@ document.write(`
 </li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#integrasi-data"><strong>Integrasi Data.</strong></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#ekspolrasi-data"><strong>Ekspolrasi Data.</strong></a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#eksplorasi-data"><strong>Eksplorasi Data</strong></a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-1-import-library-dan-memuat-data-menyimpan-ke-csv"><strong>Langkah 1: Import Library dan Memuat Data menyimpan ke CSV</strong></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-2-verifikasi-data-anomali"><strong>Langkah 2: Verifikasi data anomali</strong></a></li>
@@ -499,11 +498,21 @@ document.write(`
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#visualisasi-data-analisis-hubungan-fitur-dan-target"><strong>Visualisasi Data (Analisis Hubungan Fitur dan Target)</strong></a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#preprocessing-encoding"><strong>Preprocessing (Encoding)</strong></a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#klasifikasi-dengan-decision-tree"><strong>Klasifikasi dengan Decision Tree</strong></a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-hasil-kinerja-model"><strong>Analisis Hasil Kinerja Model</strong></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#akurasi-keseluruhan"><strong>Akurasi Keseluruhan</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rincian-kinerja-berdasarkan-laporan-klasifikasi"><strong>Rincian Kinerja (Berdasarkan Laporan Klasifikasi)</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kesimpulan-akhir"><strong>Kesimpulan Akhir</strong></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#klasifikasi"><strong>Klasifikasi</strong></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#decision-tree-classifier"><strong>1. Decision Tree Classifier</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naive-bayes-classifier"><strong>2. Naive Bayes Classifier</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#k-nearest-neighbors-knn"><strong>3. K-Nearest Neighbors (KNN)</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tabel-ringkasan-performa-model-klasifikasi">Tabel Ringkasan Performa Model Klasifikasi</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#kesimpulan-analisis-model-klasifikasi-tic-tac-toe">Kesimpulan Analisis Model Klasifikasi Tic-Tac-Toe</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hasil-evaluasi-ketiga-model-berikut-kesimpulan-utamanya">Hasil evaluasi ketiga model, berikut kesimpulan utamanya:</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#performa-terbaik-k-nearest-neighbors-knn">1. Performa Terbaik: <strong>K-Nearest Neighbors (KNN)</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#model-paling-seimbang-decision-tree">2. Model Paling Seimbang: <strong>Decision Tree</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#performa-terendah-naive-bayes">3. Performa Terendah: <strong>Naive Bayes</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rekomendasi-implementasi">Rekomendasi Implementasi:</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -518,8 +527,8 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="uas">
-<h1><strong>UAS</strong><a class="headerlink" href="#uas" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="uas-penambangan-data">
+<h1>UAS PENAMBANGAN DATA<a class="headerlink" href="#uas-penambangan-data" title="Link to this heading">#</a></h1>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="pendahuluan">
 <h1><strong>Pendahuluan</strong><a class="headerlink" href="#pendahuluan" title="Link to this heading">#</a></h1>
@@ -618,8 +627,8 @@ document.write(`
 </section>
 </section>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="integrasi-data">
-<h1><strong>Integrasi Data.</strong><a class="headerlink" href="#integrasi-data" title="Link to this heading">#</a></h1>
+<section class="tex2jax_ignore mathjax_ignore" id="ekspolrasi-data">
+<h1><strong>Ekspolrasi Data.</strong><a class="headerlink" href="#ekspolrasi-data" title="Link to this heading">#</a></h1>
 <p>Dalam konteks analisis data menggunakan notebook, “Integrasi Data” adalah tahap di mana kita mengambil atau menarik data dari sumber aslinya agar dapat diolah. Untuk dataset kita, sumbernya adalah UCI Machine Learning Repository.</p>
 <p>Untuk mengambil data agar dapat diolah, kita akan menggunakan package Python bernama <code class="docutils literal notranslate"><span class="pre">ucimlrepo</span></code> yang telah disediakan oleh UCI. Instalasi package ini berguna untuk menarik dataset yang kita inginkan langsung dari repositori UCI secara terstruktur.</p>
 <p>Perintah untuk mengambil data sangat sederhana. Kita hanya perlu mengetahui ID unik dari dataset yang kita inginkan (untuk “Tic-Tac-Toe Endgame”, ID-nya adalah 101). Kode di bawah ini akan menginstal library, mengambil data, dan menampilkannya dalam bentuk tabel (DataFrame) agar kita bisa melihatnya.</p>
@@ -1006,54 +1015,54 @@ Kita akan menggunakan library <code class="docutils literal notranslate"><span c
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--- Membuat Visualisasi Distribusi untuk Setiap Kolom ---
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_6408/3142870799.py:18: FutureWarning: 
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_6526/3142870799.py:18: FutureWarning: 
 
 Passing `palette` without assigning `hue` is deprecated and will be removed in v0.14.0. Assign the `x` variable to `hue` and set `legend=False` for the same effect.
 
   sns.countplot(x=df[col], ax=axes[i], palette=&#39;viridis&#39;, order = df[col].value_counts().index)
-/tmp/ipykernel_6408/3142870799.py:18: FutureWarning: 
+/tmp/ipykernel_6526/3142870799.py:18: FutureWarning: 
 
 Passing `palette` without assigning `hue` is deprecated and will be removed in v0.14.0. Assign the `x` variable to `hue` and set `legend=False` for the same effect.
 
   sns.countplot(x=df[col], ax=axes[i], palette=&#39;viridis&#39;, order = df[col].value_counts().index)
-/tmp/ipykernel_6408/3142870799.py:18: FutureWarning: 
+/tmp/ipykernel_6526/3142870799.py:18: FutureWarning: 
 
 Passing `palette` without assigning `hue` is deprecated and will be removed in v0.14.0. Assign the `x` variable to `hue` and set `legend=False` for the same effect.
 
   sns.countplot(x=df[col], ax=axes[i], palette=&#39;viridis&#39;, order = df[col].value_counts().index)
-/tmp/ipykernel_6408/3142870799.py:18: FutureWarning: 
+/tmp/ipykernel_6526/3142870799.py:18: FutureWarning: 
 
 Passing `palette` without assigning `hue` is deprecated and will be removed in v0.14.0. Assign the `x` variable to `hue` and set `legend=False` for the same effect.
 
   sns.countplot(x=df[col], ax=axes[i], palette=&#39;viridis&#39;, order = df[col].value_counts().index)
-/tmp/ipykernel_6408/3142870799.py:18: FutureWarning: 
+/tmp/ipykernel_6526/3142870799.py:18: FutureWarning: 
 
 Passing `palette` without assigning `hue` is deprecated and will be removed in v0.14.0. Assign the `x` variable to `hue` and set `legend=False` for the same effect.
 
   sns.countplot(x=df[col], ax=axes[i], palette=&#39;viridis&#39;, order = df[col].value_counts().index)
-/tmp/ipykernel_6408/3142870799.py:18: FutureWarning: 
-
-Passing `palette` without assigning `hue` is deprecated and will be removed in v0.14.0. Assign the `x` variable to `hue` and set `legend=False` for the same effect.
-
-  sns.countplot(x=df[col], ax=axes[i], palette=&#39;viridis&#39;, order = df[col].value_counts().index)
-/tmp/ipykernel_6408/3142870799.py:18: FutureWarning: 
+/tmp/ipykernel_6526/3142870799.py:18: FutureWarning: 
 
 Passing `palette` without assigning `hue` is deprecated and will be removed in v0.14.0. Assign the `x` variable to `hue` and set `legend=False` for the same effect.
 
   sns.countplot(x=df[col], ax=axes[i], palette=&#39;viridis&#39;, order = df[col].value_counts().index)
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_6408/3142870799.py:18: FutureWarning: 
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_6526/3142870799.py:18: FutureWarning: 
 
 Passing `palette` without assigning `hue` is deprecated and will be removed in v0.14.0. Assign the `x` variable to `hue` and set `legend=False` for the same effect.
 
   sns.countplot(x=df[col], ax=axes[i], palette=&#39;viridis&#39;, order = df[col].value_counts().index)
-/tmp/ipykernel_6408/3142870799.py:18: FutureWarning: 
+/tmp/ipykernel_6526/3142870799.py:18: FutureWarning: 
 
 Passing `palette` without assigning `hue` is deprecated and will be removed in v0.14.0. Assign the `x` variable to `hue` and set `legend=False` for the same effect.
 
   sns.countplot(x=df[col], ax=axes[i], palette=&#39;viridis&#39;, order = df[col].value_counts().index)
-/tmp/ipykernel_6408/3142870799.py:18: FutureWarning: 
+/tmp/ipykernel_6526/3142870799.py:18: FutureWarning: 
+
+Passing `palette` without assigning `hue` is deprecated and will be removed in v0.14.0. Assign the `x` variable to `hue` and set `legend=False` for the same effect.
+
+  sns.countplot(x=df[col], ax=axes[i], palette=&#39;viridis&#39;, order = df[col].value_counts().index)
+/tmp/ipykernel_6526/3142870799.py:18: FutureWarning: 
 
 Passing `palette` without assigning `hue` is deprecated and will be removed in v0.14.0. Assign the `x` variable to `hue` and set `legend=False` for the same effect.
 
@@ -1129,6 +1138,55 @@ Passing `palette` without assigning `hue` is deprecated and will be removed in v
 <li><p><strong>Untuk Fitur (X)</strong>: Kita akan menggunakan OneHotEncoder. Ini adalah pilihan terbaik karena fitur-fitur kita (posisi papan) bersifat nominal, artinya tidak ada urutan atau tingkatan (‘x’ tidak lebih baik dari ‘o’). OneHotEncoder akan membuat kolom-kolom biner baru untuk setiap kemungkinan nilai (misalnya top-left-square_x, top-left-square_o, top-left-square_b).</p></li>
 <li><p><strong>Untuk Target (y)</strong>: Kita akan menggunakan LabelEncoder. Ini sudah cukup karena kita hanya perlu mengubah dua kategori (‘positive’ dan ‘negative’) menjadi nilai numerik seperti 1 dan 0.</p></li>
 </ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 1. Import semua library yang akan kita butuhkan</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">ucimlrepo</span><span class="w"> </span><span class="kn">import</span> <span class="n">fetch_ucirepo</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.model_selection</span><span class="w"> </span><span class="kn">import</span> <span class="n">train_test_split</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.preprocessing</span><span class="w"> </span><span class="kn">import</span> <span class="n">OneHotEncoder</span><span class="p">,</span> <span class="n">LabelEncoder</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.tree</span><span class="w"> </span><span class="kn">import</span> <span class="n">DecisionTreeClassifier</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.naive_bayes</span><span class="w"> </span><span class="kn">import</span> <span class="n">GaussianNB</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.neighbors</span><span class="w"> </span><span class="kn">import</span> <span class="n">KNeighborsClassifier</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.metrics</span><span class="w"> </span><span class="kn">import</span> <span class="n">accuracy_score</span><span class="p">,</span> <span class="n">classification_report</span>
+
+<span class="c1"># 2. Muat dan siapkan data</span>
+<span class="n">tic_tac_toe_endgame</span> <span class="o">=</span> <span class="n">fetch_ucirepo</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="mi">101</span><span class="p">)</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">tic_tac_toe_endgame</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">features</span><span class="p">,</span> <span class="n">tic_tac_toe_endgame</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">targets</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="n">X</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;class&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;class&#39;</span><span class="p">]</span>
+
+<span class="c1"># 3. Preprocessing (Encoding)</span>
+<span class="n">encoder_X</span> <span class="o">=</span> <span class="n">OneHotEncoder</span><span class="p">(</span><span class="n">sparse_output</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">handle_unknown</span><span class="o">=</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
+<span class="n">X_encoded</span> <span class="o">=</span> <span class="n">encoder_X</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+<span class="n">X_encoded_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">X_encoded</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">encoder_X</span><span class="o">.</span><span class="n">get_feature_names_out</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">columns</span><span class="p">))</span>
+
+<span class="n">encoder_y</span> <span class="o">=</span> <span class="n">LabelEncoder</span><span class="p">()</span>
+<span class="n">y_encoded</span> <span class="o">=</span> <span class="n">encoder_y</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+
+<span class="c1"># 4. Pembagian Data</span>
+<span class="c1"># Data dibagi menjadi 80% latih dan 20% uji</span>
+<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span>
+    <span class="n">X_encoded_df</span><span class="p">,</span> <span class="n">y_encoded</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">,</span> <span class="n">stratify</span><span class="o">=</span><span class="n">y_encoded</span>
+<span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;--- Persiapan Data Selesai ---&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Data Latih: </span><span class="si">{</span><span class="n">X_train</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2"> baris&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Data Uji: </span><span class="si">{</span><span class="n">X_test</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2"> baris&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Data siap digunakan untuk melatih 3 model.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--- Persiapan Data Selesai ---
+Data Latih: 766 baris
+Data Uji: 192 baris
+Data siap digunakan untuk melatih 3 model.
+</pre></div>
+</div>
+</div>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import library untuk encoding</span>
@@ -1234,89 +1292,42 @@ Contoh 5 data target pertama yang sudah di-encode:
 </div>
 </div>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="klasifikasi-dengan-decision-tree">
-<h1><strong>Klasifikasi dengan Decision Tree</strong><a class="headerlink" href="#klasifikasi-dengan-decision-tree" title="Link to this heading">#</a></h1>
+<section class="tex2jax_ignore mathjax_ignore" id="klasifikasi">
+<h1><strong>Klasifikasi</strong><a class="headerlink" href="#klasifikasi" title="Link to this heading">#</a></h1>
 <p><strong>Alur kerja lengkap untuk tahap klasifikasi:</strong></p>
 <ul class="simple">
 <li><p>**Membagi Data:**Kita akan membagi dataset menjadi dua: 80% untuk melatih model (data latih) dan 20% untuk menguji model (data uji).</p></li>
 <li><p><strong>Membuat &amp; Melatih Model:</strong> Kita akan membuat model menggunakan algoritma Decision Tree Classifier, sama seperti pada contoh acuan Anda. Model ini akan “belajar” dari data latih.</p></li>
 <li><p><strong>Prediksi &amp; Evaluasi:</strong> Setelah dilatih, model akan diminta untuk menebak hasil dari data uji. Kemudian, kita akan membandingkan tebakan model dengan jawaban sebenarnya untuk mengukur seberapa baik kinerjanya.</p></li>
 </ul>
+<section id="decision-tree-classifier">
+<h2><strong>1. Decision Tree Classifier</strong><a class="headerlink" href="#decision-tree-classifier" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import library yang diperlukan untuk pemodelan dan evaluasi</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.model_selection</span><span class="w"> </span><span class="kn">import</span> <span class="n">train_test_split</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.tree</span><span class="w"> </span><span class="kn">import</span> <span class="n">DecisionTreeClassifier</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.metrics</span><span class="w"> </span><span class="kn">import</span> <span class="n">accuracy_score</span><span class="p">,</span> <span class="n">classification_report</span><span class="p">,</span> <span class="n">confusion_matrix</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">seaborn</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sns</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;--- Melatih dan Mengevaluasi Model 1: Decision Tree ---&quot;</span><span class="p">)</span>
 
-<span class="c1"># Variabel X_encoded_df dan y_encoded sudah ada dari langkah preprocessing sebelumnya</span>
+<span class="c1"># 1. Membuat dan melatih model</span>
+<span class="n">dt_model</span> <span class="o">=</span> <span class="n">DecisionTreeClassifier</span><span class="p">(</span><span class="n">criterion</span><span class="o">=</span><span class="s1">&#39;entropy&#39;</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+<span class="n">dt_model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;--- Memulai Tahap Klasifikasi ---&quot;</span><span class="p">)</span>
+<span class="c1"># 2. Melakukan prediksi dan evaluasi</span>
+<span class="n">y_pred_dt</span> <span class="o">=</span> <span class="n">dt_model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+<span class="n">accuracy_dt</span> <span class="o">=</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred_dt</span><span class="p">)</span>
+<span class="n">report_dt</span> <span class="o">=</span> <span class="n">classification_report</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred_dt</span><span class="p">,</span> <span class="n">target_names</span><span class="o">=</span><span class="n">encoder_y</span><span class="o">.</span><span class="n">classes_</span><span class="p">)</span>
 
-<span class="c1"># 1. Membagi Data Menjadi Data Latih dan Data Uji</span>
-<span class="c1"># test_size=0.2 artinya 20% data digunakan untuk pengujian.</span>
-<span class="c1"># stratify=y_encoded memastikan proporsi kelas &#39;positive&#39; dan &#39;negative&#39; seimbang.</span>
-<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span>
-    <span class="n">X_encoded_df</span><span class="p">,</span> <span class="n">y_encoded</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">,</span> <span class="n">stratify</span><span class="o">=</span><span class="n">y_encoded</span>
-<span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Data berhasil dibagi:&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Ukuran data latih: </span><span class="si">{</span><span class="n">X_train</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2"> baris&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Ukuran data uji: </span><span class="si">{</span><span class="n">X_test</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2"> baris&quot;</span><span class="p">)</span>
-
-
-<span class="c1"># 2. Membuat dan Melatih Model Decision Tree</span>
-<span class="n">model</span> <span class="o">=</span> <span class="n">DecisionTreeClassifier</span><span class="p">(</span><span class="n">criterion</span><span class="o">=</span><span class="s1">&#39;entropy&#39;</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
-<span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Model Decision Tree berhasil dilatih.&quot;</span><span class="p">)</span>
-
-
-<span class="c1"># 3. Melakukan Prediksi dan Evaluasi Model</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">--- Hasil Evaluasi Kinerja Model ---&quot;</span><span class="p">)</span>
-<span class="c1"># Melakukan prediksi pada data uji</span>
-<span class="n">y_pred</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
-
-<span class="c1"># Menghitung akurasi</span>
-<span class="n">accuracy</span> <span class="o">=</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Akurasi Model: </span><span class="si">{</span><span class="n">accuracy</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">100</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">%</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
-
-<span class="c1"># Menampilkan Laporan Klasifikasi</span>
-<span class="c1"># Kita menggunakan variabel encoder_y dari langkah preprocessing untuk mendapatkan nama kelas asli</span>
-<span class="n">class_names</span> <span class="o">=</span> <span class="n">encoder_y</span><span class="o">.</span><span class="n">classes_</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Laporan Klasifikasi:&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">classification_report</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">,</span> <span class="n">target_names</span><span class="o">=</span><span class="n">class_names</span><span class="p">))</span>
-
-
-<span class="c1"># 4. Menampilkan Confusion Matrix</span>
-<span class="c1"># Variabel encoder_y juga digunakan di sini untuk label pada plot</span>
-<span class="n">cm</span> <span class="o">=</span> <span class="n">confusion_matrix</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
-<span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">cm</span><span class="p">,</span> <span class="n">annot</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">fmt</span><span class="o">=</span><span class="s1">&#39;d&#39;</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;Blues&#39;</span><span class="p">,</span>
-            <span class="n">xticklabels</span><span class="o">=</span><span class="n">class_names</span><span class="p">,</span> <span class="n">yticklabels</span><span class="o">=</span><span class="n">class_names</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Confusion Matrix&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Prediksi Model&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Label Sebenarnya&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="c1"># 3. Menampilkan hasil</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Akurasi Decision Tree: </span><span class="si">{</span><span class="n">accuracy_dt</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">100</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">%</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Laporan Klasifikasi Decision Tree:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">report_dt</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--- Memulai Tahap Klasifikasi ---
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--- Melatih dan Mengevaluasi Model 1: Decision Tree ---
 
-Data berhasil dibagi:
-Ukuran data latih: 766 baris
-Ukuran data uji: 192 baris
+Akurasi Decision Tree: 90.10%
 
-Model Decision Tree berhasil dilatih.
-
---- Hasil Evaluasi Kinerja Model ---
-
-Akurasi Model: 90.10%
-
-Laporan Klasifikasi:
+Laporan Klasifikasi Decision Tree:
               precision    recall  f1-score   support
 
     negative       0.88      0.84      0.85        67
@@ -1327,43 +1338,239 @@ Laporan Klasifikasi:
 weighted avg       0.90      0.90      0.90       192
 </pre></div>
 </div>
-<img alt="_images/660f945668cb09d75fbdc27eeab264ccb1bac23e753eca5b53c97ec16e7b93f5.png" src="_images/660f945668cb09d75fbdc27eeab264ccb1bac23e753eca5b53c97ec16e7b93f5.png" />
 </div>
 </div>
 <p><strong>Penjelasan Hasil Akhir</strong></p>
 <ul class="simple">
 <li><p>Akurasi: Anda akan melihat akurasi model dalam bentuk persentase. Untuk dataset ini, model Decision Tree biasanya mencapai akurasi yang sangat tinggi.</p></li>
 <li><p>aporan Klasifikasi: Laporan ini akan memberikan rincian tentang seberapa baik model memprediksi kelas positive dan negative.</p></li>
-<li><p>Confusion Matrix: Tabel ini akan menunjukkan secara visual berapa banyak prediksi yang benar dan berapa yang salah, serta jenis kesalahannya.</p></li>
 </ul>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="analisis-hasil-kinerja-model">
-<h1><strong>Analisis Hasil Kinerja Model</strong><a class="headerlink" href="#analisis-hasil-kinerja-model" title="Link to this heading">#</a></h1>
-<p>Setelah model dievaluasi menggunakan data uji, kita mendapatkan hasil kinerja sebagai berikut:</p>
-<section id="akurasi-keseluruhan">
-<h2><strong>Akurasi Keseluruhan</strong><a class="headerlink" href="#akurasi-keseluruhan" title="Link to this heading">#</a></h2>
-<p>Akurasi model mencapai <strong>94.27%</strong>. Ini adalah hasil yang sangat tinggi, yang berarti model mampu memberikan prediksi yang benar untuk sekitar 94 dari 100 kasus pada data yang belum pernah dilihat sebelumnya.</p>
+<section id="naive-bayes-classifier">
+<h2><strong>2. Naive Bayes Classifier</strong><a class="headerlink" href="#naive-bayes-classifier" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;--- Melatih dan Mengevaluasi Model 2: Naive Bayes ---&quot;</span><span class="p">)</span>
+
+<span class="c1"># 1. Membuat dan melatih model</span>
+<span class="n">nb_model</span> <span class="o">=</span> <span class="n">GaussianNB</span><span class="p">()</span>
+<span class="n">nb_model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+
+<span class="c1"># 2. Melakukan prediksi dan evaluasi</span>
+<span class="n">y_pred_nb</span> <span class="o">=</span> <span class="n">nb_model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+<span class="n">accuracy_nb</span> <span class="o">=</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred_nb</span><span class="p">)</span>
+<span class="n">report_nb</span> <span class="o">=</span> <span class="n">classification_report</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred_nb</span><span class="p">,</span> <span class="n">target_names</span><span class="o">=</span><span class="n">encoder_y</span><span class="o">.</span><span class="n">classes_</span><span class="p">)</span>
+
+<span class="c1"># 3. Menampilkan hasil</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Akurasi Naive Bayes: </span><span class="si">{</span><span class="n">accuracy_nb</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">100</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">%</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Laporan Klasifikasi Naive Bayes:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">report_nb</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--- Melatih dan Mengevaluasi Model 2: Naive Bayes ---
+
+Akurasi Naive Bayes: 65.10%
+
+Laporan Klasifikasi Naive Bayes:
+              precision    recall  f1-score   support
+
+    negative       0.50      0.40      0.45        67
+    positive       0.71      0.78      0.75       125
+
+    accuracy                           0.65       192
+   macro avg       0.61      0.59      0.60       192
+weighted avg       0.64      0.65      0.64       192
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Penjelasan Hasil:</strong></p>
+<p>Anda mungkin akan melihat bahwa akurasi Naive Bayes sedikit lebih rendah dibandingkan Decision Tree. Hal ini wajar, karena asumsi “naif”-nya (bahwa setiap posisi kotak di papan tidak saling memengaruhi) sebenarnya tidak sepenuhnya benar dalam permainan Tic-Tac-Toe. Namun, model ini tetap memberikan performa yang cukup baik dan proses pelatihannya sangat cepat.</p>
 </section>
-<section id="rincian-kinerja-berdasarkan-laporan-klasifikasi">
-<h2><strong>Rincian Kinerja (Berdasarkan Laporan Klasifikasi)</strong><a class="headerlink" href="#rincian-kinerja-berdasarkan-laporan-klasifikasi" title="Link to this heading">#</a></h2>
+<section id="k-nearest-neighbors-knn">
+<h2><strong>3. K-Nearest Neighbors (KNN)</strong><a class="headerlink" href="#k-nearest-neighbors-knn" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;--- Melatih dan Mengevaluasi Model 3: K-Nearest Neighbors (KNN) ---&quot;</span><span class="p">)</span>
+
+<span class="c1"># 1. Membuat dan melatih model</span>
+<span class="c1"># n_neighbors=5 berarti kita akan melihat 5 tetangga terdekat</span>
+<span class="n">knn_model</span> <span class="o">=</span> <span class="n">KNeighborsClassifier</span><span class="p">(</span><span class="n">n_neighbors</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">knn_model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+
+<span class="c1"># 2. Melakukan prediksi dan evaluasi</span>
+<span class="n">y_pred_knn</span> <span class="o">=</span> <span class="n">knn_model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+<span class="n">accuracy_knn</span> <span class="o">=</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred_knn</span><span class="p">)</span>
+<span class="n">report_knn</span> <span class="o">=</span> <span class="n">classification_report</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred_knn</span><span class="p">,</span> <span class="n">target_names</span><span class="o">=</span><span class="n">encoder_y</span><span class="o">.</span><span class="n">classes_</span><span class="p">)</span>
+
+<span class="c1"># 3. Menampilkan hasil</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Akurasi K-Nearest Neighbors (k=5): </span><span class="si">{</span><span class="n">accuracy_knn</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">100</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">%</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Laporan Klasifikasi K-Nearest Neighbors:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">report_knn</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--- Melatih dan Mengevaluasi Model 3: K-Nearest Neighbors (KNN) ---
+
+Akurasi K-Nearest Neighbors (k=5): 90.62%
+
+Laporan Klasifikasi K-Nearest Neighbors:
+              precision    recall  f1-score   support
+
+    negative       1.00      0.73      0.84        67
+    positive       0.87      1.00      0.93       125
+
+    accuracy                           0.91       192
+   macro avg       0.94      0.87      0.89       192
+weighted avg       0.92      0.91      0.90       192
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Penjelasan Hasil:</strong></p>
+<p>KNN seringkali berkinerja baik pada banyak masalah klasifikasi. Anda bisa membandingkan akurasinya dengan dua model sebelumnya. Anda juga bisa bereksperimen dengan mengubah nilai n_neighbors (misalnya menjadi 3 atau 7) untuk melihat apakah hasilnya bisa lebih baik.</p>
+<section id="tabel-ringkasan-performa-model-klasifikasi">
+<h3>Tabel Ringkasan Performa Model Klasifikasi<a class="headerlink" href="#tabel-ringkasan-performa-model-klasifikasi" title="Link to this heading">#</a></h3>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Model</p></th>
+<th class="head"><p>Akurasi</p></th>
+<th class="head"><p>Presisi (Positive)</p></th>
+<th class="head"><p>Recall (Positive)</p></th>
+<th class="head"><p>F1-Score (Positive)</p></th>
+<th class="head"><p>Presisi (Negative)</p></th>
+<th class="head"><p>Recall (Negative)</p></th>
+<th class="head"><p>F1-Score (Negative)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Decision Tree</p></td>
+<td><p>90.10%</p></td>
+<td><p>0.91</p></td>
+<td><p>0.94</p></td>
+<td><p>0.92</p></td>
+<td><p>0.88</p></td>
+<td><p>0.84</p></td>
+<td><p>0.85</p></td>
+</tr>
+<tr class="row-odd"><td><p>K-Nearest Neighbors</p></td>
+<td><p>90.62%</p></td>
+<td><p>0.87</p></td>
+<td><p>1.00</p></td>
+<td><p>0.93</p></td>
+<td><p>1.00</p></td>
+<td><p>0.73</p></td>
+<td><p>0.84</p></td>
+</tr>
+<tr class="row-even"><td><p>Naive Bayes</p></td>
+<td><p>65.10%</p></td>
+<td><p>0.71</p></td>
+<td><p>0.78</p></td>
+<td><p>0.75</p></td>
+<td><p>0.50</p></td>
+<td><p>0.40</p></td>
+<td><p>0.45</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="kesimpulan-analisis-model-klasifikasi-tic-tac-toe">
+<h3>Kesimpulan Analisis Model Klasifikasi Tic-Tac-Toe<a class="headerlink" href="#kesimpulan-analisis-model-klasifikasi-tic-tac-toe" title="Link to this heading">#</a></h3>
+</section>
+</section>
+<section id="hasil-evaluasi-ketiga-model-berikut-kesimpulan-utamanya">
+<h2>Hasil evaluasi ketiga model, berikut kesimpulan utamanya:<a class="headerlink" href="#hasil-evaluasi-ketiga-model-berikut-kesimpulan-utamanya" title="Link to this heading">#</a></h2>
+<section id="performa-terbaik-k-nearest-neighbors-knn">
+<h3>1. Performa Terbaik: <strong>K-Nearest Neighbors (KNN)</strong><a class="headerlink" href="#performa-terbaik-k-nearest-neighbors-knn" title="Link to this heading">#</a></h3>
 <ul class="simple">
-<li><p><strong>Kelas <code class="docutils literal notranslate"><span class="pre">negative</span></code> (Bukan Kemenangan ‘x’)</strong>:</p>
+<li><p><strong>Akurasi tertinggi</strong>: 90.62%</p></li>
+<li><p><strong>Kelebihan utama</strong>:</p></li>
+<li><p>Recall sempurna (1.00) untuk kelas positive</p></li>
+<li><p>Precision sempurna (1.00) untuk kelas negative</p></li>
+<li><p><strong>Kekurangan</strong>:</p></li>
+<li><p>Trade-off antara precision dan recall untuk kelas negative (recall hanya 0.73)</p></li>
+</ul>
+</section>
+<section id="model-paling-seimbang-decision-tree">
+<h3>2. Model Paling Seimbang: <strong>Decision Tree</strong><a class="headerlink" href="#model-paling-seimbang-decision-tree" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Akurasi</strong>: 90.10% (sedikit di bawah KNN)</p></li>
+<li><p><strong>Kelebihan utama</strong>:</p>
 <ul>
-<li><p><strong>Precision (0.92):</strong> Ketika model memprediksi hasilnya adalah <code class="docutils literal notranslate"><span class="pre">negative</span></code>, tebakannya 92% benar.</p></li>
-<li><p><strong>Recall (0.99):</strong> Model ini sangat andal dalam mengenali hampir semua (99%) kondisi yang memang bukan kemenangan ‘x’.</p></li>
+<li><p>Keseimbangan terbaik antara precision dan recall di kedua kelas</p></li>
+<li><p>Lebih interpretabel dibanding KNN</p></li>
 </ul>
 </li>
-<li><p><strong>Kelas <code class="docutils literal notranslate"><span class="pre">positive</span></code> (Kemenangan ‘x’)</strong>:</p>
+<li><p><strong>Kekurangan</strong>:</p>
 <ul>
-<li><p><strong>Precision (0.99):</strong> Ini adalah metrik yang paling mengesankan. Jika model ini memprediksi bahwa ‘x’ menang, prediksinya 99% benar. Ini menunjukkan model sangat bisa dipercaya saat mengidentifikasi kemenangan.</p></li>
-<li><p><strong>Recall (0.89):</strong> Model berhasil mendeteksi 89% dari seluruh kasus kemenangan ‘x’ yang ada. Artinya, ada sekitar 11% kasus kemenangan yang terlewatkan dan keliru diklasifikasikan sebagai <code class="docutils literal notranslate"><span class="pre">negative</span></code>.</p></li>
+<li><p>Presisi kelas negative lebih rendah (0.88) dibanding KNN</p></li>
 </ul>
 </li>
 </ul>
 </section>
-<section id="kesimpulan-akhir">
-<h2><strong>Kesimpulan Akhir</strong><a class="headerlink" href="#kesimpulan-akhir" title="Link to this heading">#</a></h2>
-<p>Model Decision Tree ini memiliki <strong>kinerja yang sangat baik dan kuat</strong>. Kekuatan terbesarnya adalah <strong>presisi yang sangat tinggi dalam mendeteksi kemenangan ‘x’</strong>. Meskipun ada sedikit kelemahan dalam mengenali <em>semua</em> kasus kemenangan yang ada (recall sedikit lebih rendah), model ini secara umum sangat akurat dan dapat diandalkan untuk kasus penggunaan ini.</p>
+<section id="performa-terendah-naive-bayes">
+<h3>3. Performa Terendah: <strong>Naive Bayes</strong><a class="headerlink" href="#performa-terendah-naive-bayes" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Akurasi jauh lebih rendah</strong>: 65.10%</p></li>
+<li><p><strong>Masalah utama</strong>:</p>
+<ul>
+<li><p>Asumsi independensi fitur tidak cocok untuk data permainan strategis</p></li>
+<li><p>Recall kelas negative sangat rendah (0.40)</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="rekomendasi-implementasi">
+<h3>Rekomendasi Implementasi:<a class="headerlink" href="#rekomendasi-implementasi" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p><strong>Untuk aplikasi produksi</strong>:</p>
+<ul class="simple">
+<li><p>Pilih <strong>KNN</strong> jika ingin maksimalkan deteksi kemenangan (recall 100% untuk positive)</p></li>
+<li><p>Pilih <strong>Decision Tree</strong> jika butuh model yang lebih interpretabel</p></li>
+</ul>
+</li>
+<li><p><strong>Optimasi lebih lanjut</strong>:</p>
+<ul class="simple">
+<li><p>Fine-tuning parameter KNN (nilai k) dan Decision Tree (kedalaman pohon)</p></li>
+<li><p>Coba ensemble methods seperti Random Forest</p></li>
+</ul>
+</li>
+<li><p><strong>Hindari Naive Bayes</strong> untuk kasus ini karena asumsi model tidak sesuai dengan karakteristik data permainan strategis.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Visualisasi Perbandingan Akurasi</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+
+<span class="n">models</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Decision Tree&#39;</span><span class="p">,</span> <span class="s1">&#39;KNN&#39;</span><span class="p">,</span> <span class="s1">&#39;Naive Bayes&#39;</span><span class="p">]</span>
+<span class="n">accuracy</span> <span class="o">=</span> <span class="p">[</span><span class="mf">90.10</span><span class="p">,</span> <span class="mf">90.62</span><span class="p">,</span> <span class="mf">65.10</span><span class="p">]</span>
+<span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;#1f77b4&#39;</span><span class="p">,</span> <span class="s1">&#39;#2ca02c&#39;</span><span class="p">,</span> <span class="s1">&#39;#d62728&#39;</span><span class="p">]</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
+<span class="n">bars</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">models</span><span class="p">,</span> <span class="n">accuracy</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">colors</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Perbandingan Akurasi Model&#39;</span><span class="p">,</span> <span class="n">pad</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Akurasi (%)&#39;</span><span class="p">,</span> <span class="n">labelpad</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+
+<span class="c1"># Tambah label nilai di setiap bar</span>
+<span class="k">for</span> <span class="n">bar</span> <span class="ow">in</span> <span class="n">bars</span><span class="p">:</span>
+    <span class="n">height</span> <span class="o">=</span> <span class="n">bar</span><span class="o">.</span><span class="n">get_height</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">bar</span><span class="o">.</span><span class="n">get_x</span><span class="p">()</span> <span class="o">+</span> <span class="n">bar</span><span class="o">.</span><span class="n">get_width</span><span class="p">()</span><span class="o">/</span><span class="mf">2.</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span>
+            <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">height</span><span class="si">}</span><span class="s1">%&#39;</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s1">&#39;bottom&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/5fa7143eb67035f616ae35556a5150d24bcc13744626a8f151dd1aa74fc50985.png" src="_images/5fa7143eb67035f616ae35556a5150d24bcc13744626a8f151dd1aa74fc50985.png" />
+</div>
+</div>
+</section>
 </section>
 </section>
 
@@ -1397,6 +1604,15 @@ weighted avg       0.90      0.90      0.90       192
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="Tugas_Pra_Uas.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><strong>Tugas Pra UAS</strong></p>
+      </div>
+    </a>
 </div>
                 </footer>
               
@@ -1413,7 +1629,7 @@ weighted avg       0.90      0.90      0.90       192
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><strong>UAS</strong></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">UAS PENAMBANGAN DATA</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#pendahuluan"><strong>Pendahuluan</strong></a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sumber-data"><strong>Sumber Data</strong></a></li>
 </ul>
@@ -1437,7 +1653,7 @@ weighted avg       0.90      0.90      0.90       192
 </li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#integrasi-data"><strong>Integrasi Data.</strong></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#ekspolrasi-data"><strong>Ekspolrasi Data.</strong></a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#eksplorasi-data"><strong>Eksplorasi Data</strong></a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-1-import-library-dan-memuat-data-menyimpan-ke-csv"><strong>Langkah 1: Import Library dan Memuat Data menyimpan ke CSV</strong></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-2-verifikasi-data-anomali"><strong>Langkah 2: Verifikasi data anomali</strong></a></li>
@@ -1448,11 +1664,21 @@ weighted avg       0.90      0.90      0.90       192
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#visualisasi-data-analisis-hubungan-fitur-dan-target"><strong>Visualisasi Data (Analisis Hubungan Fitur dan Target)</strong></a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#preprocessing-encoding"><strong>Preprocessing (Encoding)</strong></a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#klasifikasi-dengan-decision-tree"><strong>Klasifikasi dengan Decision Tree</strong></a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-hasil-kinerja-model"><strong>Analisis Hasil Kinerja Model</strong></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#akurasi-keseluruhan"><strong>Akurasi Keseluruhan</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rincian-kinerja-berdasarkan-laporan-klasifikasi"><strong>Rincian Kinerja (Berdasarkan Laporan Klasifikasi)</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kesimpulan-akhir"><strong>Kesimpulan Akhir</strong></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#klasifikasi"><strong>Klasifikasi</strong></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#decision-tree-classifier"><strong>1. Decision Tree Classifier</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naive-bayes-classifier"><strong>2. Naive Bayes Classifier</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#k-nearest-neighbors-knn"><strong>3. K-Nearest Neighbors (KNN)</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tabel-ringkasan-performa-model-klasifikasi">Tabel Ringkasan Performa Model Klasifikasi</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#kesimpulan-analisis-model-klasifikasi-tic-tac-toe">Kesimpulan Analisis Model Klasifikasi Tic-Tac-Toe</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hasil-evaluasi-ketiga-model-berikut-kesimpulan-utamanya">Hasil evaluasi ketiga model, berikut kesimpulan utamanya:</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#performa-terbaik-k-nearest-neighbors-knn">1. Performa Terbaik: <strong>K-Nearest Neighbors (KNN)</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#model-paling-seimbang-decision-tree">2. Model Paling Seimbang: <strong>Decision Tree</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#performa-terendah-naive-bayes">3. Performa Terendah: <strong>Naive Bayes</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rekomendasi-implementasi">Rekomendasi Implementasi:</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
